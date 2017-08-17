@@ -1,0 +1,52 @@
+html,
+body {
+	font-family: $font-reg;
+	overflow-x: hidden;
+}
+
+p,
+span,
+blockquote,
+a {
+	font-family: $font-book;
+}
+
+.big-container {
+	width: 100%;
+	max-width: 1900px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.container {
+	width: 100%;
+	max-width: 1175px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.aside {
+	width: 16.66%;
+}
+
+.main {
+	width: 63.6666%;
+	min-width: 1175px;
+}
+
+.no-scroll {
+	overflow: hidden;
+}

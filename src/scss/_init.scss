@@ -1,4 +1,50 @@
 // Colors
 
+$black-color: #000;
+$white-color: #fff;
+
+$text-color: #8790a6;
+$link-color: #284b96;
+$link2-color: #ffcb32;
+
+$start-grad: #f2f3f7;
+$border-color: #d9dfe9;
+$menu-bg: rgb(64, 81, 93);
+
+$bg1: #dcdfe1;
+$bg2: #dfeafd;
+$bg3: #fef4d6;
 
 //Fonts
+@font-face {
+	font-family: 'univia_probook';
+	src: url('../fonts/univiapro-book.woff2') format('woff2'), url('../fonts/univiapro-book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'univia_proregular';
+	src: url('../fonts/univiapro-regular.woff2') format('woff2'), url('../fonts/univiapro-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'univia_promedium';
+	src: url('../fonts/univiapro-medium.woff2') format('woff2'), url('../fonts/univiapro-medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'univia_probold';
+	src: url('../fonts/univiapro-bold.woff2') format('woff2'), url('../fonts/univiapro-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-book: 'univia_probook';
+$font-reg: 'univia_proregular';
+$font-med: 'univia_promedium';
+$font-bold: 'univia_probold';

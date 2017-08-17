@@ -188,3 +188,92 @@ th {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+@font-face {
+  font-family: 'univia_probook';
+  src: url("../fonts/univiapro-book.woff2") format("woff2"), url("../fonts/univiapro-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'univia_proregular';
+  src: url("../fonts/univiapro-regular.woff2") format("woff2"), url("../fonts/univiapro-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'univia_promedium';
+  src: url("../fonts/univiapro-medium.woff2") format("woff2"), url("../fonts/univiapro-medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'univia_probold';
+  src: url("../fonts/univiapro-bold.woff2") format("woff2"), url("../fonts/univiapro-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html,
+body {
+  font-family: "univia_proregular";
+  overflow-x: hidden; }
+
+p,
+span,
+blockquote,
+a {
+  font-family: "univia_probook"; }
+
+.big-container {
+  width: 100%;
+  max-width: 1900px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.container {
+  width: 100%;
+  max-width: 1175px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.flex-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.aside {
+  width: 16.66%; }
+
+.main {
+  width: 63.6666%;
+  min-width: 1175px; }
+
+.no-scroll {
+  overflow: hidden; }
