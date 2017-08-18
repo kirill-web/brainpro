@@ -1,6 +1,6 @@
 html,
 body {
-	font-family: $font-reg;
+	font-family: $font-book;
 	overflow-x: hidden;
 }
 
@@ -21,7 +21,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .container {
@@ -49,4 +49,125 @@ a {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+.page-header {
+	background-color: $white-color;
+	padding: 27px 0;
+	border-bottom: 1px solid $border-color;
+	.container {
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		a {
+			text-decoration: none;
+			color: $text-color;
+		}
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+		span {
+			display: block;
+			font-size: 14px;
+			line-height: 22px;
+			padding-left: 35px;
+		}
+	}
+	&__contacts-item {
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+	&__lang {
+		display: block;
+		font-size: 14px;
+		line-height: 14px;
+		text-decoration: none;
+		color: $text-color;
+		padding: 5px 7px 7px 7px;
+		border: 1px solid transparent;
+		border-radius: 15px;
+		transition: all 0.3s;
+		&.active {
+			border-color: $border-color;
+			color: $black-color;
+		}
+		&:hover {
+			color: $black-color;
+		}
+	}
+	&__tel {
+		font-size: 18px;
+		line-height: 22px;
+		margin: 3px 0 5px 0;
+		font-family: $font-reg;
+	}
+	&__tel-descr {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0;
+		color: $text-color;
+	}
+	&__status {
+		font-size: 14px;
+		padding: 12px 19px 15px 19px;
+		border-radius: 25px;
+		text-align: center;
+		background-color: transparent;
+		border: 2px solid $border-color;
+		color: $text-color;
+		transition: all 0.3s;
+		&:hover {
+			background-color: $border-color;
+		}
+	}
+}
+
+.menu-toggle {
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image: url(../img/menu-icon.png);
+	width: 20px;
+	height: 16px;
+}
+
+body {
+	background-image: linear-gradient(to bottom, $start-grad, $white-color);
+}
+
+.page-footer {
+	padding: 60px 0;
+	background-color: $white-color;
+	.flex-wrap {
+		justify-content: space-between;
+	}
+	&__copy {
+		font-size: 14px;
+		margin: 0;
+		color: $text-color;
+	}
+	&__link {
+		font-size: 14px;
+		color: $link-color;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__socials {
+		padding-right: 110px;
+		font-size: 0;
+	}
+	&__social {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 30px;
+		background-repeat: no-repeat;
+		background-image: url(../img/inst.png);
+		width: 20px;
+		height: 20px;
+	}
 }

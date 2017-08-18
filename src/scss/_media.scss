@@ -1,0 +1,20 @@
+@media (max-width: 1440px) {
+	.contacts {
+		.big-container {
+			max-width: 1175px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.aside {
+			display: none;
+		}
+		&__main {
+			width: 100%;
+		}
+	}
+	.page-footer {
+		&__socials {
+			padding-right: 0;
+		}
+	}
+}
