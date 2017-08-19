@@ -30,6 +30,7 @@
 		position: relative;
 		background-repeat: no-repeat;
 		background-size: 100%;
+		background-position: 100% 100%;
 		min-height: 280px;
 		transition: all 0.3s;
 		margin-bottom: 30px;
@@ -152,12 +153,16 @@
 		margin-left: 60px;
 		position: relative;
 		border-radius: 4px;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
 		&:first-child {
 			margin-left: 0;
 		}
 		&-title {
 			font-size: 16px;
 			line-height: 26px;
+			margin: 0;
 		}
 		&:before {
 			content: '';

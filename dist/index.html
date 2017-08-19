@@ -16,13 +16,14 @@
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
+				<button type="button" class="menu-toggle--inside"></button>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.png" alt="logo"><span>сервис-центр</span>
 						</a>
 					</div>
 					<div class="page-header__contants flex-wrap">
-						<div class="page-header__contacts-item">
+						<div class="page-header__contacts-item page-header__contacts-item--lang">
 							<a href="#" class="page-header__lang active">рус</a>
 							<a href="#" class="page-header__lang">укр</a>
 						</div>
@@ -45,6 +46,16 @@
 			<aside class="aside"></aside>
 		</div>
 	</header>
+	<nav class="main-menu">
+		<button type="button" class="main-menu__close"></button>
+		<ul>
+			<li><a href="#" class="main-menu__link active">главная</a></li>
+			<li><a href="#" class="main-menu__link">о компании</a></li>
+			<li><a href="#" class="main-menu__link">условия гарантии</a></li>
+			<li><a href="#" class="main-menu__link">доставка</a></li>
+			<li><a href="#" class="main-menu__link">прайс лист</a></li>
+		</ul>
+	</nav>
 	<section class="service-sec">
 		<div class="container">
 			<h1 class="service-sec__title">Качественно новый сервис-центр</h1>
@@ -287,6 +298,8 @@
 	</footer>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async defer></script>
 	<script src="js/contacts-map.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>

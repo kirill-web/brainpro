@@ -1,4 +1,19 @@
 @media (max-width: 1440px) {
+	.page-header {
+		.aside {
+			display: none;
+		}
+		.main {
+			min-width: 1px;
+			width: 100%;
+		}
+		.big-container {
+			padding: 0;
+		}
+	}
+	.menu-toggle--inside {
+		display: block;
+	}
 	.contacts {
 		.big-container {
 			max-width: 1175px;
@@ -14,7 +29,96 @@
 	}
 	.page-footer {
 		&__socials {
+			padding-right: 40px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.main-menu {
+		ul {
+			transform: translateX(-20%);
+		}
+		&__link {
+			font-size: 32px;
+			line-height: 32px;	
+		}
+	}
+	.our-advant {
+		&__item {
+			margin-left: 20px;
+			padding-left: 75px;
+		}
+	}
+	.about-us {
+		&__descr {
+			padding-right: 35px;
+		}
+	}
+	.contacts {
+		&__info {
+			padding-left: 20px;	
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.page-header {
+		&__status {
+			display: none;
+		}
+		&__contacts-item {
+			padding-left: 15px;
+			padding-right: 15px;
+			&--lang {
+				order: 3;
+				padding-right: 0;
+			}
+		}
+	}
+	.service-sec {
+		&__item {
+			width: 48%;
+		}
+	}
+	.our-advant {
+		.flex-wrap {
+			flex-wrap: wrap;
+		}
+		&__item {
+			width: 48%;
+			margin-left: 0;
+			margin-bottom: 40px;
+		}
+		&__img-item {
+			width: 32%;
+		}
+	}
+	.about-us {
+		.flex-wrap {
+			flex-direction: column;
+		}
+		&__title {
+			margin-bottom: 25px;
+		}
+		&__descr {
+			margin-bottom: 20px;
 			padding-right: 0;
+		}
+		&__info,
+		&__img {
+			width: 100%;
+		}
+		&__info {
+			margin-bottom: 20px;
+		}
+	}
+	.contacts {
+		&__map {
+			width: 70%;
+		}
+		&__info {
+			width: 30%;
 		}
 	}
 }
