@@ -17,8 +17,8 @@
 	.contacts {
 		.big-container {
 			max-width: 1175px;
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		.aside {
 			display: none;
@@ -119,6 +119,129 @@
 		}
 		&__info {
 			width: 30%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.page-header {
+		padding: 22px 0;
+		.flex-wrap {
+			justify-content: flex-start;
+		}
+		.menu-toggle--inside {
+			margin-right: 20px;
+		}
+		&__contacts {
+			display: none;
+		}
+		&__logo {
+			span {
+				display: none;
+			}
+		}
+		&__form {
+			display: block;
+		}
+	}
+	.main-menu {
+		ul {
+			transform: none;
+		}
+		&__link {
+			font-size: 24px;
+			line-height: 24px;
+			&:before {
+				left: -30px;
+			}
+		}
+		&__close {
+			top: 30px;
+			left: 25px;
+		}
+	}
+	.service-sec {
+		padding-top: 47px;
+		&__title {
+			font-size: 24px;
+			line-height: 36px;
+		}
+		&__descr {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+		&__items {
+			display: none;
+		}
+		&__mobile-items {
+			display: block;
+		}
+	}
+	.quick-bid {
+		display: block;
+	}
+	.our-advant {
+		margin-top: 0;
+		margin-bottom: 40px;
+		padding: 40px 0;
+		background-color: $menu-bg;
+		.flex-wrap {
+			margin: 0;
+		}
+		&__item {
+			width: 100%;
+			margin-left: 0;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&-title {
+				color: $white-color;
+			}
+			&:before {
+				border-color: $text-color;
+			}
+		}
+		&__image-items {
+			display: none;
+		}
+	}
+	.about-us {
+		display: none;
+	}
+	.contacts {
+		background-color: $white-color;
+		&__map {
+			display: none;
+		}
+		&__info {
+			padding-left: 0;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	
+	.page-footer {
+		background-color: $white-color;
+		padding: 0 0 40px 0;
+		.flex-wrap {
+			flex-direction: column;
+		}
+		&__link {
+			display: none;
+		}
+		&__copy {
+			padding-top: 35px;
+			border-top: 2px solid #acb2c2;
+			margin-bottom: 15px;
+		}
+		&__social {
+			margin-left: 0;
+			margin-right: 25px;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 }

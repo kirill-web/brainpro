@@ -28,8 +28,8 @@ a {
 .container {
 	width: 100%;
 	max-width: 1175px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -125,6 +125,26 @@ a {
 			background-color: $border-color;
 		}
 	}
+	&__form {
+		display: none;
+		margin-left: auto;
+	}
+	&__select {
+		display: block;
+		font-size: 14px;
+		line-height: 17px;
+		text-decoration: none;
+		padding: 2px 7px 5px 7px;
+		border: 2px solid $border-color;
+		border-radius: 15px;;
+		color: $black-color;
+		-webkit-appearance: none;
+		appearance: none;
+		text-align: center;
+		background-color: transparent;
+		font-family: $font-reg;
+		margin: 0;
+	}
 }
 
 .menu-toggle,
@@ -206,6 +226,54 @@ a {
 			&:before {
 				display: block;
 			}
+		}
+	}
+}
+
+.quick-bid {
+	display: none;
+	text-align: center;
+	margin-bottom: 47px;
+	.flex-wrap {
+		justify-content: center;
+		margin-bottom: 7px;
+	}
+	&__tel {
+		display: inline-block;
+		font-size: 16px;
+		color: $black-color;
+		position: relative;
+		font-family: $font-med;
+		&:first-child {
+			margin-right: 20px;
+			&:before {
+				content: '|';
+				font-family: $font-book;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -11px;
+				color: $text-color;
+			}
+		}
+	}
+	&__text {
+		font-size: 13px;
+		color: $text-color;
+		margin-top: 0;
+		margin-bottom: 35px;
+	}
+	&__btn {
+		padding: 16px 32px;
+		font-size: 16px;
+		text-align: center;
+		border-radius: 30px;
+		font-family: $font-reg;
+		border: 0;
+		color: $black-color;
+		background-color: $link2-color;
+		&:active {
+			background-color: $btn-active;
 		}
 	}
 }

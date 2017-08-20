@@ -6,6 +6,8 @@ $white-color: #fff;
 $text-color: #8790a6;
 $link-color: #284b96;
 $link2-color: #ffcb32;
+$btn-active: #feb637;
+$wrong-color: #df535d;
 
 $start-grad: #f2f3f7;
 $border-color: #d9dfe9;
@@ -16,6 +18,15 @@ $bg2: #dfeafd;
 $bg3: #fef4d6;
 
 //Fonts
+@font-face {
+    font-family: 'univia_prothin';
+    src: url('../fonts/univiapro-thin.woff2') format('woff2'),
+         url('../fonts/univiapro-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @font-face {
 	font-family: 'univia_probook';
 	src: url('../fonts/univiapro-book.woff2') format('woff2'), url('../fonts/univiapro-book.woff') format('woff');
@@ -44,6 +55,7 @@ $bg3: #fef4d6;
 	font-style: normal;
 }
 
+$font-thin: 'univia_prothin';
 $font-book: 'univia_probook';
 $font-reg: 'univia_proregular';
 $font-med: 'univia_promedium';
