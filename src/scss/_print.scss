@@ -21,7 +21,7 @@
 		font-size: 16px;
 		line-height: 26px;
 		margin-top: 0;
-		margin-bottom: 45px;
+		margin-bottom: 0;
 		color: $text-color;
 		span {
 			color: $wrong-color;
@@ -29,6 +29,7 @@
 		}
 	}
 	&__btn {
+		margin-top: 45px;
 		text-align: center;
 		background-color: transparent;
 		border: 2px solid $link2-color;
@@ -181,8 +182,10 @@
 		}
 	}
 	&__advant {
-		justify-content: space-between;
+		.container {
+			justify-content: space-between;
 		align-items: center;
+		}
 		margin-bottom: 75px;
 		&-item {
 			display: flex;
@@ -218,6 +221,47 @@
 			font-size: 16px;
 			line-height: 26px;
 			margin: 0;
+		}
+	}
+	&__mobile {
+		display: none;
+		padding-top: 40px;
+		&-title {
+			font-size: 16px;
+			line-height: 24px;
+			margin-top: 0;
+			margin-bottom: 17px;
+			a {
+				color: $link-color;
+				text-decoration: none;
+			}
+		}
+		&-descr {
+			font-size: 14px;
+			line-height: 18px;
+			color: $text-color;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		&-wrap {
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 20px;
+			border-bottom: 2px solid $border-color;
+		}
+		&-price {
+			font-size: 14px;
+		}
+		&-btn {
+			text-align: center;
+			border-radius: 30px;
+			font-size: 16px;
+			padding: 10px 18px;
+			border: 2px solid $link2-color;
+			background-color: transparent;
+			&:active {
+				background-color: $link2-color;
+			}
 		}
 	}
 }
