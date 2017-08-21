@@ -1176,6 +1176,240 @@ body {
     margin: 0;
     max-width: 525px; }
 
+.order-sec {
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 65px; }
+
+.order-form {
+  -webkit-box-shadow: 0 0 20px #ecedef;
+          box-shadow: 0 0 20px #ecedef;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 60px 95px; }
+  .order-form__title {
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center; }
+  .order-form__block {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d9dfe9;
+    margin-bottom: 18px; }
+    .order-form__block .flex-wrap {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+  .order-form__label {
+    display: block;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #8790a6;
+    text-align: left; }
+    .order-form__label--60 {
+      width: 60%; }
+    .order-form__label--40 {
+      width: 39%; }
+  .order-form__select, .order-form__input {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 18px 15px;
+    font-size: 16px;
+    color: #000;
+    background-color: #f2f3f7;
+    border: 1px solid #d9dfe9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none; }
+    .order-form__select--60, .order-form__input--60 {
+      width: 60%; }
+    .order-form__select--40, .order-form__input--40 {
+      width: 39%; }
+    .order-form__select--25, .order-form__input--25 {
+      width: 24%; }
+    .order-form__select--15, .order-form__input--15 {
+      width: 14%; }
+  .order-form__select {
+    background-repeat: no-repeat;
+    background-image: url(../img/select-arrow.png);
+    background-size: 10px 6px;
+    background-position: 97% 50%; }
+    .order-form__select--light {
+      background-color: #fff;
+      background-image: url(../img/select-light.png); }
+  .order-form__contacts .order-form__input {
+    width: 24%; }
+  .order-form__address {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .order-form__address .order-form__select--light {
+      width: 33%; }
+  .order-form__more {
+    width: 66%; }
+  .order-form__tabs, .order-form__tabs-back {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    border-radius: 8px;
+    border: 1px solid #d9dfe9;
+    margin-bottom: 20px; }
+  .order-form__tab, .order-form__tab-back {
+    text-align: center;
+    font-size: 16px;
+    padding: 17px 0;
+    border-right: 1px solid #d9dfe9;
+    width: 25%;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #000; }
+    .order-form__tab:first-child, .order-form__tab-back:first-child {
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px; }
+    .order-form__tab:last-child, .order-form__tab-back:last-child {
+      border: 0;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px; }
+    .order-form__tab:hover, .order-form__tab-back:hover {
+      background-color: #f2f3f7; }
+    .order-form__tab--disable {
+      text-decoration: line-through; }
+      .order-form__tab--disable:hover {
+        cursor: default;
+        background-color: #fff; }
+    .order-form__tab.active, .active.order-form__tab-back {
+      background-color: #f2f3f7;
+      font-family: "univia_proregular"; }
+  .order-form__shops {
+    border-bottom: 1px solid #d9dfe9;
+    padding-bottom: 20px;
+    margin-bottom: 23px; }
+  .order-form__shop {
+    display: block;
+    color: #284b96;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .order-form__shop:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      border-radius: 50%;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background-color: #ffcb32; }
+    .order-form__shop:hover {
+      text-decoration: none;
+      color: #000; }
+  .order-form__hint {
+    font-size: 14px;
+    color: #8790a6;
+    margin-top: 0;
+    margin-bottom: 25px; }
+  .order-form__check {
+    display: none; }
+    .order-form__check--deliv + label {
+      margin-top: 25px;
+      margin-bottom: 25px; }
+    .order-form__check:checked + label:before {
+      background-image: url(../img/check.png);
+      background-size: 18px 12px; }
+  .order-form__check-label {
+    display: block;
+    padding-left: 40px;
+    position: relative;
+    font-size: 16px;
+    color: #000; }
+    .order-form__check-label:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      left: 0;
+      border-radius: 8px;
+      border: 2px solid #40515d;
+      background-color: transparent;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: 50%; }
+    .order-form__check-label:hover {
+      cursor: pointer; }
+  .order-form__buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 50px; }
+    .order-form__buttons .order-form__check-label {
+      display: inline-block;
+      vertical-align: middle;
+      color: #8790a6;
+      margin-left: 25px; }
+    .order-form__buttons a {
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 4px;
+      color: #284b96; }
+      .order-form__buttons a:hover {
+        text-decoration: none; }
+  .order-form__submit {
+    font-size: 18px;
+    text-align: center;
+    padding: 16px 48px 18px 48px;
+    border: 2px solid #ffcb32;
+    font-family: "univia_proregular";
+    border-radius: 30px;
+    background-color: #ffcb32;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .order-form__submit:active {
+      background-color: #feb637; }
+    .order-form__submit:hover {
+      background-color: transparent; }
+
 @media (max-width: 1440px) {
   .page-header .aside {
     display: none; }

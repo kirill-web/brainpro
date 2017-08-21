@@ -297,3 +297,248 @@
 		max-width: 525px;
 	}
 }
+.order-sec {
+	background-color: $white-color;
+	padding-top: 30px;
+	padding-bottom: 65px;
+}
+.order-form {
+	box-shadow: 0 0 20px #ecedef;
+	border-radius: 8px;
+	background-color: $white-color;
+	padding: 60px 95px;
+	&__title {
+		font-size: 34px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	&__block {
+		padding-bottom: 18px;
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 18px;
+		.flex-wrap {
+			justify-content: space-between;
+		}
+	}
+	&__label {
+		display: block;
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 12px;
+		color: $text-color;
+		text-align: left;
+		&--60 {
+			width: 60%;
+		}
+		&--40 {
+			width: 39%;
+		}
+	}
+	&__select,
+	&__input {
+		display: block;
+		width: 100%;
+		border-radius: 8px;
+		padding: 18px 15px;
+		font-size: 16px;
+		color: $black-color;
+		background-color: $start-grad;
+		border: 1px solid $border-color;
+		-webkit-appearance: none;
+		appearance: none;
+		&--60 {
+			width: 60%;
+		}
+		&--40 {
+			width: 39%;
+		}
+		&--25 {
+			width: 24%;
+		}
+		&--15 {
+			width: 14%;
+		}
+	}
+	&__select {
+		background-repeat: no-repeat;
+		background-image: url(../img/select-arrow.png);
+		background-size: 10px 6px;
+		background-position: 97% 50%;
+		&--light {
+			background-color: $white-color;
+			background-image: url(../img/select-light.png);
+		}
+	}
+	&__contacts {
+		.order-form__input {
+			width: 24%;
+		}
+	}
+	&__address {
+		align-items: flex-start;
+		.order-form__select--light {
+			width: 33%;
+		}
+	}
+	&__more {
+		width: 66%;
+	}
+	&__tabs {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: stretch;
+		border-radius: 8px;
+		border: 1px solid $border-color;
+		margin-bottom: 20px;
+	}
+	&__tab {
+		text-align: center;
+		font-size: 16px;
+		padding: 17px 0;
+		border-right: 1px solid $border-color;
+		width: 25%;
+		text-decoration: none;
+		transition: all 0.3s;
+		color: $black-color;
+		&:first-child {
+			border-top-left-radius: 7px;
+			border-bottom-left-radius: 7px;
+		}
+		&:last-child {
+			border: 0;
+			border-top-right-radius: 7px;
+			border-bottom-right-radius: 7px;
+		}
+		&:hover {
+			background-color: $start-grad;
+		}
+		&--disable {
+			text-decoration: line-through;
+			&:hover {
+				cursor: default;
+				background-color: $white-color;
+			}
+		}
+		&.active {
+			background-color: $start-grad;
+			font-family: $font-reg;
+		}
+	}
+	&__tabs-back {
+		@extend .order-form__tabs;
+	}
+	&__tab-back {
+		@extend .order-form__tab;
+	}
+	&__shops {
+		border-bottom: 1px solid $border-color;
+		padding-bottom: 20px;
+		margin-bottom: 23px;
+	}
+	&__shop {
+		display: block;
+		color: $link-color;
+		font-size: 16px;
+		margin-bottom: 12px;
+		padding-left: 20px;
+		position: relative;
+		transition: all 0.3s;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 50%;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			background-color: $link2-color;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $black-color;
+		}
+	}
+	&__hint {
+		font-size: 14px;
+		color: $text-color;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+	&__check {
+		display: none;
+		&--deliv + label {
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		&:checked + label:before {
+			background-image: url(../img/check.png);
+			background-size: 18px 12px;
+		}
+	}
+	&__check-label {
+		display: block;
+		padding-left: 40px;
+		position: relative;
+		font-size: 16px;
+		color: $black-color;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			border-radius: 8px;
+			border: 2px solid $menu-bg;
+			background-color: transparent;
+			width: 30px;
+			height: 30px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: 50px;
+		.order-form__check-label {
+			display: inline-block;
+			vertical-align: middle;
+			color: $text-color;
+			margin-left: 25px;
+		}
+		a {
+			font-size: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 4px;
+			color: $link-color;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__submit {
+		font-size: 18px;
+		text-align: center;
+		padding: 16px 48px 18px 48px;
+		border: 2px solid $link2-color;
+		font-family: $font-reg;
+		border-radius: 30px;
+		background-color: $link2-color;
+		transition: all 0.3s;
+		&:active {
+			background-color: $btn-active;
+		}
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
