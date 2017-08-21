@@ -41,7 +41,7 @@
 		}
 		&__link {
 			font-size: 32px;
-			line-height: 32px;	
+			line-height: 32px;
 		}
 	}
 	.our-advant {
@@ -57,7 +57,19 @@
 	}
 	.contacts {
 		&__info {
-			padding-left: 20px;	
+			padding-left: 20px;
+		}
+	}
+	.order-form {
+		padding-left: 25px;
+		padding-right: 25px;
+		&__address {
+			.order-form__select--light {
+				width: 29%;
+			}
+		}
+		&__more {
+			width: 70%;
 		}
 	}
 }
@@ -119,6 +131,38 @@
 		}
 		&__info {
 			width: 30%;
+		}
+	}
+	.prices-sec {
+		&__title-wrap {
+			flex-direction: column;
+			margin-bottom: 25px;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+	}
+	.order-form {
+		&__address {
+			flex-direction: column;
+			.order-form__select--light {
+				width: 50%;
+				margin-bottom: 20px;
+			}
+		}
+		&__address-labels {
+			.order-form__label--33 {
+				width: 100%;
+			}
+			.order-form__label--66 {
+				display: none;
+			}
+		}
+		&__label--hidden {
+			display: block;
+		}
+		&__more {
+			width: 100%;
 		}
 	}
 }
@@ -221,7 +265,6 @@
 			margin-bottom: 40px;
 		}
 	}
-	
 	.page-footer {
 		background-color: $white-color;
 		padding: 0 0 40px 0;

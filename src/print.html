@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="print-body">
 	<header class="page-header">
 		<div class="big-container">
 			<aside class="aside">
@@ -76,7 +76,7 @@
 		<div class="container">
 			<div class="prices-sec__title-wrap flex-wrap">
 				<h2 class="prices-sec__title">Стоимость услуг</h2>
-				<div class="prices-sec__tabs">
+				<div class="prices-sec__tabs flex-wrap">
 					<button class="prices-sec__tab active" data-id="prices-bw">чб лазерные принтеры и мфу</button>
 					<button class="prices-sec__tab" data-id="prices-colors">цветные лазерные принтеры и мфу</button>
 				</div>
@@ -264,9 +264,9 @@
 					</div>
 				</div>
 				<div class="order-form__block">
-					<div class="flex-wrap">
-						<label for="" class="order-form__label order-form__label--40">Ваш город</label>
-						<label for="" class="order-form__label order-form__label--60">Как хотите передать устройство?</label>
+					<div class="flex-wrap order-form__address-labels">
+						<label for="" class="order-form__label order-form__label--33">Ваш город</label>
+						<label for="" class="order-form__label order-form__label--66">Как хотите передать устройство?</label>
 					</div>
 					<div class="order-form__address flex-wrap">
 						<select name="" id="" class="order-form__select order-form__select--40 order-form__select--light">
@@ -274,34 +274,68 @@
 					<option value="">Одесса</option>
 						</select>
 						<div class="order-form__more">
-							<div class="order-form__tabs">
-								<a href="" class="order-form__tab order-form__tab--disable">Сервис-центр</a>
-								<a href="" class="order-form__tab active">Магазины Brain</a>
-								<a href="" class="order-form__tab">Новая почта</a>
-								<a href="" class="order-form__tab">Курьер</a>
+							<div class="order-form__give">
+							<label class="order-form__label order-form__label--hidden">Как хотите передать устройство?</label>
+								<div class="order-form__tabs">
+									<a href="" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
+									<a href="" class="order-form__tab active for-shops">Магазины Brain</a>
+									<a href="" class="order-form__tab for-post">Новая почта</a>
+									<a href="" class="order-form__tab for-courier">Курьер</a>
+								</div>
+								<div class="order-form__common-tab order-form__shops-wrap">
+									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
+									<div class="order-form__shops">
+										<a href="" class="order-form__shop">Вадима Гетьмана, 13</a>
+										<a href="" class="order-form__shop">Вышгородская, 32/2</a>
+										<a href="" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
+										<a href="" class="order-form__shop">Харьковское шоссе, 1</a>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__post">
+									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
+									<select name="" id="" class="order-form__select">
+										<option value="">№1. Тараса Пудренка 2</option>
+										<option value="">№1. Тараса Пудренка 20</option>
+									</select>
+									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give">
+									<label for="check-give" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
+									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+								</div>
+								<div class="order-form__common-tab order-form__courier">
+									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+								</div>
 							</div>
-							<label class="order-form__label">Адреса магазинов в вашем городе:</label>
-							<div class="order-form__shops">
-								<a href="" class="order-form__shop">Вадима Гетьмана, 13</a>
-								<a href="" class="order-form__shop">Вышгородская, 32/2</a>
-								<a href="" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
-								<a href="" class="order-form__shop">Харьковское шоссе, 1</a>
+							<div class="order-form__take">
+								<label class="order-form__label">Как хотите получить устройство?</label>
+								<div class="order-form__tabs-back">
+									<a href="" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
+									<a href="" class="order-form__tab-back active for-shops">Магазины Brain</a>
+									<a href="" class="order-form__tab-back for-post">Новая почта</a>
+									<a href="" class="order-form__tab-back for-courier">Курьер</a>
+								</div>
+								<div class="order-form__common-tab order-form__shops-wrap">
+									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
+									<div class="order-form__shops">
+										<a href="" class="order-form__shop">Вадима Гетьмана, 13</a>
+										<a href="" class="order-form__shop">Вышгородская, 32/2</a>
+										<a href="" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
+										<a href="" class="order-form__shop">Харьковское шоссе, 1</a>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__post">
+									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
+									<select name="" id="" class="order-form__select">
+										<option value="">№1. Тараса Пудренка 2</option>
+										<option value="">№1. Тараса Пудренка 20</option>
+									</select>
+									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-post">
+									<label for="check-post" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
+									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+								</div>
+								<div class="order-form__common-tab order-form__courier">
+									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+								</div>
 							</div>
-							<label class="order-form__label">Как хотите получить устройство?</label>
-							<div class="order-form__tabs-back">
-								<a href="" class="order-form__tab-back">Сервис-центр</a>
-								<a href="" class="order-form__tab-back">Магазины Brain</a>
-								<a href="" class="order-form__tab-back">Новая почта</a>
-								<a href="" class="order-form__tab-back">Курьер</a>
-							</div>
-							<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-							<select name="" id="" class="order-form__select">
-								<option value="">№1. Тараса Пудренка 2</option>
-								<option value="">№1. Тараса Пудренка 20</option>
-							</select>
-							<input type="checkbox" class="order-form__check order-form__check--deliv" id="check1">
-							<label for="check1" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-							<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
 							<div class="order-form__buttons">
 								<button class="order-form__submit">Отправить</button>
 								<input type="checkbox" class="order-form__check" id="check2" checked>
@@ -311,6 +345,25 @@
 					</div>
 				</div>
 			</form>
+		</div>
+	</section>
+	<section class="about-us">
+		<div class="container">
+			<div class="flex-wrap">
+				<div class="about-us__info">
+					<h2 class="about-us__title">Brain Pro Сервис</h2>
+					<p class="about-us__descr">Компания с 20 летним опытом работы, на рынке ИТ в сфере оптовых продаж, корпоративных и персональных решениях с наличием национальной сети собственных магазинов "Brain. Магазины умных покупок" и Интернет магазина Brain.com.ua.</p>
+					<span class="about-us__name">— команда BrainPro</span>
+				</div>
+				<div class="about-us__img">
+					<div class="about-us__img-item"><img src="img/combo-img.jpg" alt=""></div>
+					<!--
+					<div class="about-us__img-item"><img src="" alt=""></div>
+					<div class="about-us__img-item"><img src="" alt=""></div>
+					<div class="about-us__img-item"><img src="" alt=""></div>
+-->
+				</div>
+			</div>
 		</div>
 	</section>
 	<section class="contacts">
