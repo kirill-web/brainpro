@@ -354,6 +354,8 @@
 			padding: 45px 0;
 			.container {
 				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
 			}
 			&-item {
 				margin-left: 0;
@@ -401,5 +403,13 @@
 	}
 	.breadcrumbs {
 		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 425px) {
+	.quick-popup {
+		min-height: 100vh;
+		border: 0;
+		box-shadow: 0;
 	}
 }

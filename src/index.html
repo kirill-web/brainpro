@@ -356,6 +356,31 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- POPUP -->
+	<div class="quick-popup">
+		<button class="quick-popup__close"></button>
+		<h2 class="quick-popup__title">Быстрая заявка</h2>
+		<form action="" class="quick-popup__form">
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="name-popup">
+				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="tel-popup">
+				<label for="tel-popup" class="order-form__placeholder"><span>Телефон</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<textarea class="quick-popup__textarea" id="comment-popup"></textarea>
+				<label for="comment-popup" class="order-form__placeholder"><span>Пару слов о проблеме</span></label>
+			</div>
+			<input type="checkbox" class="order-form__check" id="check-popup2" checked>
+			<label for="check-popup2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			<button type="submit" class="quick-popup__submit">Отправить</button>
+		</form>
+	</div>
+	<!-- -->
+
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async defer></script>
 	<script src="js/markerclusterer.js"></script>
 	<script src="js/geocoder.js"></script>

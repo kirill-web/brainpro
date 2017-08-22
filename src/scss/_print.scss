@@ -193,6 +193,7 @@
 			margin-left: 95px;
 			position: relative;
 			padding-left: 78px;
+			min-height: 60px;
 			&:first-child {
 				margin-left: 0;
 			}
@@ -442,7 +443,8 @@
 	}
 	&__input {
 		position: relative;
-		input {
+		input,
+		textarea {
 			@extend .order-form__select;
 			background-image: none;
 		}
@@ -469,6 +471,10 @@
 				font-size: 14px;
 				padding-left: 16px;
 			}
+		}
+		textarea + .order-form__placeholder {
+			align-items: flex-start;
+			padding: 18px 15px;
 		}
 	}
 	&__placeholder {

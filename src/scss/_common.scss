@@ -315,3 +315,85 @@ body {
 		height: 20px;
 	}
 }
+
+.quick-popup {
+	display: none;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	max-width: 375px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $white-color;
+	padding: 40px 25px;
+	overflow-y: scroll;
+	max-height: 100vh;
+	border: 1px solid $border-color;
+	box-shadow: 0 0 5px $border-color;
+	&__close {
+		border: 0;
+		background-color: transparent;
+		padding: 0;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-repeat: no-repeat;
+		background-image: url(../img/popup-close.png);
+		width: 15px;
+		height: 15px;
+		background-size: 15px 15px;
+	}
+	&__title {
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	&__input {
+		margin-bottom: 15px;
+	}
+	.order-form__check-label {
+		color: $text-color;
+		text-align: left;
+		font-size: 14px;
+		+ a {
+			color: $link-color;
+			text-align: left;
+			font-size: 14px;
+		}
+	}
+	&__submit {
+		text-align: center;
+		border-radius: 30px;
+		margin-top: 30px;
+		background-color: $link2-color;
+		font-size: 16px;
+		font-family: $font-reg;
+		color: $black-color;
+		padding: 18px 45px;
+		border: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		&:active {
+			background-color: $btn-active;
+		}
+	}
+}
+
+.mobile-form {
+	@extend .quick-popup;
+	&__close {
+		@extend .quick-popup__close;
+	}
+	&__title {
+		@extend .quick-popup__title;
+	}
+	&__input,
+	&__select {
+		@extend .quick-popup__input;
+	}
+	&__next {
+		@extend .quick-popup__submit;
+	}
+}

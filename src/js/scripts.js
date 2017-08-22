@@ -103,7 +103,7 @@ $(document).ready(function () {
 	});
 	
 	// Плавные плейсхолдеры
-	$('.order-form__input input').focus(function(){
+	$('.order-form__input input, .order-form__input textarea').focus(function(){
 		$(this).next('.order-form__placeholder').addClass('active');
 		$(this).css({
 			"paddingTop":"23px",
@@ -124,6 +124,40 @@ $(document).ready(function () {
 	$('.about-us__img-item').hover(function(){
 		$('.about-us__img-item').removeClass('active');
 		$(this).addClass('active');
+	});
+	
+	// Быстрая заявка 
+	$('.quick-bid__btn, .print-promo__btn').on('click', function(){
+		$('body').addClass('no-scroll');
+		$('.quick-popup').fadeIn(200);
+	});
+	$('.quick-popup__close').on('click', function(){
+		$('.quick-popup').fadeOut(200);
+		$('body').removeClass('no-scroll');
+	});
+	$(document).mouseup(function (c) {
+		var elem = $('.quick-popup');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.fadeOut(200);
+			$('body').removeClass('no-scroll');
+		}
+	});
+	
+	// Заявка на мобильных
+	$('.prices-sec__mobile-btn').on('click', function(){
+		$('body').addClass('no-scroll');
+		$('.mobile-form').fadeIn(200);
+	});
+	$('.mobile-form__close').on('click', function(){
+		$('.mobile-form').fadeOut(200);
+		$('body').removeClass('no-scroll');
+	});
+	$(document).mouseup(function (c) {
+		var elem = $('.mobile-form');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.fadeOut(200);
+			$('body').removeClass('no-scroll');
+		}
 	});
 	
 	

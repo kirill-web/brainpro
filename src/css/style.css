@@ -540,6 +540,66 @@ body {
     width: 20px;
     height: 20px; }
 
+.quick-popup, .mobile-form {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  max-width: 375px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px 25px;
+  overflow-y: scroll;
+  max-height: 100vh;
+  border: 1px solid #d9dfe9;
+  -webkit-box-shadow: 0 0 5px #d9dfe9;
+          box-shadow: 0 0 5px #d9dfe9; }
+  .quick-popup__close, .mobile-form__close {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../img/popup-close.png);
+    width: 15px;
+    height: 15px;
+    background-size: 15px 15px; }
+  .quick-popup__title, .mobile-form__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px; }
+  .quick-popup__input, .mobile-form__input, .mobile-form__select {
+    margin-bottom: 15px; }
+  .quick-popup .order-form__check-label, .mobile-form .order-form__check-label {
+    color: #8790a6;
+    text-align: left;
+    font-size: 14px; }
+    .quick-popup .order-form__check-label + a, .mobile-form .order-form__check-label + a {
+      color: #284b96;
+      text-align: left;
+      font-size: 14px; }
+  .quick-popup__submit, .mobile-form__next {
+    text-align: center;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: #ffcb32;
+    font-size: 16px;
+    font-family: "univia_proregular";
+    color: #000;
+    padding: 18px 45px;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+    .quick-popup__submit:active, .mobile-form__next:active {
+      background-color: #feb637; }
+
 .service-sec {
   padding-top: 77px; }
   .service-sec__title {
@@ -1164,7 +1224,8 @@ body {
             align-items: center;
     margin-left: 95px;
     position: relative;
-    padding-left: 78px; }
+    padding-left: 78px;
+    min-height: 60px; }
     .prices-sec__advant-item:first-child {
       margin-left: 0; }
     .prices-sec__advant-item:before {
@@ -1349,7 +1410,8 @@ body {
       width: 33%; }
     .order-form__label--hidden {
       display: none; }
-  .order-form__select, .order-form__input input {
+  .order-form__select, .order-form__input input,
+  .order-form__input textarea {
     display: block;
     width: 100%;
     border-radius: 8px;
@@ -1369,7 +1431,8 @@ body {
       width: 24%; }
     .order-form__select--15, .order-form__input--15 {
       width: 14%; }
-  .order-form__select, .order-form__input input {
+  .order-form__select, .order-form__input input,
+  .order-form__input textarea {
     background-repeat: no-repeat;
     background-image: url(../img/select-arrow.png);
     background-size: 10px 6px;
@@ -1379,7 +1442,8 @@ body {
       background-image: url(../img/select-light.png); }
   .order-form__input {
     position: relative; }
-    .order-form__input input {
+    .order-form__input input,
+    .order-form__input textarea {
       background-image: none; }
     .order-form__input.error input {
       border-color: #df535d; }
@@ -1389,6 +1453,12 @@ body {
       color: #df535d;
       font-size: 14px;
       padding-left: 16px; }
+    .order-form__input textarea + .order-form__placeholder {
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      padding: 18px 15px; }
   .order-form__placeholder {
     position: absolute;
     width: 100%;
@@ -1931,7 +2001,15 @@ body {
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
-                flex-direction: column; }
+                flex-direction: column;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
       .prices-sec__advant-item {
         margin-left: 0;
         color: #fff;
@@ -1963,3 +2041,10 @@ body {
       margin-bottom: 25px; }
   .breadcrumbs {
     margin-bottom: 25px; } }
+
+@media (max-width: 425px) {
+  .quick-popup, .mobile-form {
+    min-height: 100vh;
+    border: 0;
+    -webkit-box-shadow: 0;
+            box-shadow: 0; } }
