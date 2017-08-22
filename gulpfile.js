@@ -45,7 +45,8 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
 	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js'
+		'src/libs/jquery/dist/jquery.min.js',
+		'src/libs/masked.min.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {

@@ -292,15 +292,30 @@
 					<option value="">Samsung</option>
 					<option value="">Apple</option>
 				</select>
-						<input type="text" class="order-form__input order-form__input--15" placeholder="Модель">
+						<div class="order-form__input order-form__input--15">
+							<input type="text" id="model">
+							<label for="model" class="order-form__placeholder"><span>Модель</span></label>
+						</div>
 					</div>
 				</div>
 				<div class="order-form__block">
 					<div class="order-form__contacts flex-wrap">
-						<input type="text" class="order-form__input" placeholder="Фамилия">
-						<input type="text" class="order-form__input" placeholder="Имя">
-						<input type="tel" class="order-form__input" placeholder="Телефон">
-						<input type="email" class="order-form__input" placeholder="Эл. почта">
+						<div class="order-form__input">
+							<input type="text" id="surname">
+							<label for="surname" class="order-form__placeholder"><span>Фамилия</span></label>
+						</div>
+						<div class="order-form__input">
+							<input type="text" id="name">
+							<label for="name" class="order-form__placeholder"><span>Имя</span></label>
+						</div>
+						<div class="order-form__input">
+							<input type="tel" class="order-form__input--tel" id="tel">
+							<label for="tel" class="order-form__placeholder"><span>Телефон</span></label>
+							</div>
+						<div class="order-form__input error">
+							<input type="email" id="email">
+							<label for="email" class="order-form__placeholder"><span>Эл. почта</span></label>
+						</div>
 					</div>
 				</div>
 				<div class="order-form__block">
@@ -326,7 +341,17 @@
 									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
 									<div class="order-form__shops">
 										<a href="" class="order-form__shop">Вадима Гетьмана, 13</a>
+										<div class="order-form__shop-info">
+											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
+											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
+											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
+										</div>
 										<a href="" class="order-form__shop">Вышгородская, 32/2</a>
+										<div class="order-form__shop-info">
+											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
+											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
+											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
+										</div>
 										<a href="" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
 										<a href="" class="order-form__shop">Харьковское шоссе, 1</a>
 									</div>
@@ -339,10 +364,16 @@
 									</select>
 									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give">
 									<label for="check-give" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+									<div class="order-form__input">
+										<input type="text" id="street1">
+										<label for="street1" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
 								</div>
 								<div class="order-form__common-tab order-form__courier">
-									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+									<div class="order-form__input">
+										<input type="text" id="street11">
+										<label for="street11" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
 								</div>
 							</div>
 							<div class="order-form__take">
@@ -357,6 +388,11 @@
 									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
 									<div class="order-form__shops">
 										<a href="" class="order-form__shop">Вадима Гетьмана, 13</a>
+										<div class="order-form__shop-info">
+											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
+											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
+											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
+										</div>
 										<a href="" class="order-form__shop">Вышгородская, 32/2</a>
 										<a href="" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
 										<a href="" class="order-form__shop">Харьковское шоссе, 1</a>
@@ -370,10 +406,16 @@
 									</select>
 									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-post">
 									<label for="check-post" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+									<div class="order-form__input">
+										<input type="text" id="street2">
+										<label for="street2" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
 								</div>
 								<div class="order-form__common-tab order-form__courier">
-									<input type="text" class="order-form__input" placeholder="Улица, номер дома и квартира">
+									<div class="order-form__input">
+										<input type="text" id="street22">
+										<label for="street22" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
 								</div>
 							</div>
 							<div class="order-form__buttons">
@@ -396,12 +438,10 @@
 					<span class="about-us__name">— команда BrainPro</span>
 				</div>
 				<div class="about-us__img">
-					<div class="about-us__img-item"><img src="img/combo-img.jpg" alt=""></div>
-					<!--
-					<div class="about-us__img-item"><img src="" alt=""></div>
-					<div class="about-us__img-item"><img src="" alt=""></div>
-					<div class="about-us__img-item"><img src="" alt=""></div>
--->
+					<div class="about-us__img-item about-us__img-item--first"><img src="img/slide4.jpg" alt=""></div>
+					<div class="about-us__img-item about-us__img-item--second"><img src="img/slide4.jpg" alt=""></div>
+					<div class="about-us__img-item about-us__img-item--third"><img src="img/slide4.jpg" alt=""></div>
+					<div class="about-us__img-item about-us__img-item--fourth active"><img src="img/slide4.jpg" alt=""></div>
 				</div>
 			</div>
 		</div>
@@ -456,6 +496,8 @@
 		</div>
 	</footer>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async defer></script>
+	<script src="js/markerclusterer.js"></script>
+	<script src="js/geocoder.js"></script>
 	<script src="js/contacts-map.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/scripts.js"></script>

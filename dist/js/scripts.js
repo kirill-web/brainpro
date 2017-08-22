@@ -57,7 +57,7 @@ $(document).ready(function () {
 			$('.order-form__give .order-form__courier').show();
 		}
 	});
-	
+
 	// Получить товар
 	$('.order-form__tab-back:not(.order-form__tab-back--disable)').on('click', function (e) {
 		e.preventDefault();
@@ -78,11 +78,66 @@ $(document).ready(function () {
 	});
 
 	// Доплачу за доставку до адреса
-	$('.order-form__post .order-form__check').change(function(){
+	$('.order-form__post .order-form__check').change(function () {
 		if ($(this).is(':checked')) {
 			$(this).siblings('.order-form__input').show();
 		} else {
 			$(this).siblings('.order-form__input').hide();
 		}
 	});
+
+	// Маска для телефона
+	$(".order-form__input--tel").mask("(999) 999-99-99", {
+		placeholder: "(___) ___-__-__"
+	});
+
+	// Подробная инфа о магазине
+	$('.order-form__shop').click(function (e) {
+		e.preventDefault();
+		$('.order-form__shop').not(this).removeClass('active').next('.order-form__shop-info').slideUp(200);
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active').next('.order-form__shop-info').slideUp(200);
+		} else {
+			$(this).addClass('active').next('.order-form__shop-info').slideDown(200);
+		}
+	});
+	
+	// Плавные плейсхолдеры
+	$('.order-form__input input').focus(function(){
+		$(this).next('.order-form__placeholder').addClass('active');
+		$(this).css({
+			"paddingTop":"23px",
+			"paddingBottom":"13px"
+		});
+	});
+	$('.order-form__input input').focusout(function(){
+		if ($(this).val() == "") {
+			$(this).next('.order-form__placeholder').removeClass('active');
+			$(this).css({
+			"paddingTop":"18px",
+			"paddingBottom":"18px"
+		});
+		} 
+	});
+	
+	// Слайдер 
+	$('.about-us__img-item').hover(function(){
+		$('.about-us__img-item').removeClass('active');
+		$(this).addClass('active');
+	});
+	
+	
+	// Смена города
+	  $('.contacts__select').on('change', function() {
+    var city = $(this).val()
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({'address': city
+    }, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        mapContacts.setCenter(results[0].geometry.location);
+      } else {
+        // something is wrong
+      }
+    });
+  });
 });
