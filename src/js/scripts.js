@@ -45,16 +45,16 @@ $(document).ready(function () {
 		$('.order-form__tab').removeClass('active');
 		$(this).addClass('active');
 		if ($('.order-form__tab.for-shops').hasClass('active')) {
-			$('.order-form__give .order-form__common-tab').hide();
-			$('.order-form__give .order-form__shops-wrap').show();
+			$('.order-form__give .order-form__common-tab, .mobile-form .order-form__common-tab').hide();
+			$('.order-form__give .order-form__shops-wrap, .mobile-form .order-form__shops-wrap').show();
 		}
 		if ($('.order-form__tab.for-post').hasClass('active')) {
-			$('.order-form__give .order-form__common-tab').hide();
-			$('.order-form__give .order-form__post').show();
+			$('.order-form__give .order-form__common-tab, .mobile-form .order-form__common-tab').hide();
+			$('.order-form__give .order-form__post, .mobile-form .order-form__post').show();
 		}
 		if ($('.order-form__tab.for-courier').hasClass('active')) {
-			$('.order-form__give .order-form__common-tab').hide();
-			$('.order-form__give .order-form__courier').show();
+			$('.order-form__give .order-form__common-tab, .mobile-form .order-form__common-tab').hide();
+			$('.order-form__give .order-form__courier, .mobile-form .order-form__courier').show();
 		}
 	});
 
@@ -138,8 +138,8 @@ $(document).ready(function () {
 	$(document).mouseup(function (c) {
 		var elem = $('.quick-popup');
 		if (c.target != elem[0] && !elem.has(c.target).length) {
-			elem.fadeOut(200);
 			$('body').removeClass('no-scroll');
+			elem.fadeOut(200);
 		}
 	});
 	
@@ -147,17 +147,27 @@ $(document).ready(function () {
 	$('.prices-sec__mobile-btn').on('click', function(){
 		$('body').addClass('no-scroll');
 		$('.mobile-form').fadeIn(200);
+		$('.mobile-form__steps').removeClass('active');
+		$('.mobile-form__steps#step-one').addClass('active');
 	});
 	$('.mobile-form__close').on('click', function(){
 		$('.mobile-form').fadeOut(200);
 		$('body').removeClass('no-scroll');
 	});
-	$(document).mouseup(function (c) {
+	$(document).mouseup(function(a) {
 		var elem = $('.mobile-form');
-		if (c.target != elem[0] && !elem.has(c.target).length) {
-			elem.fadeOut(200);
+		if (a.target != elem[0] && !elem.has(a.target).length) {
 			$('body').removeClass('no-scroll');
+			elem.fadeOut(200);
 		}
+	});
+	
+	// Форма по шагам на мобильных
+	$('.mobile-form__next, .mobile-form__prev').on('click', function(){
+		var dataId = $(this).attr('data-id');
+
+		$('.mobile-form__steps').removeClass('active');
+		$('.mobile-form__steps#' + dataId).addClass('active');
 	});
 	
 	
