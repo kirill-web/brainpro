@@ -453,9 +453,9 @@
 				<div class="contacts__info">
 					<form action="#" class="contacts__form">
 						<select class="contacts__select">
-						<option value="ivano">Ивано-франковск</option>
-						<option value="kiev">Киев</option>
-						<option value="odessa">Одесса</option>
+						<option value="Ивано-франковск">Ивано-франковск</option>
+						<option value="Киев">Киев</option>
+						<option value="Одесса">Одесса</option>
 					</select>
 						<div class="contacts__city">
 							<div class="contacts__info-item">
@@ -495,8 +495,45 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- POPUP -->
+	<!-- DESKTOP QUICK POPUP -->
+	<form action="#" class="big-quick-popup">
+		<button type="button" class="big-quick-popup__close"></button>
+		<div class="big-quick-popup__container">
+			<div class="flex-wrap">
+				<div class="big-quick-popup__input">
+					<input type="text" id="name-big">
+					<label for="name-big" class="big-quick-popup__placeholder"><span>Имя и фамилия</span></label>
+				</div>
+				<div class="big-quick-popup__input">
+					<input type="text" id="tel-big">
+					<label for="tel-big" class="big-quick-popup__placeholder"><span>Телефон</span></label>
+				</div>
+			</div>
+			<div class="big-quick-popup__input">
+				<input type="text" id="problem-big">
+				<label for="problem-big" class="big-quick-popup__placeholder"><span>Пару слов о проблеме</span></label>
+			</div>
+			<div class="flex-wrap">
+				<button type="button" class="big-quick-popup__submit">Отправить</button>
+				<input type="checkbox" class="order-form__check" id="big-agree" checked>
+				<label for="big-agree" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			</div>
+		</div>
+		<div class="big-quick-popup__done">
+			<h2 class="big-quick-popup__title">Заявка отправлена</h2>
+			<p class="big-quick-popup__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.</p>
+			<p class="big-quick-popup__goodday">Хорошего дня!</p>
+			<div class="quick-bid">
+					<div class="flex-wrap">
+						<span class="quick-bid__tel">0 800 215 500</span>
+						<span class="quick-bid__tel">067 353 76 67</span>
+					</div>
+					<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+				</div>
+		</div>
+	</form>
+	<!--  -->
+	<!-- QUICK POPUP -->
 	<div class="quick-popup">
 		<button class="quick-popup__close"></button>
 		<h2 class="quick-popup__title">Быстрая заявка</h2>
@@ -519,6 +556,7 @@
 		</form>
 	</div>
 	<!-- -->
+	<!-- MOBILE STEP BY STEP FORM -->
 	<form action="#" class="mobile-form">
 		<button class="mobile-form__close"></button>
 		<div class="mobile-form__steps active" id="step-one">
@@ -676,18 +714,17 @@
 			<p class="mobile-form__text">Производитель и модель указаны на устройстве. Также на его упаковке или документации</p>
 			<p class="mobile-form__good-day">Хорошего дня!</p>
 			<div class="quick-bid">
-					<div class="flex-wrap">
-						<span class="quick-bid__tel">0 800 215 500</span>
-						<span class="quick-bid__tel">067 353 76 67</span>
-					</div>
-					<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+				<div class="flex-wrap">
+					<span class="quick-bid__tel">0 800 215 500</span>
+					<span class="quick-bid__tel">067 353 76 67</span>
 				</div>
+				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+			</div>
 		</div>
 	</form>
-
+	<!--  -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async defer></script>
 	<script src="js/markerclusterer.js"></script>
-	<script src="js/geocoder.js"></script>
 	<script src="js/contacts-map.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/scripts.js"></script>

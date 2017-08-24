@@ -8,7 +8,7 @@ function initMap() {
 
 	var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
 		center: ivano,
-		zoom: 13,
+		zoom: 12,
 		styles: [
 			{
 				"featureType": "water",
@@ -194,7 +194,21 @@ function initMap() {
 		});
 	});
 	var markerCluster = new MarkerClusterer(mapContacts, markers, {
-		imagePath: '../img/cluster.png'
+		imagePath: '../img/cluster'
+	});
+	// Смена города
+	$('.contacts__select').on('change', function () {
+		var city = $(this).val()
+		var geocoder = new google.maps.Geocoder();
+		geocoder.geocode({
+			'address': city
+		}, function (results, status) {
+			if (status == google.maps.GeocoderStatus.OK) {
+				mapContacts.setCenter(results[0].geometry.location);
+			} else {
+				// something is wrong
+			}
+		});
 	});
 }
 var locations = [
@@ -209,5 +223,13 @@ var locations = [
 	{
 		lat: 48.927988,
 		lng: 24.715421
-		}
+		},
+	{
+		lat: 50.452228,
+		lng: 30.522073
+	},
+	{
+		lat: 50.451921,
+		lng: 30.524433
+	}
 	];
