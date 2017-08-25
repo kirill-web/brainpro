@@ -1,4 +1,6 @@
-$(document).ready(function(){
+
+google.maps.event.addDomListener(window, 'load', initMap);
+
 	function initMap() {
 	var ivano = {
 		lat: 48.924104,
@@ -234,4 +236,3 @@ var locations = [
 		lng: 30.524433
 	}
 	];
-});
