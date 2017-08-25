@@ -307,7 +307,9 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: row;
-		max-height: 330px;
+		align-items: stretch;
+		justify-content: flex-start;
+		max-height: 340px;
 	}
 	&__img-item {
 		width: 13%;
@@ -315,6 +317,7 @@
 		position: relative;
 		align-items: stretch;
 		transition: all 0.3s;
+		min-height: 100%;
 		&:before {
 			content: '';
 			position: absolute;
@@ -335,6 +338,7 @@
 			display: block;
 			height: auto;
 			width: 100%;
+			height: 340px;
 		}
 	}
 	&__title {
