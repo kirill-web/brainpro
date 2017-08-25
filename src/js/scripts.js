@@ -246,4 +246,6 @@ $(document).ready(function () {
 
 	// Кастомные селекты
 	$('.order-form__select, .contacts__select').selectric();
+	
+	new WOW().init();
 });

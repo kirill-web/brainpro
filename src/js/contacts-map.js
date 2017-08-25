@@ -1,4 +1,5 @@
-function initMap() {
+$(document).ready(function(){
+	function initMap() {
 	var ivano = {
 		lat: 48.924104,
 		lng: 24.711977
@@ -233,3 +234,4 @@ var locations = [
 		lng: 30.524433
 	}
 	];
+});

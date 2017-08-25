@@ -47,7 +47,8 @@ gulp.task('scripts', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/jquery.selectric.min.js',
-		'src/libs/masked.min.js'
+		'src/libs/masked.min.js',
+		'src/libs/wow.min.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {
