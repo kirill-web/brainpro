@@ -259,7 +259,6 @@
 	}
 	.our-advant {
 		margin-top: 0;
-		margin-bottom: 40px;
 		padding: 40px 0;
 		background-color: $menu-bg;
 		.flex-wrap {
@@ -288,6 +287,7 @@
 	}
 	.contacts {
 		background-color: $white-color;
+		padding-top: 40px;
 		&__map {
 			display: none;
 		}
@@ -343,7 +343,6 @@
 		}
 	}
 	.prices-sec {
-		margin-bottom: 43px;
 		&__title-wrap,
 		&__items {
 			display: none !important;

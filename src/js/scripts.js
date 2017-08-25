@@ -1,4 +1,9 @@
 $(document).ready(function () {
+	
+	// Prevent # behavior
+	$('[href="#"]').click(function (e) {
+		e.preventDefault();
+	});
 
 	// Мобильное меню
 	$('.menu-toggle, .menu-toggle--inside').on('click', function () {
@@ -40,8 +45,8 @@ $(document).ready(function () {
 	});
 
 	// Отдать товар
-	$('.order-form__tab:not(.order-form__tab--disable)').on('click', function (b) {
-		b.preventDefault();
+	$('.order-form__tab:not(.order-form__tab--disable)').on('click', function (e) {
+		e.preventDefault();
 		$('.order-form__tab').removeClass('active');
 		$(this).addClass('active');
 		if ($('.order-form__tab.for-shops').hasClass('active')) {
@@ -59,8 +64,8 @@ $(document).ready(function () {
 	});
 
 	// Получить товар
-	$('.order-form__tab-back:not(.order-form__tab-back--disable)').on('click', function (a) {
-		a.preventDefault();
+	$('.order-form__tab-back:not(.order-form__tab-back--disable)').on('click', function (e) {
+		e.preventDefault();
 		$('.order-form__tab-back').removeClass('active');
 		$(this).addClass('active');
 		if ($('.order-form__tab-back.for-shops').hasClass('active')) {
@@ -92,8 +97,8 @@ $(document).ready(function () {
 	});
 
 	// Подробная инфа о магазине
-	$('.order-form__shop').click(function (d) {
-		d.preventDefault();
+	$('.order-form__shop').click(function (e) {
+		e.preventDefault();
 		$('.order-form__shop').not(this).removeClass('active').next('.order-form__shop-info').slideUp(200);
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active').next('.order-form__shop-info').slideUp(200);
@@ -170,10 +175,10 @@ $(document).ready(function () {
 		$('.quick-popup').fadeOut(200);
 		$('body').removeClass('no-scroll');
 	});
-	$(document).mouseup(function (c) {
+	$(document).mouseup(function (e) {
 		var elem = $('.quick-popup');
 		if (elem.is(':visible')) {
-			if (c.target != elem[0] && !elem.has(c.target).length) {
+			if (e.target != elem[0] && !elem.has(e.target).length) {
 				$('body').removeClass('no-scroll');
 				elem.fadeOut(200);
 			}

@@ -2502,7 +2502,6 @@ body {
     display: block; }
   .our-advant {
     margin-top: 0;
-    margin-bottom: 40px;
     padding: 40px 0;
     background-color: #40515d; }
     .our-advant .flex-wrap {
@@ -2522,7 +2521,8 @@ body {
   .about-us {
     display: none; }
   .contacts {
-    background-color: #fff; }
+    background-color: #fff;
+    padding-top: 40px; }
     .contacts__map {
       display: none; }
     .contacts__info {
@@ -2567,41 +2567,39 @@ body {
       margin-bottom: 27px; }
     .print-promo__btn {
       display: none; }
-  .prices-sec {
-    margin-bottom: 43px; }
-    .prices-sec__title-wrap, .prices-sec__items {
-      display: none !important; }
-    .prices-sec__advant {
-      margin-bottom: 0;
-      background-color: #40515d;
-      padding: 45px 0; }
-      .prices-sec__advant .container {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-            -ms-flex-align: start;
-                align-items: flex-start; }
-      .prices-sec__advant-item {
-        margin-left: 0;
-        color: #fff;
-        margin-bottom: 15px;
-        padding-left: 78px; }
-        .prices-sec__advant-item:last-child {
-          margin-bottom: 0; }
-        .prices-sec__advant-item:before {
-          background-size: 60px 60px;
-          width: 60px;
-          height: 60px; }
-    .prices-sec__mobile {
-      display: block; }
+  .prices-sec__title-wrap, .prices-sec__items {
+    display: none !important; }
+  .prices-sec__advant {
+    margin-bottom: 0;
+    background-color: #40515d;
+    padding: 45px 0; }
+    .prices-sec__advant .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .prices-sec__advant-item {
+      margin-left: 0;
+      color: #fff;
+      margin-bottom: 15px;
+      padding-left: 78px; }
+      .prices-sec__advant-item:last-child {
+        margin-bottom: 0; }
+      .prices-sec__advant-item:before {
+        background-size: 60px 60px;
+        width: 60px;
+        height: 60px; }
+  .prices-sec__mobile {
+    display: block; }
   .simple-fast {
     display: none; }
   .order-sec {
