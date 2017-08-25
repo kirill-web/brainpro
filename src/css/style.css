@@ -226,6 +226,237 @@ th {
   font-weight: normal;
   font-style: normal; }
 
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #fff;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.preloader {
+  height: 120px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50%;
+  width: 45%;
+  margin: 5%;
+  position: relative; }
+  .preloader .dot {
+    display: inline-block;
+    background: #666;
+    height: 5px;
+    width: 5px;
+    margin-right: 20px;
+    opacity: 0.7;
+    border-radius: 50%;
+    -webkit-animation: fade-out 5s linear infinite;
+            animation: fade-out 5s linear infinite; }
+  .preloader .pacman {
+    display: inline-block;
+    background: #666;
+    height: 20px;
+    vertical-align: bottom;
+    width: 20px;
+    margin-right: 20px;
+    opacity: 1;
+    border-radius: 50%;
+    position: relative;
+    -webkit-animation: move-forward 5s linear infinite;
+            animation: move-forward 5s linear infinite;
+    -webkit-transform: translateX(-40px);
+        -ms-transform: translateX(-40px);
+            transform: translateX(-40px); }
+  .preloader .dot:nth-child(1) {
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s; }
+  .preloader .dot:nth-child(2) {
+    -webkit-animation-delay: .4s;
+            animation-delay: .4s; }
+  .preloader .dot:nth-child(3) {
+    -webkit-animation-delay: .6s;
+            animation-delay: .6s; }
+  .preloader .dot:nth-child(4) {
+    -webkit-animation-delay: .8s;
+            animation-delay: .8s; }
+  .preloader .dot:nth-child(5) {
+    -webkit-animation-delay: 1.0s;
+            animation-delay: 1.0s; }
+  .preloader .dot:nth-child(6) {
+    -webkit-animation-delay: 1.2s;
+            animation-delay: 1.2s; }
+  .preloader .dot:nth-child(7) {
+    -webkit-animation-delay: 1.4s;
+            animation-delay: 1.4s; }
+  .preloader .dot:nth-child(8) {
+    -webkit-animation-delay: 1.6s;
+            animation-delay: 1.6s; }
+  .preloader .dot:nth-child(9) {
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s; }
+  .preloader .dot:nth-child(10) {
+    -webkit-animation-delay: 2.0s;
+            animation-delay: 2.0s; }
+  .preloader .dot:nth-child(11) {
+    -webkit-animation-delay: 2.2s;
+            animation-delay: 2.2s; }
+  .preloader .dot:nth-child(12) {
+    -webkit-animation-delay: 2.4s;
+            animation-delay: 2.4s; }
+  .preloader .pacman:before {
+    content: '';
+    display: inline-block;
+    background: transparent;
+    vertical-align: bottom;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: 0px;
+    border-right: 10px solid #fff;
+    opacity: 1;
+    position: absolute;
+    -webkit-animation: eat .4s infinite;
+            animation: eat .4s infinite; }
+  .preloader .ghost {
+    height: 25px;
+    width: 25px;
+    background: #669;
+    top: -22px;
+    left: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: relative;
+    -webkit-transform: translateX(365px);
+        -ms-transform: translateX(365px);
+            transform: translateX(365px);
+    -webkit-animation: ghost 5s linear infinite;
+            animation: ghost 5s linear infinite;
+    -webkit-animation-delay: 2.7s;
+            animation-delay: 2.7s;
+    opacity: 0; }
+    .preloader .ghost:before {
+      height: 5px;
+      content: '';
+      width: 3px;
+      background: #fff;
+      top: 7px;
+      left: 7px;
+      z-index: 10;
+      position: absolute; }
+    .preloader .ghost:after {
+      height: 5px;
+      content: '';
+      width: 3px;
+      background: #fff;
+      top: 7px;
+      right: 7px;
+      z-index: 10;
+      position: absolute; }
+
+@-webkit-keyframes eat {
+  50% {
+    -webkit-transform: translateX(10px) scale(0.1);
+            transform: translateX(10px) scale(0.1); } }
+
+@keyframes eat {
+  50% {
+    -webkit-transform: translateX(10px) scale(0.1);
+            transform: translateX(10px) scale(0.1); } }
+
+@-webkit-keyframes ghost {
+  3% {
+    opacity: 1; }
+  35% {
+    opacity: 1; }
+  49% {
+    opacity: 0; }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@keyframes ghost {
+  3% {
+    opacity: 1; }
+  35% {
+    opacity: 1; }
+  49% {
+    opacity: 0; }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@-webkit-keyframes move-forward {
+  50% {
+    -webkit-transform: translateX(335px);
+            transform: translateX(335px); }
+  50.1% {
+    -webkit-transform: translateX(335px) scaleX(-1);
+            transform: translateX(335px) scaleX(-1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-40px) scaleX(-1);
+            transform: translateX(-40px) scaleX(-1); } }
+
+@keyframes move-forward {
+  50% {
+    -webkit-transform: translateX(335px);
+            transform: translateX(335px); }
+  50.1% {
+    -webkit-transform: translateX(335px) scaleX(-1);
+            transform: translateX(335px) scaleX(-1);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(-40px) scaleX(-1);
+            transform: translateX(-40px) scaleX(-1); } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  89.99% {
+    opacity: 0; }
+  90% {
+    opacity: 0.5; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  89.99% {
+    opacity: 0; }
+  90% {
+    opacity: 0.5; } }
+
 html,
 body {
   font-family: "univia_probook";

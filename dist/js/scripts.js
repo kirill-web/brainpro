@@ -4,7 +4,7 @@ $(document).ready(function () {
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
 	});
-	
+
 	$('.order-form__input textarea').focusout(function(){
 		var vav = $(this).val();
 		console.log(vav)
@@ -33,7 +33,7 @@ $(document).ready(function () {
 			$(this).next('.service-sec__mobile-hide').slideDown(200);
 		}
 	});
-	
+
 	// Смена контактов при смене города
 	$('.contacts__select').change(function(){
 		var selectVal = $(this).val();
@@ -162,9 +162,9 @@ $(document).ready(function () {
 			});
 		}
 	});
-	
 
-	// Слайдер 
+
+	// Слайдер
 	$('.about-us__img-item').hover(function () {
 		$('.about-us__img-item').removeClass('active');
 		$(this).addClass('active');
@@ -189,7 +189,7 @@ $(document).ready(function () {
 		$('.big-quick-popup__done').show();
 	});
 
-	// Быстрая заявка 
+	// Быстрая заявка
 	$('.quick-bid__btn').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.overlay').show();
@@ -246,6 +246,14 @@ $(document).ready(function () {
 
 	// Кастомные селекты
 	$('.order-form__select, .contacts__select').selectric();
-	
+
 	new WOW().init();
+});
+
+
+$(window).on('load', function(){
+  // preloader
+  setTimeout(function(){
+    $('.preloader-container').fadeOut(300);
+  }, 1500);
 });
