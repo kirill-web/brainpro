@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	
+
 	// Prevent # behavior
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
@@ -26,6 +26,23 @@ $(document).ready(function () {
 			$(this).addClass('active');
 			$(this).parent('.container').addClass('active');
 			$(this).next('.service-sec__mobile-hide').slideDown(200);
+		}
+	});
+	
+	// Смена контактов при смене города
+	$('.contacts__select').change(function(){
+		var selectVal = $(this).val();
+		if (selectVal == 'Иваново-франковск') {
+			$('.contacts__city').removeClass('active');
+			$('.contacts__city#city-ivanovo').addClass('active');
+		}
+		if (selectVal == 'Киев') {
+			$('.contacts__city').removeClass('active');
+			$('.contacts__city#city-kiev').addClass('active');
+		}
+		if (selectVal == 'Одесса') {
+			$('.contacts__city').removeClass('active');
+			$('.contacts__city#city-odessa').addClass('active');
 		}
 	});
 
@@ -92,7 +109,7 @@ $(document).ready(function () {
 	});
 
 	// Маска для телефона
-	$(".order-form__input--tel").mask("(999) 999-99-99", {
+	$(".order-form__input--tel, .big-quick-popup__tel").mask("(999) 999-99-99", {
 		placeholder: "(___) ___-__-__"
 	});
 
@@ -155,13 +172,13 @@ $(document).ready(function () {
 	});
 	$('.big-quick-popup__close').on('click', function () {
 		$('.big-quick-popup').hide(300);
-		setTimeout(function(){
+		setTimeout(function () {
 			$('body').removeClass('no-scroll');
 			$('.big-quick-popup__container').show();
-		$('.big-quick-popup__done').hide();
+			$('.big-quick-popup__done').hide();
 		}, 300);
 	});
-	$('.big-quick-popup__submit').on('click', function(){
+	$('.big-quick-popup__submit').on('click', function () {
 		$('.big-quick-popup__container').hide();
 		$('.big-quick-popup__done').show();
 	});
@@ -169,10 +186,12 @@ $(document).ready(function () {
 	// Быстрая заявка 
 	$('.quick-bid__btn').on('click', function () {
 		$('body').addClass('no-scroll');
+		$('.overlay').show();
 		$('.quick-popup').fadeIn(200);
 	});
 	$('.quick-popup__close').on('click', function () {
 		$('.quick-popup').fadeOut(200);
+		$('.overlay').hide();
 		$('body').removeClass('no-scroll');
 	});
 	$(document).mouseup(function (e) {
@@ -180,6 +199,7 @@ $(document).ready(function () {
 		if (elem.is(':visible')) {
 			if (e.target != elem[0] && !elem.has(e.target).length) {
 				$('body').removeClass('no-scroll');
+				$('.overlay').hide();
 				elem.fadeOut(200);
 			}
 		}
@@ -188,12 +208,14 @@ $(document).ready(function () {
 	// Заявка на мобильных
 	$('.prices-sec__mobile-btn').on('click', function () {
 		$('body').addClass('no-scroll');
+		$('.overlay').show();
 		$('.mobile-form').fadeIn(200);
 		$('.mobile-form__steps').removeClass('active');
 		$('.mobile-form__steps#step-one').addClass('active');
 	});
 	$('.mobile-form__close').on('click', function () {
 		$('.mobile-form').fadeOut(200);
+		$('.overlay').hide();
 		$('body').removeClass('no-scroll');
 	});
 	$(document).mouseup(function (a) {
@@ -201,6 +223,7 @@ $(document).ready(function () {
 		if (form.is(':visible')) {
 			if (a.target != form[0] && !form.has(a.target).length && form.is(':visible')) {
 				$('body').removeClass('no-scroll');
+				$('.overlay').hide();
 				form.fadeOut(200);
 			}
 		}
@@ -214,7 +237,7 @@ $(document).ready(function () {
 		$('.mobile-form__steps#' + dataId).addClass('active');
 	});
 
-	
+
 	// Кастомные селекты
-	 $('.order-form__select, .contacts__select').selectric();
+	$('.order-form__select, .contacts__select').selectric();
 });
