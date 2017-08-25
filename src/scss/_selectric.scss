@@ -1,0 +1,301 @@
+/*======================================
+  Selectric v1.13.0
+======================================*/
+
+.selectric-wrapper {
+	position: relative;
+	cursor: pointer;
+}
+
+.selectric-responsive {
+	width: 100%;
+}
+
+.selectric {
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	padding: 18px 15px;
+	padding-right: 25px;
+	font-size: 16px;
+	color: $black-color;
+	background-color: $start-grad;
+	border: 1px solid $border-color;
+	-webkit-appearance: none;
+	appearance: none;
+	background-repeat: no-repeat;
+	background-image: url(../img/select-arrow.png);
+	background-size: 10px 6px;
+	background-position: 97% 50%;
+	position: relative;
+	overflow: hidden;
+	&-order-form__select--60 {
+		width: 60%;
+	}
+	&-order-form__select--40 {
+		width: 39%;
+	}
+	&-order-form__select--25 {
+		width: 24%;
+	}
+	&-order-form__select--15 {
+		width: 14%;
+	}
+}
+
+.selectric .label {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	color: $black-color;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.selectric .button {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	background-color: transparent;
+	color: #BBB;
+	text-align: center;
+	font: 0/0 a;
+	*font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial;
+}
+
+.selectric .button:after {
+	display: none;
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	border-top-color: #BBB;
+	border-bottom: none;
+}
+
+.selectric-focus .selectric {
+	background-color: $white-color;
+	background-image: url(../img/select-light.png);
+}
+
+.selectric-contacts__select .selectric {
+	display: inline-block;
+	width: auto;
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	margin-bottom: 14px;
+	border-radius: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	border-bottom: 1px dashed $link-color;
+	background-image: none;
+}
+
+.selectric-contacts__select .label {
+	color: $link-color;
+}
+.selectric-contacts__select.focus .selectric {
+	background-image: none;
+	background-color: transparent;
+}
+
+.selectric-contacts__select .selectric-items {
+	min-width: 180px;
+	li {
+		color: $link-color;
+	}
+}
+
+.selectric-hover .selectric {}
+
+.selectric-hover .selectric .button {}
+
+.selectric-hover .selectric .button:after {}
+
+.selectric-open {
+	z-index: 9999;
+}
+
+.selectric-open .selectric {}
+
+.selectric-open .selectric-items {
+	display: block;
+}
+
+.selectric-disabled {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.selectric-hide-select {
+	position: relative;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+.selectric-hide-select select {
+	position: absolute;
+	left: -100%;
+}
+
+.selectric-hide-select.selectric-is-native {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.selectric-hide-select.selectric-is-native select {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	border: none;
+	z-index: 1;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+.selectric-input {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	outline: none !important;
+	border: none !important;
+	*font: 0/0 a !important;
+	background: none !important;
+}
+
+.selectric-temp-show {
+	position: absolute !important;
+	visibility: hidden !important;
+	display: block !important;
+}
+
+
+/* Items box */
+
+.selectric-items {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: $white-color;
+	border: 1px solid $border-color;
+	border-radius: 8px;
+	z-index: -1;
+}
+
+.selectric-items .selectric-scroll {
+	height: 100%;
+	overflow: auto;
+}
+
+.selectric-above .selectric-items {
+	top: auto;
+	bottom: 100%;
+}
+
+.selectric-items ul,
+.selectric-items li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 18px;
+	min-height: 20px;
+}
+
+.selectric-items li {
+	display: block;
+	padding: 10px;
+	color: $text-color;
+	cursor: pointer;
+	&:first-child {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+	&:last-child {
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+}
+
+.selectric-items li.selected {
+	background: $start-grad;
+	color: $black-color;
+	font-family: $font-reg;
+}
+
+.selectric-items li.highlighted {
+	background: $start-grad;
+	color: $black-color;
+	font-family: $font-reg;
+}
+
+.selectric-items li:hover {
+	background: $start-grad;
+	color: $black-color;
+}
+
+.selectric-items .disabled {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	cursor: default !important;
+	background: none !important;
+	color: #666 !important;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.selectric-items .selectric-group .selectric-group-label {
+	font-weight: bold;
+	padding-left: 10px;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: none;
+	color: #444;
+}
+
+.selectric-items .selectric-group.disabled li {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.selectric-items .selectric-group li {
+	padding-left: 25px;
+}

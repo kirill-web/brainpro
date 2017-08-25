@@ -209,4 +209,7 @@ $(document).ready(function () {
 		$('.mobile-form__steps#' + dataId).addClass('active');
 	});
 
+	
+	// Кастомные селекты
+	 $('.order-form__select, .contacts__select').selectric();
 });
