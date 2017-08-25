@@ -156,6 +156,10 @@ a {
 	background-image: url(../img/menu-icon.png);
 	width: 20px;
 	height: 16px;
+	transition: opacity 0.3s;
+	&:hover {
+		opacity: 0.8;
+	}
 }
 .menu-toggle--inside {
 	display: none;
@@ -174,8 +178,8 @@ a {
 	z-index: 10;
 	&__close {
 		position: absolute;
-		top: 50px;
-		left: 45px;
+		top: 42px;
+		left: 50px;
 		padding: 0;
 		border: 0;
 		background-color: transparent;
@@ -183,7 +187,11 @@ a {
 		background-image: url(../img/close.png);
 		width: 20px;
 		height: 20px;
+		transition: opacity 0.3s;
 		background-size: 20px 20px;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 	ul {
 		padding: 0;
@@ -210,8 +218,8 @@ a {
 		color: $white-color;
 		position: relative;
 		margin-bottom: 30px;
+		transition: all 0.3s;
 		&:before {
-			display: none;
 			content: '';
 			position: absolute;
 			background-color: $link2-color;
@@ -219,12 +227,15 @@ a {
 			height: 2px;
 			left: -50px;
 			top: 60%;
-			transform: translateY(-50%);
+			transform: translate(-30px, -50%);
+			opacity: 0;
+			transition: all 0.3s;
 		}
 		&:hover,
 		&.active {
 			&:before {
-				display: block;
+				transform: translate(0, -50%);
+				opacity: 1;
 			}
 		}
 	}

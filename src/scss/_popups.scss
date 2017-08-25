@@ -1,3 +1,14 @@
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(64, 81, 93, 0.7);
+	z-index: 1;
+}
+
 .big-quick-popup {
 	display: none;
 	position: absolute;
@@ -166,8 +177,6 @@
 	padding: 40px 25px;
 	overflow-y: scroll;
 	max-height: 100vh;
-	border: 1px solid $border-color;
-	box-shadow: 0 0 5px $border-color;
 	&__close {
 		border: 0;
 		background-color: transparent;
@@ -190,10 +199,13 @@
 		margin-bottom: 15px;
 	}
 	.order-form__check-label {
+		display: inline-block;
 		color: $text-color;
 		text-align: left;
 		font-size: 14px;
+		margin-bottom: 10px;
 		+a {
+			display: inline;
 			color: $link-color;
 			text-align: left;
 			font-size: 14px;
