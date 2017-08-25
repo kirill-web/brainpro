@@ -4,6 +4,11 @@ $(document).ready(function () {
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
 	});
+	
+	$('.order-form__input textarea').focusout(function(){
+		var vav = $(this).val();
+		console.log(vav)
+	})
 
 	// Мобильное меню
 	$('.menu-toggle, .menu-toggle--inside').on('click', function () {
@@ -111,7 +116,7 @@ $(document).ready(function () {
 	// Маска для телефона
 	$(".order-form__input--tel, .big-quick-popup__tel").mask("(999) 999-99-99", {
 		placeholder: "(___) ___-__-__"
-	});
+	}, {clearIfNotMatch: true});
 
 	// Подробная инфа о магазине
 	$('.order-form__shop').click(function (e) {
@@ -132,8 +137,8 @@ $(document).ready(function () {
 			"paddingBottom": "13px"
 		});
 	});
-	$('.order-form__input input').focusout(function () {
-		if ($(this).val() === "") {
+	$('.order-form__input input, .order-form__input textarea').focusout(function () {
+		if ($(this).val() === "" || $(this).val() == "(___) ___-__-__") {
 			$(this).next('.order-form__placeholder').removeClass('active');
 			$(this).css({
 				"paddingTop": "18px",
@@ -157,6 +162,7 @@ $(document).ready(function () {
 			});
 		}
 	});
+	
 
 	// Слайдер 
 	$('.about-us__img-item').hover(function () {
