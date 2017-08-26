@@ -247,7 +247,6 @@ $(document).ready(function () {
 	// Кастомные селекты
 	$('.order-form__select, .contacts__select').selectric();
 
-	new WOW().init();
 });
 
 
@@ -255,5 +254,6 @@ $(window).on('load', function(){
   // preloader
   setTimeout(function(){
     $('.preloader-container').fadeOut(300);
+    new WOW().init();
   }, 1500);
 });
