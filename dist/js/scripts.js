@@ -234,6 +234,23 @@ $(document).ready(function () {
 			}
 		}
 	});
+	
+	$('.quick-popup__submit').on('click', function(e){
+		e.preventDefault();
+		$('.quick-popup').hide();
+		$('.mobile-form').show();
+		$('.mobile-form .mobile-form__steps').removeClass('active');
+		$('.mobile-form #step-five').addClass('active');
+	});
+	
+	// Check i agree
+	$('.agree-wrap .order-form__check-label, .mobile-form__agree .order-form__check-label').on('click', function(){
+		if ($('.agree-wrap .order-form__check').is(':checked')) {
+			$('.agree-wrap').addClass('checked');
+		} else {
+			$('.agree-wrap').removeClass('checked');
+		}
+	});
 
 	// Форма по шагам на мобильных
 	$('.mobile-form__next, .mobile-form__prev').on('click', function () {

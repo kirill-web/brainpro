@@ -5,6 +5,7 @@
 		font-size: 42px;
 		margin-top: 0;
 		margin-bottom: 20px;
+		font-family: $font-reg;
 	}
 	&__descr {
 		text-align: center;
@@ -60,6 +61,8 @@
 			margin: 0;
 			font-size: 20px;
 			line-height: 26px;
+			max-width: 240px;
+			font-family: $font-reg;
 		}
 		&:hover {
 			.service-sec__more {
@@ -95,6 +98,8 @@
 			line-height: 26px;
 			margin-top: 0;
 			margin-bottom: 18px;
+			max-width: 240px;
+			font-family: $font-reg;
 		}
 		&-text {
 			font-size: 14px;
@@ -142,11 +147,18 @@
 		display: block;
 		color: $black-color;
 		margin-bottom: 8px;
+		text-decoration: none;
+		transition: all 0.3s;
+		border-bottom: 1px solid transparent;
+		display: inline-flex;
+		width: auto;
+		font-family: $font-reg;
 		&:last-child {
 			margin-bottom: 0;
 		}
 		&:hover {
 			text-decoration: none;
+			border-bottom: 1px solid $black-color;
 		}
 	}
 	&__mobile-items {
@@ -244,6 +256,7 @@
 			font-size: 16px;
 			line-height: 26px;
 			margin: 0;
+			font-family: $font-reg;
 		}
 		&:before {
 			content: '';
@@ -277,6 +290,7 @@
 		font-size: 16px;
 		line-height: 22px;
 		margin: 0;
+		font-family: $font-reg;
 	}
 }
 

@@ -61,14 +61,14 @@
 			padding: 16px 0;
 		}
 	}
-		&__placeholder {
+	&__placeholder {
 		position: absolute;
 		width: 100%;
 		min-height: 100%;
 		top: 0;
 		left: 0;
 		font-size: 20px;
-			line-height: 20px;
+		line-height: 20px;
 		color: $white-color;
 		padding: 16px 0;
 		display: flex;
@@ -100,7 +100,7 @@
 			color: $white-color;
 		}
 	}
-	.order-form__check:checked + label:before {
+	.order-form__check:checked+label:before {
 		background-image: url(../img/check-w.png);
 	}
 	.order-form__check-label {
@@ -198,17 +198,38 @@
 	&__input {
 		margin-bottom: 15px;
 	}
-	.order-form__check-label {
-		display: inline-block;
-		color: $text-color;
-		text-align: left;
-		font-size: 14px;
-		margin-bottom: 10px;
-		+a {
-			display: inline;
-			color: $link-color;
+	.agree-wrap {
+		padding-left: 40px;
+		position: relative;
+		.order-form__check-label {
+			padding-left: 0;
+			display: inline-block;
+			vertical-align: bottom;
+			color: $text-color;
 			text-align: left;
 			font-size: 14px;
+			line-height: 14px;
+			margin-bottom: 0;
+			+a {
+				display: inline-block;
+				vertical-align: top;
+				color: $link-color;
+				text-align: left;
+				font-size: 14px;
+				line-height: 14px;
+			}
+			&:before {
+				display: none;
+			}
+		}
+		&:before {
+			@extend .order-form__check-label:before;
+		}
+		&.checked {
+			&:before {
+				background-image: url(../img/check.png);
+			background-size: 18px 12px;
+			}
 		}
 	}
 	&__submit {
@@ -330,6 +351,12 @@
 			margin-top: 15px;
 		}
 	}
+	.order-form__post {
+		.order-form__check-label {
+			margin-top: 17px;
+			margin-bottom: 23px;
+		}
+	}
 	&__agree {
 		padding-top: 20px;
 		border-top: 1px solid $border-color;
@@ -361,6 +388,8 @@
 			height: auto;
 			width: 100%;
 			max-width: 140px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	&__good-day {

@@ -26,7 +26,7 @@
 	background-repeat: no-repeat;
 	background-image: url(../img/select-arrow.png);
 	background-size: 10px 6px;
-	background-position: 97% 50%;
+	background-position: calc(100% - 15px) 50%;
 	position: relative;
 	overflow: hidden;
 	&-order-form__select--60 {

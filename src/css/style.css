@@ -518,7 +518,7 @@ a {
 
 .main {
   width: 63.6666%;
-  min-width: 1175px; }
+  min-width: 1205px; }
 
 .no-scroll {
   overflow: hidden;
@@ -793,7 +793,8 @@ body {
     text-align: center;
     font-size: 42px;
     margin-top: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-family: "univia_proregular"; }
   .service-sec__descr {
     text-align: center;
     font-size: 16px;
@@ -847,7 +848,9 @@ body {
     .service-sec__item-title {
       margin: 0;
       font-size: 20px;
-      line-height: 26px; }
+      line-height: 26px;
+      max-width: 240px;
+      font-family: "univia_proregular"; }
     .service-sec__item:hover .service-sec__more {
       visibility: visible;
       z-index: 2;
@@ -890,7 +893,9 @@ body {
       font-size: 20px;
       line-height: 26px;
       margin-top: 0;
-      margin-bottom: 18px; }
+      margin-bottom: 18px;
+      max-width: 240px;
+      font-family: "univia_proregular"; }
     .service-sec__more-text {
       font-size: 14px;
       margin-top: 0;
@@ -929,11 +934,22 @@ body {
     font-size: 20px;
     display: block;
     color: #000;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: auto;
+    font-family: "univia_proregular"; }
     .service-sec__also-link:last-child {
       margin-bottom: 0; }
     .service-sec__also-link:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: 1px solid #000; }
   .service-sec__mobile-items {
     display: none;
     border-top: 1px solid #d9dfe9; }
@@ -1020,7 +1036,8 @@ body {
     .our-advant__item-title {
       font-size: 16px;
       line-height: 26px;
-      margin: 0; }
+      margin: 0;
+      font-family: "univia_proregular"; }
     .our-advant__item:before {
       content: '';
       position: absolute;
@@ -1048,7 +1065,8 @@ body {
   .our-advant__text {
     font-size: 16px;
     line-height: 22px;
-    margin: 0; }
+    margin: 0;
+    font-family: "univia_proregular"; }
 
 @-webkit-keyframes slider {
   0% {
@@ -1236,7 +1254,7 @@ body {
     border: 2px solid #ffcb32;
     border-radius: 30px;
     padding: 18px 35px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "univia_proregular";
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
@@ -1262,13 +1280,19 @@ body {
 
 .prices-sec__title {
   font-size: 34px;
-  margin: 0; }
+  margin: 0;
+  width: 33.33%; }
 
 .prices-sec__tabs {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  width: 66.66%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .prices-sec__tab {
   border: 2px solid transparent;
@@ -1321,7 +1345,7 @@ body {
 .prices-sec__item {
   background-color: #fff;
   border-radius: 8px;
-  width: 48%;
+  width: 49%;
   padding: 29px 20px 29px 22px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1412,7 +1436,16 @@ body {
       border-color: #feb637; }
 
 .prices-sec__advant {
+  position: relative;
   margin-bottom: 75px; }
+  .prices-sec__advant:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: -2px;
+    left: 0;
+    background-color: #fff; }
   .prices-sec__advant .container {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -1461,6 +1494,7 @@ body {
     margin: 0; }
 
 .prices-sec__mobile {
+  position: relative;
   display: none;
   padding-top: 40px; }
   .prices-sec__mobile-title {
@@ -1853,7 +1887,7 @@ body {
     position: relative;
     font-size: 16px;
     color: #000; }
-    .order-form__check-label:before {
+    .order-form__check-label:before, .quick-popup .agree-wrap:before, .mobile-form .agree-wrap:before {
       content: '';
       position: absolute;
       top: 50%;
@@ -1906,16 +1940,18 @@ body {
     font-size: 18px;
     text-align: center;
     padding: 16px 48px 18px 48px;
-    border: 2px solid #ffcb32;
+    border: 0;
     font-family: "univia_proregular";
     border-radius: 30px;
     background-color: #ffcb32;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .order-form__submit:active {
-      background-color: #feb637; }
+      background-color: #feb637;
+      -webkit-box-shadow: inset 0 2px 2px #ce972e;
+              box-shadow: inset 0 2px 2px #ce972e; }
     .order-form__submit:hover {
-      background-color: transparent; }
+      background-color: #feb637; }
 
 .text-sec {
   padding-top: 80px; }
@@ -2107,7 +2143,7 @@ body {
       font-size: 14px; }
       .big-quick-popup .order-form__check-label + a:hover {
         text-decoration: none; }
-    .big-quick-popup .order-form__check-label:before {
+    .big-quick-popup .order-form__check-label:before, .big-quick-popup .quick-popup .agree-wrap:before, .quick-popup .big-quick-popup .agree-wrap:before, .big-quick-popup .mobile-form .agree-wrap:before, .mobile-form .big-quick-popup .agree-wrap:before {
       border-color: #fff; }
   .big-quick-popup__done {
     display: none;
@@ -2182,17 +2218,30 @@ body {
     margin-bottom: 30px; }
   .quick-popup__input, .mobile-form__input, .mobile-form__select {
     margin-bottom: 15px; }
-  .quick-popup .order-form__check-label, .mobile-form .order-form__check-label {
-    display: inline-block;
-    color: #8790a6;
-    text-align: left;
-    font-size: 14px;
-    margin-bottom: 10px; }
-    .quick-popup .order-form__check-label + a, .mobile-form .order-form__check-label + a {
-      display: inline;
-      color: #284b96;
+  .quick-popup .agree-wrap, .mobile-form .agree-wrap {
+    padding-left: 40px;
+    position: relative; }
+    .quick-popup .agree-wrap .order-form__check-label, .mobile-form .agree-wrap .order-form__check-label {
+      padding-left: 0;
+      display: inline-block;
+      vertical-align: bottom;
+      color: #8790a6;
       text-align: left;
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 0; }
+      .quick-popup .agree-wrap .order-form__check-label + a, .mobile-form .agree-wrap .order-form__check-label + a {
+        display: inline-block;
+        vertical-align: top;
+        color: #284b96;
+        text-align: left;
+        font-size: 14px;
+        line-height: 14px; }
+      .quick-popup .agree-wrap .order-form__check-label:before, .mobile-form .agree-wrap .order-form__check-label:before, .quick-popup .agree-wrap .agree-wrap:before, .mobile-form .agree-wrap .agree-wrap:before {
+        display: none; }
+    .quick-popup .agree-wrap.checked:before, .mobile-form .agree-wrap.checked:before {
+      background-image: url(../img/check.png);
+      background-size: 18px 12px; }
   .quick-popup__submit, .mobile-form__next {
     text-align: center;
     border-radius: 30px;
@@ -2294,6 +2343,10 @@ body {
 .mobile-form .order-form__courier input {
   margin-top: 15px; }
 
+.mobile-form .order-form__post .order-form__check-label {
+  margin-top: 17px;
+  margin-bottom: 23px; }
+
 .mobile-form__agree {
   padding-top: 20px;
   border-top: 1px solid #d9dfe9; }
@@ -2329,7 +2382,9 @@ body {
     display: block;
     height: auto;
     width: 100%;
-    max-width: 140px; }
+    max-width: 140px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .mobile-form__good-day {
   font-size: 16px;
@@ -2363,7 +2418,8 @@ body {
   background-repeat: no-repeat;
   background-image: url(../img/select-arrow.png);
   background-size: 10px 6px;
-  background-position: 97% 50%;
+  background-position: -webkit-calc(100% - 15px) 50%;
+  background-position: calc(100% - 15px) 50%;
   position: relative;
   overflow: hidden; }
   .selectric-order-form__select--60 {

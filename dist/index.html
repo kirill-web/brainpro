@@ -9,25 +9,25 @@
 </head>
 
 <body>
-  <!-- preloader -->
-  <div class='preloader-container'>
-    <div class='preloader'>
-      <div class='pacman'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='ghost'></div>
-    </div>
-  </div>
-  <!-- prelaoder -->
+	<!-- preloader -->
+	<div class='preloader-container'>
+		<div class='preloader'>
+			<div class='pacman'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='ghost'></div>
+		</div>
+	</div>
+	<!-- prelaoder -->
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
 			<aside class="aside">
@@ -337,7 +337,7 @@
 						<option value="Киев">Киев</option>
 						<option value="Одесса">Одесса</option>
 					</select>
-					<div class="contacts__city active" id="city-ivanovo">
+						<div class="contacts__city active" id="city-ivanovo">
 							<div class="contacts__info-item">
 								<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52</a>
 								<a href="tel:0672142525" class="contacts__info-link">044 256 56 56</a>
@@ -417,7 +417,7 @@
 			</div>
 		</div>
 	</footer>
-
+	<div class="overlay"></div>
 	<!-- POPUP -->
 	<div class="quick-popup">
 		<button type="button" class="quick-popup__close"></button>
@@ -428,18 +428,36 @@
 				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
-				<input type="text" id="tel-popup">
+				<input type="text" id="tel-popup" class="order-form__input--tel">
 				<label for="tel-popup" class="order-form__placeholder"><span>Телефон</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
 				<textarea class="quick-popup__textarea" id="comment-popup"></textarea>
 				<label for="comment-popup" class="order-form__placeholder"><span>Пару слов о проблеме</span></label>
 			</div>
-			<input type="checkbox" class="order-form__check" id="check-popup2" checked>
-			<label for="check-popup2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			<div class="agree-wrap">
+				<input type="checkbox" class="order-form__check" id="check-popup2" checked>
+				<label for="check-popup2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			</div>
 			<button type="submit" class="quick-popup__submit">Отправить</button>
 		</form>
 	</div>
+	<form action="#" class="mobile-form">
+		<button type="button" class="mobile-form__close"></button>
+		<div class="mobile-form__steps mobile-form__done" id="step-five">
+			<a href="/" class="mobile-form__logo"><img src="img/logo.png" alt=""></a>
+			<h2 class="mobile-form__title">Заявка отправлена</h2>
+			<p class="mobile-form__text">Производитель и модель указаны на устройстве. Также на его упаковке или документации</p>
+			<p class="mobile-form__good-day">Хорошего дня!</p>
+			<div class="quick-bid">
+				<div class="flex-wrap">
+					<span class="quick-bid__tel">0 800 215 500</span>
+					<span class="quick-bid__tel">067 353 76 67</span>
+				</div>
+				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+			</div>
+		</div>
+	</form>
 	<!-- -->
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70"></script>

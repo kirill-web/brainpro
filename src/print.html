@@ -9,25 +9,25 @@
 </head>
 
 <body class="print-body">
-  <!-- preloader -->
-  <div class='preloader-container'>
-    <div class='preloader'>
-      <div class='pacman'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='ghost'></div>
-    </div>
-  </div>
-  <!-- prelaoder -->
+	<!-- preloader -->
+	<div class='preloader-container'>
+		<div class='preloader'>
+			<div class='pacman'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='dot'></div>
+			<div class='ghost'></div>
+		</div>
+	</div>
+	<!-- prelaoder -->
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
 			<aside class="aside">
@@ -611,8 +611,10 @@
 				<textarea class="quick-popup__textarea" id="comment-popup"></textarea>
 				<label for="comment-popup" class="order-form__placeholder"><span>Пару слов о проблеме</span></label>
 			</div>
-			<input type="checkbox" class="order-form__check" id="check-popup2" checked>
-			<label for="check-popup2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			<div class="agree-wrap">
+				<input type="checkbox" class="order-form__check" id="check-popup2" checked>
+				<label for="check-popup2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+			</div>
 			<button type="submit" class="quick-popup__submit">Отправить</button>
 		</form>
 	</div>
@@ -757,8 +759,10 @@
 				</div>
 			</div>
 			<div class="mobile-form__agree">
-				<input type="checkbox" class="order-form__check" id="check2-mobile" checked>
-				<label for="check2-mobile" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+				<div class="agree-wrap">
+					<input type="checkbox" class="order-form__check" id="check2-mobile" checked>
+					<label for="check2-mobile" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+				</div>
 			</div>
 			<button type="button" class="mobile-form__next mobile-form__next--send" data-id="step-five">Отправить</button>
 			<button type="button" class="mobile-form__prev" data-id="step-three">Шаг назад</button>
