@@ -249,6 +249,7 @@
 		min-height: 60px;
 		display: flex;
 		align-items: center;
+		background-color: transparent;
 		&:first-child {
 			margin-left: 0;
 		}
@@ -266,8 +267,9 @@
 			left: 0;
 			width: 60px;
 			height: 60px;
-			border-radius: 50%;
-			border: 2px solid $border-color;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-image: url(../img/health.svg);
 		}
 	}
 	&__img-item {

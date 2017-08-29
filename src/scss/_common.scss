@@ -70,6 +70,7 @@ a {
 			display: block;
 			height: auto;
 			width: 100%;
+			max-width: 137px;
 		}
 		span {
 			display: block;
@@ -325,7 +326,7 @@ body {
 		vertical-align: middle;
 		margin-left: 30px;
 		background-repeat: no-repeat;
-		background-image: url(../img/inst.png);
+		background-image: url(../img/inst.svg);
 		width: 20px;
 		height: 20px;
 	}
