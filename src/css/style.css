@@ -625,6 +625,11 @@ a {
   .menu-toggle--inside:hover {
     opacity: 0.8; }
 
+.menu-toggle {
+  -webkit-transform: translateX(-16px);
+      -ms-transform: translateX(-16px);
+          transform: translateX(-16px); }
+
 .menu-toggle--inside {
   display: none; }
 
@@ -648,7 +653,7 @@ a {
   .main-menu__close, .big-quick-popup__close {
     position: absolute;
     top: 42px;
-    left: 50px;
+    left: 34px;
     padding: 0;
     border: 0;
     background-color: transparent;
@@ -5040,7 +5045,7 @@ body {
   .contacts__main {
     width: 100%; }
   .page-footer__socials {
-    padding-right: 40px; } }
+    padding-right: 50px; } }
 
 @media (max-width: 1199px) {
   .main-menu ul {
@@ -5065,7 +5070,9 @@ body {
     .order-form__address .selectric-order-form__select--light {
       width: 29%; }
     .order-form__more {
-      width: 70%; } }
+      width: 70%; }
+  .page-footer__socials {
+    padding-right: 0; } }
 
 @media (max-width: 991px) {
   .page-header__status {

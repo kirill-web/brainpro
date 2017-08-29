@@ -161,6 +161,10 @@ a {
 		opacity: 0.8;
 	}
 }
+.menu-toggle {
+	transform: translateX(-16px);
+}
+
 .menu-toggle--inside {
 	display: none;
 }
@@ -179,7 +183,7 @@ a {
 	&__close {
 		position: absolute;
 		top: 42px;
-		left: 50px;
+		left: 34px;
 		padding: 0;
 		border: 0;
 		background-color: transparent;
