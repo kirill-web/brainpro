@@ -280,8 +280,32 @@ $(document).ready(function () {
 	});
 
   // WOW
-  new WOW().init();
-  
+  wow = new WOW({
+    boxClass:     'wow',
+    animateClass: 'animated',
+    offset:       0,
+    mobile:       false,
+    live:         true
+  })
+  wow.init();
+
+
+  // переход к форме по заказать
+  $('.prices-sec__order-link').on('click', function(){
+    var getId = $(this).data('order-id') - 1;
+    $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
+    $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
+    return false;
+  })
+
+  // preload images
+  $.fn.preload = function() {
+    this.each(function(){
+      $('<img/>')[0].src = this;
+    });
+  }
+  $(['img/popup-close.png']).preload();
+
 });
 
 

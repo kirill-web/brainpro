@@ -233,6 +233,10 @@
 		.menu-toggle--inside {
 			margin-right: 20px;
 		}
+    &__hamburger{
+      flex-basis: 35px;
+      transform: translateX(-10px);
+    }
 		&__contacts {
 			display: none;
 		}
@@ -383,6 +387,7 @@
 			margin-bottom: 0;
 			background-color: $menu-bg;
 			padding: 45px 0;
+      margin-top: -2px;
 			.container {
 				flex-direction: column;
 				justify-content: flex-start;
