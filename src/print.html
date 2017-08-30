@@ -30,12 +30,22 @@
 	<!-- prelaoder -->
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
-			<aside class="aside">
-				<button type="button" class="menu-toggle"></button>
+      <aside class="aside">
+				<button type="button" class="menu-toggle">
+				  <span></span>
+          <span></span>
+          <span></span>
+				</button>
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-					<button type="button" class="menu-toggle--inside"></button>
+          <div class="page-header__hamburger">
+            <button type="button" class="menu-toggle--inside">
+              <span></span>
+              <span></span>
+              <span></span>
+  					</button>
+          </div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -72,7 +82,6 @@
 		</div>
 	</header>
 	<nav class="main-menu">
-		<button type="button" class="main-menu__close" style="background-image: url(../img/close.png);"></button>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
 			<li><a href="#" class="main-menu__link">о компании</a></li>
@@ -528,7 +537,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="order-form__buttons">
 								<button type="submit" class="order-form__submit">Отправить</button>
 								<input type="checkbox" class="order-form__check" id="check2" checked>

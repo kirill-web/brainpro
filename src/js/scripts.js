@@ -12,14 +12,16 @@ $(document).ready(function () {
 
 	// Мобильное меню
 	$('.menu-toggle, .menu-toggle--inside').on('click', function () {
-		$('body').addClass('no-scroll');
-		$('.main-menu').show(300);
+		$('body').toggleClass('no-scroll');
+		$('.main-menu').toggle(300);
 		$('.main-menu').css('display', 'flex');
+    $(this).toggleClass('active');
+    $('.page-header').toggleClass('active-menu');
 	});
-	$('.main-menu__close').on('click', function () {
-		$('.main-menu').hide(300);
-		$('body').removeClass('no-scroll');
-	});
+	// $('.main-menu__close').on('click', function () {
+	// 	// $('.main-menu').hide(300);
+	// 	// $('body').removeClass('no-scroll');
+	// });
 
 	// Услуги на мобильных на главной
 	$('.service-sec__mobile-item').on('click', function () {
@@ -234,7 +236,7 @@ $(document).ready(function () {
 			}
 		}
 	});
-	
+
 	$('.quick-popup__submit').on('click', function(e){
 		e.preventDefault();
 		$('.quick-popup').hide();
@@ -242,7 +244,7 @@ $(document).ready(function () {
 		$('.mobile-form .mobile-form__steps').removeClass('active');
 		$('.mobile-form #step-five').addClass('active');
 	});
-	
+
 	// Check i agree
 	$('.agree-wrap .order-form__check-label, .mobile-form__agree .order-form__check-label').on('click', function(){
 		if ($('.agree-wrap .order-form__check').is(':checked')) {
@@ -264,13 +266,13 @@ $(document).ready(function () {
 	// Кастомные селекты
 	$('.order-form__select, .contacts__select').selectric();
 
-	
+
 	// Смена инфы при смене города в большой форме
 	$('.order-form__select').change(function(){
 		if ($(this).val() == 'Киев') {
 			$('.order-form__give, .order-form__take').hide();
 			$('#give-kiev, #take-kiev').show();
-		} 
+		}
 		if ($(this).val() == 'Одесса') {
 			$('.order-form__give, .order-form__take').hide();
 			$('#give-odessa, #take-odessa').show();
