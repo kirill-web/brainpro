@@ -135,6 +135,7 @@ a {
 		color: $text-color;
 	}
 	&__status {
+    margin-left: auto;
 		font-size: 14px;
 		padding: 12px 19px 15px 19px;
 		border-radius: 25px;
@@ -387,13 +388,14 @@ body {
 		}
 	}
 	&__socials {
-		padding-right: 110px;
+    flex: 0 0 300px;
+    padding-left: 60px;
 		font-size: 0;
 	}
 	&__social {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: 30px;
+		margin-right: 30px;
 		background-repeat: no-repeat;
 		background-image: url(../img/inst.svg);
 		width: 20px;

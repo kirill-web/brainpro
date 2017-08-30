@@ -22,7 +22,7 @@
 	}
 	.contacts {
 		.big-container {
-			max-width: 1175px;
+			max-width: 1205px;
 			padding-left: 30px;
 			padding-right: 30px;
 		}
@@ -35,7 +35,7 @@
 	}
 	.page-footer {
 		&__socials {
-			padding-right: 50px;
+			// padding-right: 50px;
 		}
 	}
 }
@@ -63,7 +63,8 @@
 	}
 	.contacts {
 		&__info {
-			padding-left: 20px;
+      flex-basis: 270px;
+			padding-left: 30px;
 		}
 	}
 	.order-form {
@@ -83,7 +84,8 @@
 	}
 	.page-footer {
 		&__socials {
-			padding-right: 0;
+      flex-basis: 270px;
+			padding-left: 30px;
 		}
 	}
 }
@@ -144,7 +146,7 @@
 			width: 70%;
 		}
 		&__info {
-			width: 30%;
+			flex-basis: 240px;
 		}
 	}
 	.print-promo {
@@ -215,6 +217,11 @@
 			width: 100%;
 		}
 	}
+  .page-footer {
+    &__socials {
+      flex-basis: 240px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -332,6 +339,10 @@
 			border-top: 2px solid #acb2c2;
 			margin-bottom: 15px;
 		}
+    &__socials{
+      flex: 0 0 auto;
+      padding-left: 0;
+    }
 		&__social {
 			margin-left: 0;
 			margin-right: 25px;

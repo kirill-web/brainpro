@@ -278,13 +278,16 @@ $(document).ready(function () {
 			$('#give-odessa, #take-odessa').show();
 		}
 	});
+
+  // WOW
+  new WOW().init();
+  
 });
 
 
 $(window).on('load', function(){
   // preloader
   setTimeout(function(){
-    $('.preloader-container').fadeOut(300);
-    new WOW().init();
-  }, 1500);
+    $('body').addClass('loaded');
+  }, 100);
 });

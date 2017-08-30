@@ -5,29 +5,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BrainPro | Print</title>
+  <style>
+    body {
+      position: relative;
+    }
+    body::after {
+      display: inline-block;
+      content: " ";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1001;
+      pointer-events: none;
+      touch-action: none;
+      background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+      transition: opacity 0.3s ease-out;
+    }
+    body.preloader::after {
+      opacity: 1;
+    }
+    body.loaded::after {
+      opacity: 0;
+    }
+  </style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="print-body">
-	<!-- preloader -->
-	<div class='preloader-container'>
-		<div class='preloader'>
-			<div class='pacman'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='ghost'></div>
-		</div>
-	</div>
-	<!-- prelaoder -->
+<body class="preloader print-body">
+
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
       <aside class="aside">
