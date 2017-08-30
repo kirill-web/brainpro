@@ -279,6 +279,9 @@
 		margin-top: 0;
 		padding: 40px 0;
 		background-color: $menu-bg;
+		&:after {
+			display: block;
+		}
 		.flex-wrap {
 			margin: 0;
 		}

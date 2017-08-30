@@ -344,11 +344,12 @@
 					</div>
 					<div class="order-form__address flex-wrap">
 						<select name="" id="" class="order-form__select order-form__select--40 order-form__select--light">
-					<option value="">Киев</option>
-					<option value="">Одесса</option>
+					<option value="Киев">Киев</option>
+					<option value="Одесса">Одесса</option>
 						</select>
 						<div class="order-form__more">
-							<div class="order-form__give">
+						<!-- ОТДАТЬ.КИЕВ-->
+							<div class="order-form__give" id="give-kiev">
 								<label class="order-form__label order-form__label--hidden">Как хотите передать устройство?</label>
 								<div class="order-form__tabs">
 									<a href="#" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
@@ -395,7 +396,56 @@
 									</div>
 								</div>
 							</div>
-							<div class="order-form__take">
+							<!-- ОТДАТЬ.ОДЕССА-->
+							<div class="order-form__give" id="give-odessa">
+								<label class="order-form__label order-form__label--hidden">Как хотите передать устройство?</label>
+								<div class="order-form__tabs">
+									<a href="#" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
+									<a href="#" class="order-form__tab active for-shops">Магазины Brain</a>
+									<a href="#" class="order-form__tab for-post">Новая почта</a>
+									<a href="#" class="order-form__tab for-courier">Курьер</a>
+								</div>
+								<div class="order-form__common-tab order-form__shops-wrap">
+									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
+									<div class="order-form__shops">
+										<a href="#" class="order-form__shop">Другой адрес, 15</a>
+										<div class="order-form__shop-info">
+											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
+											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
+											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
+										</div>
+										<a href="#" class="order-form__shop">Вышгородская, 32/2</a>
+										<div class="order-form__shop-info">
+											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
+											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
+											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
+										</div>
+										<a href="#" class="order-form__shop">Вообще другой адрес, 56</a>
+										<a href="#" class="order-form__shop">Адрес в Одессе, 1</a>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__post">
+									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
+									<select name="" id="" class="order-form__select">
+										<option value="">№1. Тараса Пудренка 2</option>
+										<option value="">№1. Тараса Пудренка 20</option>
+									</select>
+									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give1">
+									<label for="check-give1" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
+									<div class="order-form__input">
+										<input type="text" id="street12">
+										<label for="street12" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__courier">
+									<div class="order-form__input">
+										<input type="text" id="street112">
+										<label for="street112" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
+								</div>
+							</div>
+							<!-- ПОЛУЧИТЬ.КИЕВ-->
+							<div class="order-form__take" id="take-kiev">
 								<label class="order-form__label">Как хотите получить устройство?</label>
 								<div class="order-form__tabs-back">
 									<a href="#" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
@@ -436,6 +486,49 @@
 									</div>
 								</div>
 							</div>
+							<!-- ПОЛУЧИТЬ.ОДЕССА-->
+							<div class="order-form__take" id="take-odessa">
+								<label class="order-form__label">Как хотите получить устройство?</label>
+								<div class="order-form__tabs-back">
+									<a href="#" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
+									<a href="#" class="order-form__tab-back active for-shops">Магазины Brain</a>
+									<a href="#" class="order-form__tab-back for-post">Новая почта</a>
+									<a href="#" class="order-form__tab-back for-courier">Курьер</a>
+								</div>
+								<div class="order-form__common-tab order-form__shops-wrap">
+									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
+									<div class="order-form__shops">
+										<input type="radio" name="shop-radio" id="shop-radio11" class="order-form__radio">
+										<label for="shop-radio11" class="order-form__radio-label">Вадима Гетьмана, 13</label>
+										<input type="radio" name="shop-radio" id="shop-radio21" class="order-form__radio">
+										<label for="shop-radio21" class="order-form__radio-label">Вышгородская, 32/2</label>
+										<input type="radio" name="shop-radio" id="shop-radio31" class="order-form__radio">
+										<label for="shop-radio31" class="order-form__radio-label">Дмитриевская, 56 (Лукьяновка)</label>
+										<input type="radio" name="shop-radio" id="shop-radio41" class="order-form__radio">
+										<label for="shop-radio41" class="order-form__radio-label">Харьковское шоссе, 1</label>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__post">
+									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
+									<select name="" id="" class="order-form__select">
+										<option value="">№1. Тараса Пудренка 2</option>
+										<option value="">№1. Тараса Пудренка 20</option>
+									</select>
+									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-post1">
+									<label for="check-post1" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
+									<div class="order-form__input">
+										<input type="text" id="street22">
+										<label for="street22" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
+								</div>
+								<div class="order-form__common-tab order-form__courier">
+									<div class="order-form__input">
+										<input type="text" id="street222">
+										<label for="street222" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
+									</div>
+								</div>
+							</div>
+							
 							<div class="order-form__buttons">
 								<button type="submit" class="order-form__submit">Отправить</button>
 								<input type="checkbox" class="order-form__check" id="check2" checked>

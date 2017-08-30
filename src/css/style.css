@@ -1062,10 +1062,10 @@ body {
     border-radius: 4px;
     padding: 27px;
     min-height: 160px;
-    width: 24%; }
+    width: 24.4%; }
     .our-advant__img-item--first {
       background-color: #dcdfe1;
-      width: 49%; }
+      width: 49.4%; }
     .our-advant__img-item--second {
       background-color: #dfeafd; }
     .our-advant__img-item--third {
@@ -1353,7 +1353,7 @@ body {
 .prices-sec__item {
   background-color: #fff;
   border-radius: 8px;
-  width: 49%;
+  width: 49.5%;
   padding: 29px 20px 29px 22px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1447,6 +1447,7 @@ body {
   position: relative;
   margin-bottom: 75px; }
   .prices-sec__advant:after {
+    display: none;
     content: '';
     position: absolute;
     height: 2px;
@@ -1750,6 +1751,14 @@ body {
       width: 33%; }
   .order-form__more {
     width: 66%; }
+  .order-form__take {
+    display: none; }
+    .order-form__take#take-kiev {
+      display: block; }
+  .order-form__give {
+    display: none; }
+    .order-form__give#give-kiev {
+      display: block; }
   .order-form__tabs, .order-form__tabs-back {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5220,6 +5229,8 @@ body {
     margin-top: 0;
     padding: 40px 0;
     background-color: #40515d; }
+    .our-advant:after {
+      display: block; }
     .our-advant .flex-wrap {
       margin: 0; }
     .our-advant__item {

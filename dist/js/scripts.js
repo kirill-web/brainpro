@@ -264,6 +264,18 @@ $(document).ready(function () {
 	// Кастомные селекты
 	$('.order-form__select, .contacts__select').selectric();
 
+	
+	// Смена инфы при смене города в большой форме
+	$('.order-form__select').change(function(){
+		if ($(this).val() == 'Киев') {
+			$('.order-form__give, .order-form__take').hide();
+			$('#give-kiev, #take-kiev').show();
+		} 
+		if ($(this).val() == 'Одесса') {
+			$('.order-form__give, .order-form__take').hide();
+			$('#give-odessa, #take-odessa').show();
+		}
+	});
 });
 
 

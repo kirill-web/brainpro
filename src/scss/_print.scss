@@ -113,7 +113,7 @@
 	&__item {
 		background-color: $white-color;
 		border-radius: 8px;
-		width: 49%;
+		width: 49.5%;
 		padding: 29px 20px 29px 22px;
 		display: flex;
 		flex-direction: row;
@@ -187,6 +187,7 @@
 	&__advant {
 		position: relative;
 		&:after {
+			display: none;
 			content: '';
 			position: absolute;
 			height: 2px;
@@ -531,6 +532,18 @@
 	}
 	&__more {
 		width: 66%;
+	}
+	&__take {
+		display: none;
+		&#take-kiev {
+			display: block;
+		}
+	}
+	&__give {
+		display: none;
+		&#give-kiev {
+			display: block;
+		}
 	}
 	&__tabs {
 		display: flex;
