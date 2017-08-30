@@ -5,37 +5,53 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BrainPro</title>
+  <style>
+  body {
+    position: relative;
+  }
+  body::after {
+    display: inline-block;
+    content: " ";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    pointer-events: none;
+    touch-action: none;
+    background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+    transition: opacity 0.3s ease-out;
+  }
+  body.preloader::after {
+    opacity: 1;
+  }
+  body.loaded::after {
+    opacity: 0;
+  }
+  </style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-	<!-- preloader -->
-	<div class='preloader-container'>
-		<div class='preloader'>
-			<div class='pacman'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='ghost'></div>
-		</div>
-	</div>
-	<!-- prelaoder -->
-	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
+<body class="preloader">
+	<header class="page-header wow fadeInDown" data-wow-delay="0.9s">
 		<div class="big-container">
 			<aside class="aside">
-				<button type="button" class="menu-toggle"></button>
+				<button type="button" class="menu-toggle">
+				  <span></span>
+          <span></span>
+          <span></span>
+				</button>
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-					<button type="button" class="menu-toggle--inside"></button>
+          <div class="page-header__hamburger">
+            <button type="button" class="menu-toggle--inside">
+              <span></span>
+              <span></span>
+              <span></span>
+  					</button>
+          </div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -72,7 +88,7 @@
 		</div>
 	</header>
 	<nav class="main-menu">
-		<button type="button" class="main-menu__close" style="background-image: url(../img/close.png);"></button>
+		<!--<button type="button" class="main-menu__close" style="background-image: url(../img/close.png);"></button>-->
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
 			<li><a href="#" class="main-menu__link">о компании</a></li>
@@ -83,7 +99,7 @@
 	</nav>
 	<section class="service-sec">
 		<div class="container">
-			<h1 class="service-sec__title wow fadeInUp" data-wow-duration="0.6s">Качественно новый сервис-центр</h1>
+			<h1 class="service-sec__title wow fadeInUp" data-wow-duration="0.5s">Качественно новый сервис-центр</h1>
 			<p class="service-sec__descr wow fadeInUp" data-wow-duration="0.6s">Посыл, идея, лозунг dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
 			</p>
 			<div class="quick-bid">
@@ -95,7 +111,7 @@
 				<button type="button" class="quick-bid__btn">Быстрая заявка</button>
 			</div>
 			<div class="service-sec__items flex-wrap">
-				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1s">
+				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.2s">
 					<h2 class="service-sec__item-title">Ремонт и обслуживание оргтехники
 					</h2>
 					<div class="service-sec__more">
@@ -120,7 +136,7 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
-				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.2s">
+				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.4s">
 					<h2 class="service-sec__item-title">Ремонт мобильных телефонов
 					</h2>
 					<div class="service-sec__more">
@@ -145,7 +161,7 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
-				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.4s">
+				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.6s">
 					<h2 class="service-sec__item-title">Ремонт ноутбуков</h2>
 					<div class="service-sec__more">
 						<h2 class="service-sec__more-title">Ремонт ноутбуков</h2>
@@ -168,7 +184,7 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
-				<div class="service-sec__item service-sec__item--comp wow fadeInUp" data-wow-delay="0.2s">
+				<div class="service-sec__item service-sec__item--comp wow fadeInUp" data-wow-delay="1.8s">
 					<h2 class="service-sec__item-title">Ремонт компьютеров и комплектующих</h2>
 					<div class="service-sec__more">
 						<h2 class="service-sec__more-title">Ремонт компьютеров и комплектующих</h2>
@@ -191,7 +207,7 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
-				<div class="service-sec__item service-sec__item--mobile wow fadeInUp" data-wow-delay="0.4s">
+				<div class="service-sec__item service-sec__item--mobile wow fadeInUp" data-wow-delay="2s">
 					<h2 class="service-sec__item-title">Ремонт мобильных телефонов и планшетов
 					</h2>
 					<div class="service-sec__more">
@@ -216,7 +232,7 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
-				<div class="service-sec__item service-sec__item--also wow fadeInUp" data-wow-delay="0.6s">
+				<div class="service-sec__item service-sec__item--also wow fadeInUp" data-wow-delay="2.2s">
 					<h2 class="service-sec__also-title">мы также делаем:</h2>
 					<a href="#" class="service-sec__also-link">Ремонт холодильника</a>
 					<a href="#" class="service-sec__also-link">Ремонт телевизора</a>

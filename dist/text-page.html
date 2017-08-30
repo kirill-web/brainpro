@@ -5,37 +5,53 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BrainPro</title>
+  <style>
+    body {
+      position: relative;
+    }
+    body::after {
+      display: inline-block;
+      content: " ";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1001;
+      pointer-events: none;
+      touch-action: none;
+      background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+      transition: opacity 0.3s ease-out;
+    }
+    body.preloader::after {
+      opacity: 1;
+    }
+    body.loaded::after {
+      opacity: 0;
+    }
+  </style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <!-- preloader -->
-  <div class='preloader-container'>
-    <div class='preloader'>
-      <div class='pacman'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='dot'></div>
-      <div class='ghost'></div>
-    </div>
-  </div>
-  <!-- prelaoder -->
+<body class="preloader">
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
-			<aside class="aside">
-				<button type="button" class="menu-toggle"></button>
+      <aside class="aside">
+				<button type="button" class="menu-toggle">
+				  <span></span>
+          <span></span>
+          <span></span>
+				</button>
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-					<button type="button" class="menu-toggle--inside"></button>
+          <div class="page-header__hamburger">
+            <button type="button" class="menu-toggle--inside">
+              <span></span>
+              <span></span>
+              <span></span>
+  					</button>
+          </div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -72,7 +88,6 @@
 		</div>
 	</header>
 	<nav class="main-menu">
-		<button type="button" class="main-menu__close"></button>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
 			<li><a href="#" class="main-menu__link">о компании</a></li>

@@ -5,37 +5,54 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BrainPro | Print</title>
+  <style>
+    body {
+      position: relative;
+    }
+    body::after {
+      display: inline-block;
+      content: " ";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1001;
+      pointer-events: none;
+      touch-action: none;
+      background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+      transition: opacity 0.3s ease-out;
+    }
+    body.preloader::after {
+      opacity: 1;
+    }
+    body.loaded::after {
+      opacity: 0;
+    }
+  </style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="print-body">
-	<!-- preloader -->
-	<div class='preloader-container'>
-		<div class='preloader'>
-			<div class='pacman'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='dot'></div>
-			<div class='ghost'></div>
-		</div>
-	</div>
-	<!-- prelaoder -->
+<body class="preloader print-body">
+
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
-			<aside class="aside">
-				<button type="button" class="menu-toggle"></button>
+      <aside class="aside">
+				<button type="button" class="menu-toggle">
+				  <span></span>
+          <span></span>
+          <span></span>
+				</button>
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-					<button type="button" class="menu-toggle--inside"></button>
+          <div class="page-header__hamburger">
+            <button type="button" class="menu-toggle--inside">
+              <span></span>
+              <span></span>
+              <span></span>
+  					</button>
+          </div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -72,7 +89,6 @@
 		</div>
 	</header>
 	<nav class="main-menu">
-		<button type="button" class="main-menu__close" style="background-image: url(../img/close.png);"></button>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
 			<li><a href="#" class="main-menu__link">о компании</a></li>
@@ -118,7 +134,7 @@
 					<span class="prices-sec__item-price">~ 900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id='1'>Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -126,7 +142,7 @@
 					<span class="prices-sec__item-price">~ 900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Востановление монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="2">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -134,7 +150,7 @@
 					<span class="prices-sec__item-price">~ 900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Диагностика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="3">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -142,7 +158,7 @@
 					<span class="prices-sec__item-price">700-900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Профилакатика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="4">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -150,7 +166,7 @@
 					<span class="prices-sec__item-price">~ 900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="5">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -158,19 +174,35 @@
 					<span class="prices-sec__item-price">от 900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="6">Заказать</a>
+					</div>
+				</div>
+        <div class="prices-sec__item">
+					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
+					<span class="prices-sec__item-price">~ 900 грн</span>
+					<div class="prices-sec__order">
+						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
+						<a href="#" class="prices-sec__order-link" data-order-id="7">Заказать</a>
+					</div>
+				</div>
+				<div class="prices-sec__item">
+					<h3 class="prices-sec__item-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
+					<span class="prices-sec__item-price">от 900 грн</span>
+					<div class="prices-sec__order">
+						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
+						<a href="#" class="prices-sec__order-link" data-order-id="8">Заказать</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container wow fadeInUp" data-wow-delay="0.8s">
+		<div class="container wow fadeInUp" data-wow-delay="0.2s">
 			<div class="prices-sec__items flex-wrap" id="prices-colors">
 				<div class="prices-sec__item">
 					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
 					<span class="prices-sec__item-price">~ 1500 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="1">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -178,7 +210,7 @@
 					<span class="prices-sec__item-price">~ 1500 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Востановление монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="2">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -186,7 +218,7 @@
 					<span class="prices-sec__item-price">~ 1500 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Диагностика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="3">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -194,7 +226,7 @@
 					<span class="prices-sec__item-price">1000-1900 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Профилакатика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="4">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -202,7 +234,7 @@
 					<span class="prices-sec__item-price">~ 1000 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="5">Заказать</a>
 					</div>
 				</div>
 				<div class="prices-sec__item">
@@ -210,7 +242,7 @@
 					<span class="prices-sec__item-price">от 1100 грн</span>
 					<div class="prices-sec__order">
 						<h3 class="prices-sec__order-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-						<a href="#" class="prices-sec__order-link">Заказать</a>
+						<a href="#" class="prices-sec__order-link" data-order-id="6">Заказать</a>
 					</div>
 				</div>
 			</div>
@@ -304,8 +336,12 @@
 					</div>
 					<div class="order-form__service flex-wrap">
 						<select name="" id="" class="order-form__select order-form__select--60">
-					<option value="">Заправка монохромного лазерного картриджа</option>
-					<option value="">Заправка картриджа</option>
+              <option value="" data-id="1">Заправка монохромного лазерного картриджа</option>
+              <option value="" data-id="2">Востановление монохромного лазерного картриджа</option>
+              <option value="" data-id="3">Диагностика лазерного картриджа</option>
+              <option value="" data-id="4">Профилакатика лазерного картриджа</option>
+              <option value="" data-id="5">Заправка монохромного лазерного картриджа</option>
+              <option value="" data-id="6">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</option>
 				</select>
 						<select name="" id="" class="order-form__select order-form__select--25">
 					<option value="">Samsung</option>
@@ -402,7 +438,7 @@
 								<div class="order-form__tabs">
 									<a href="#" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
 									<a href="#" class="order-form__tab active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab for-post">Новая почта</a>
+									<a href="#" class="order-form__tab order-form__tab--disable for-post">Новая почта</a>
 									<a href="#" class="order-form__tab for-courier">Курьер</a>
 								</div>
 								<div class="order-form__common-tab order-form__shops-wrap">
@@ -450,8 +486,8 @@
 								<div class="order-form__tabs-back">
 									<a href="#" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
 									<a href="#" class="order-form__tab-back active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab-back for-post">Новая почта</a>
-									<a href="#" class="order-form__tab-back for-courier">Курьер</a>
+									<a href="#" class="order-form__tab-back order-form__tab--disable for-post">Новая почта</a>
+									<a href="#" class="order-form__tab-back order-form__tab--disable for-courier">Курьер</a>
 								</div>
 								<div class="order-form__common-tab order-form__shops-wrap">
 									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
@@ -528,7 +564,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="order-form__buttons">
 								<button type="submit" class="order-form__submit">Отправить</button>
 								<input type="checkbox" class="order-form__check" id="check2" checked>
