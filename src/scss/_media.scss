@@ -32,10 +32,19 @@
 		&__main {
 			width: 100%;
 		}
+    &__info {
+      .page-footer__socials{
+        display: none;
+      }
+    }
 	}
 	.page-footer {
 		&__socials {
 			// padding-right: 50px;
+      &--map-sync{
+        opacity: 1;
+        pointer-events: all;
+      }
 		}
 	}
 }

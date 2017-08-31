@@ -57,6 +57,13 @@
 			box-shadow: none;
 			background-color: transparent;
 		}
+    &--empty{
+      display: flex;
+      flex-direction: column;
+      .service-sec__item-title{
+        color: #8790a6;
+      }
+    }
 		&-title {
 			margin: 0;
 			font-size: 20px;
@@ -64,6 +71,12 @@
 			max-width: 240px;
 			font-family: $font-reg;
 		}
+    &-blank{
+      margin-top: auto;
+      font-size: 14px;
+      font-family: $font-reg;
+      color: #8790a6;
+    }
 		&:hover {
 			.service-sec__more {
 				visibility: visible;
@@ -394,8 +407,14 @@
 		width: 100%;
 	}
 	&__info {
+    position: relative;
 		flex: 0 0 300px;
 		padding-left: 60px;
+    .page-footer__socials{
+      position: absolute;
+      bottom: -80px;
+      left: 2px;
+    }
 	}
 	&__select {
 		display: block;

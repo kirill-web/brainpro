@@ -63,7 +63,8 @@ a {
   z-index: 11;
 	background-color: $white-color;
 	padding: 27px 0;
-	border-bottom: 1px solid $border-color;
+	border-bottom: 0px solid $border-color;
+  box-shadow: 0px 0px 15px rgba(#0d0f27, .05);
   &.active-menu{
     background: transparent;
     border-color: transparent;
@@ -398,6 +399,10 @@ body {
     flex: 0 0 300px;
     padding-left: 60px;
 		font-size: 0;
+    &--map-sync{
+      opacity: 0;
+      pointer-events: none;
+    }
 	}
 	&__social {
 		display: inline-block;
