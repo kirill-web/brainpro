@@ -7,7 +7,6 @@ $(document).ready(function () {
 
 	$('.order-form__input textarea').focusout(function(){
 		var vav = $(this).val();
-		console.log(vav)
 	})
 
 	// Мобильное меню
@@ -18,10 +17,6 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $('.page-header').toggleClass('active-menu');
 	});
-	// $('.main-menu__close').on('click', function () {
-	// 	// $('.main-menu').hide(300);
-	// 	// $('body').removeClass('no-scroll');
-	// });
 
 	// Услуги на мобильных на главной
 	$('.service-sec__mobile-item').on('click', function () {
@@ -120,6 +115,11 @@ $(document).ready(function () {
 		placeholder: "(___) ___-__-__"
 	}, {clearIfNotMatch: true});
 
+  // reset mask on load
+  $(window).on('load', function(){
+    $(".order-form__input--tel, .big-quick-popup__tel").val("")
+  });
+
 	// Подробная инфа о магазине
 	$('.order-form__shop').click(function (e) {
 		e.preventDefault();
@@ -135,8 +135,8 @@ $(document).ready(function () {
 	$('.order-form__input input, .order-form__input textarea').focus(function () {
 		$(this).next('.order-form__placeholder').addClass('active');
 		$(this).css({
-			"paddingTop": "23px",
-			"paddingBottom": "13px"
+			"paddingTop": "22px",
+			"paddingBottom": "12px"
 		});
 	});
 	$('.order-form__input input, .order-form__input textarea').focusout(function () {
@@ -245,12 +245,22 @@ $(document).ready(function () {
 		$('.mobile-form #step-five').addClass('active');
 	});
 
+  // смит главной формы
+  $('.order-form').on('submit', function(e){
+		e.preventDefault();
+    $('body').addClass('no-scroll');
+		$('.big-quick-popup').show(300);
+		$('.big-quick-popup').css('display', 'flex');
+    $('.big-quick-popup__container').hide();
+		$('.big-quick-popup__done').show();
+	});
+
 	// Check i agree
 	$('.agree-wrap .order-form__check-label, .mobile-form__agree .order-form__check-label').on('click', function(){
-		if ($('.agree-wrap .order-form__check').is(':checked')) {
-			$('.agree-wrap').addClass('checked');
+		if ( $(this).parent().find('input').is(':checked')) {
+			$(this).parent().addClass('checked');
 		} else {
-			$('.agree-wrap').removeClass('checked');
+			$(this).parent().removeClass('checked');
 		}
 	});
 
