@@ -462,6 +462,11 @@
 }
 
 .contacts {
+  &--wider-contacts{
+    .contacts__info{
+      flex: 0 0 450px;
+    }
+  }
 	.container {
 		display: none;
 	}
@@ -480,6 +485,13 @@
       position: absolute;
       bottom: -80px;
       left: 2px;
+    }
+    &-row{
+      display: flex;
+      flex-wrap: wrap;
+      .contacts__info-link, .contacts__info-item{
+        flex: 0 1 50%;
+      }
     }
 	}
 	&__select {

@@ -739,6 +739,10 @@ body {
     background-image: url(../img/inst.svg);
     width: 20px;
     height: 20px; }
+    .page-footer__social--facebook {
+      background-image: url("../img/facebook.svgz"); }
+    .page-footer__social--youtube {
+      background-image: url("../img/youtube.svg"); }
 
 .service-sec {
   padding-top: 77px; }
@@ -1217,6 +1221,12 @@ body {
     font-size: 16px;
     font-style: italic; }
 
+.contacts--wider-contacts .contacts__info {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 450px;
+      -ms-flex: 0 0 450px;
+          flex: 0 0 450px; }
+
 .contacts .container {
   display: none; }
 
@@ -1238,6 +1248,19 @@ body {
     position: absolute;
     bottom: -80px;
     left: 2px; }
+  .contacts__info-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .contacts__info-row .contacts__info-link, .contacts__info-row .contacts__info-item {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 50%;
+          -ms-flex: 0 1 50%;
+              flex: 0 1 50%; }
 
 .contacts__select {
   display: block;

@@ -412,5 +412,11 @@ body {
 		background-image: url(../img/inst.svg);
 		width: 20px;
 		height: 20px;
+    &--facebook{
+      background-image: url('../img/facebook.svgz');
+    }
+    &--youtube{
+      background-image: url('../img/youtube.svg');
+    }
 	}
 }
