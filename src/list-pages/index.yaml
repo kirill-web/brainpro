@@ -1,0 +1,11 @@
+ProjectTitle: BrainPro
+
+PageList:
+- file: homepage.html
+  ready: 100
+- file: print.html
+  ready: 100
+- file: print2.html
+  ready: 50
+- file: text-page.html
+  ready: 100

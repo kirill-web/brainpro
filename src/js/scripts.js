@@ -173,7 +173,7 @@ $(document).ready(function () {
 	});
 
 	// Быстрая заявка десктоп
-	$('.print-promo__btn').on('click', function () {
+	$('.print-promo__btn, [js-quick-order-desktop]').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.big-quick-popup').show(300);
 		$('.big-quick-popup').css('display', 'flex');
@@ -303,9 +303,13 @@ $(document).ready(function () {
   // переход к форме по заказать
   $('.prices-sec__order-link').on('click', function(){
     var getId = $(this).data('order-id') - 1;
-    $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
-    $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
-    return false;
+    if ( $(this).is('[js-quick-order-desktop]') ) {
+
+    } else {
+      $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
+      $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
+      return false;
+    }
   })
 
   // preload images
@@ -315,6 +319,23 @@ $(document).ready(function () {
     });
   }
   $(['img/popup-close.png']).preload();
+
+
+  // print v2
+  $('.about-us__slider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 400,
+    cssEase: 'ease-in',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    vertical: false,
+    adaptiveHeight: false
+  });
 
 });
 

@@ -1,23 +1,26 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
-	concat = require('gulp-concat'),
-	uglifyjs = require('gulp-uglifyjs'),
-	csso = require('gulp-csso'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'),
-	spritesmith = require('gulp.spritesmith'),
-	autoprefixer = require('gulp-autoprefixer'),
-	plumber = require('gulp-plumber'),
-	gutil = require('gulp-util'),
-	del = require('del'),
-  runSequence = require('run-sequence'),
-  postcss       = require('gulp-postcss'),
-  flexbugs      = require('postcss-flexbugs-fixes');
+var gulp         = require('gulp'),
+  sass           = require('gulp-sass'),
+  sourcemaps     = require('gulp-sourcemaps'),
+  browserSync    = require('browser-sync'),
+  concat         = require('gulp-concat'),
+  uglifyjs       = require('gulp-uglifyjs'),
+  csso           = require('gulp-csso'),
+  imagemin       = require('gulp-imagemin'),
+  pngquant       = require('imagemin-pngquant'),
+  spritesmith    = require('gulp.spritesmith'),
+  autoprefixer   = require('gulp-autoprefixer'),
+  plumber        = require('gulp-plumber'),
+  gutil          = require('gulp-util'),
+  del            = require('del'),
+  runSequence    = require('run-sequence'),
+  postcss        = require('gulp-postcss'),
+  flexbugs       = require('postcss-flexbugs-fixes'),
+  consolidate    = require('gulp-consolidate'),
+  yaml           = require('require-yaml');
 
 // Default task
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'scripts', 'img'], 'watch',
+  runSequence(['sass', 'scripts', 'img', 'list-pages'], 'watch',
     callback
   )
 })
@@ -34,9 +37,11 @@ gulp.task('sass', function () {
 				this.emit('end');
 			}
 		}))
+    .pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(autoprefixer(['last 10 versions', '>3%']))
     .pipe( postcss(postCssProcessors) )
+    .pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -47,6 +52,7 @@ gulp.task('scripts', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/jquery.selectric.min.js',
+    'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/masked.min.js',
 		'src/libs/wow.min.js'
 	])
@@ -115,13 +121,26 @@ gulp.task('clean', function () {
 });
 
 
+gulp.task('list-pages', function() {
+  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
+  var pages = require('./src/list-pages/index.yaml');
+  return gulp
+    .src('src/list-pages/index.html')
+    .pipe(consolidate('lodash', {
+      pages: pages
+    }))
+    .pipe(gulp.dest('src'));
+});
+
+
 gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
 	gulp.watch('src/scss/**/*', ['sass']);
 	gulp.watch('src/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
+  gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts', ], function () {
+gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'list-pages'], function () {
 
 	var buildCss = gulp.src('src/css/style.css')
 		.pipe(csso({

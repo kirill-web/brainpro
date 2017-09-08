@@ -330,8 +330,74 @@
 	padding-top: 30px;
 	margin-bottom: 63px;
 	&__info {
+    position: relative;
+    z-index: 2;
 		width: 33%;
 	}
+  &--slider{
+    .about-us__descr{
+      width: 130%;
+      span{
+        display: inline;
+        background: rgba(white, .9);
+        padding-right: 4px;
+      }
+    }
+  }
+  &__slider{
+    width: 67%;
+    .slick-dots{
+      position: absolute;
+      left: 40px;
+      bottom: 35px;
+      li{
+        -webkit-apperance: none;
+        font-size: 0;
+        display: inline-block;
+        &::after{
+          display: inline-block;
+          content: ' ';
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: transparent;
+          border: 1px solid #feab39;
+          margin-right: 10px;
+          transition: all .24s ease
+        }
+        &.slick-active{
+          &::after{
+            background: #feab39;
+          }
+        }
+
+        cursor: pointer;
+        button{
+          display: none;
+        }
+      }
+    }
+  }
+  &__nums{
+    display: flex;
+  }
+  &__num{
+    flex: 0 1 auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    &-num{
+      font-family: $font-reg;
+      font-size: 36px;
+      color: #feab39;
+    }
+    &-desc{
+      font-family: $font-reg;
+      line-height: 1.1;
+      font-size: 16px;
+      padding-left: 25px;
+    }
+  }
 	&__img {
 		width: 67%;
 		position: relative;
