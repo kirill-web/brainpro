@@ -34,7 +34,8 @@ $(document).ready(function () {
 	// Смена контактов при смене города
 	$('.contacts__select').change(function(){
 		var selectVal = $(this).val();
-		if (selectVal == 'Иваново-франковск') {
+		if (selectVal == 'Ивано-франковск') {
+			console.log('im here')
 			$('.contacts__city').removeClass('active');
 			$('.contacts__city#city-ivanovo').addClass('active');
 		}
@@ -173,7 +174,7 @@ $(document).ready(function () {
 	});
 
 	// Быстрая заявка десктоп
-	$('.print-promo__btn, [js-quick-order-desktop]').on('click', function () {
+	$('.print-promo__btn, [js-quick-order-desktop], [js-quick-order]').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.big-quick-popup').show(300);
 		$('.big-quick-popup').css('display', 'flex');
@@ -303,13 +304,19 @@ $(document).ready(function () {
   // переход к форме по заказать
   $('.prices-sec__order-link').on('click', function(){
     var getId = $(this).data('order-id') - 1;
-    if ( $(this).is('[js-quick-order-desktop]') ) {
+    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
 
     } else {
       $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
       $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
       return false;
     }
+  })
+
+	$('[js-quick-order]').on('click', function(){
+    var text = $(this).parent().find('h3').text();
+    $('[js-paste-order-option]').find('input').val(text);
+		$('[js-paste-order-option]').find('label span').text(text);
   })
 
   // preload images

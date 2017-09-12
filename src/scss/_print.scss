@@ -1,4 +1,5 @@
 .print-body {
+	background: white;
 	.about-us {
 		background-color: $white-color;
 		padding-top: 0;
@@ -180,7 +181,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: $menu-bg;
+		background-color: #3e5c72;
 		border-radius: 8px;
 		padding: 29px 20px 29px 22px;
 		display: flex;
@@ -269,6 +270,15 @@
 			}
 			&--health:before {
 				background-image: url(../img/health.png);
+			}
+			&--medal:before {
+				background-image: url(../img/medal64.svg);
+			}
+			&--printer:before {
+				background-image: url(../img/printer64.svg);
+			}
+			&--eco:before {
+				background-image: url(../img/eco64.svg);
 			}
 		}
 		&-title {
@@ -397,7 +407,6 @@
 			left: 0;
 			font-size: 80px;
 			line-height: 70px;
-			font-weight: 100;
 			width: 100px;
 			height: 80px;
 			color: rgba(135, 144, 166, 0.3);

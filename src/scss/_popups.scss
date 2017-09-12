@@ -131,7 +131,6 @@
 		line-height: 48px;
 		color: $white-color;
 		margin-bottom: 20px;
-		font-weight: 400;
 	}
 	&__text {
 		color: $white-color;
@@ -161,6 +160,13 @@
 		&__text {
 			color: $text-color;
 			font-size: 16px;
+		}
+	}
+	&--v2{
+		.flex-wrap{
+			.big-quick-popup__input{
+				width: 31%;
+			}
 		}
 	}
 }

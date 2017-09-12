@@ -334,6 +334,22 @@
     z-index: 2;
 		width: 33%;
 	}
+	&__wrapper{
+		width: 100%;
+		max-width: 1900px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 30px;
+		.aside{
+			width: 19%;
+		}
+	}
+	&__content{
+		width: 81%;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+	}
   &--slider{
     .about-us__descr{
       width: 130%;
@@ -343,6 +359,9 @@
         padding-right: 4px;
       }
     }
+		.slick-list img{
+			width: 100%;
+		}
   }
   &__slider{
     width: 67%;
@@ -465,7 +484,38 @@
   &--wider-contacts{
     .contacts__info{
       flex: 0 0 450px;
+			padding-left: 95px;
     }
+		.contacts__main{
+			width: 100%;
+		}
+		.contacts__map{
+			height: 480px;
+		}
+		.selectric-contacts__select{
+			margin-bottom: 10px;
+			.label{
+				font-size: 34px;
+			}
+		}
+		.contacts__info-row--top{
+			position: relative;
+			padding-bottom: 15px;
+			.contacts__info-link{
+				margin-bottom: 25px;
+				font-size: 18px;
+			}
+			&::after{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				content: '';
+				width: 70px;
+				height: 2px;
+				background: #acb2c2;
+			}
+		}
   }
 	.container {
 		display: none;
@@ -527,6 +577,13 @@
 		display: block;
 		margin-bottom: 4px;
 		color: $link-color;
+		span{
+			display: block;
+			font-size: 14px;
+			margin-top: 5px;
+			color: #8790a6;
+			text-decoration: none !important;
+		}
 		&[href*='tel'] {
 			text-decoration: none;
 			color: $black-color;
