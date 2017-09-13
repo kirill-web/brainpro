@@ -10,6 +10,8 @@
 	padding-top: 85px;
 	margin-bottom: 60px;
   &-bg{
+    margin-top: -115px;
+    padding-top: 115px;
     background: #f8f8f8;
     margin-bottom: 90px;
     // background-image: url('../img/printPromo_bg.jpg');
@@ -195,6 +197,12 @@
 			margin: 0;
 			color: $white-color;
 			max-width: 75%;
+      span{
+        display: inline-block;
+        background: transparent;
+        border-radius: 4px;
+        padding: 3px 5px;
+      }
 		}
 		&-link {
 			text-align: center;
@@ -340,6 +348,7 @@
 	padding-top: 53px;
 	position: relative;
   &--collumned{
+    padding-top: 0;
     &::before{
       display: none;
     }

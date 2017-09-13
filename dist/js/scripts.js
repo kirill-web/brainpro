@@ -280,7 +280,7 @@ $(document).ready(function () {
 
 
 	// Кастомные селекты
-	$('.order-form__select, .contacts__select').selectric();
+	$('.order-form__select, .popup__select, .contacts__select').selectric();
 
 
 	// Смена инфы при смене города в большой форме
@@ -320,8 +320,7 @@ $(document).ready(function () {
 
 	$('[js-quick-order]').on('click', function(){
     var text = $(this).parent().find('h3').text();
-    $('[js-paste-order-option]').find('input').val(text);
-		$('[js-paste-order-option]').find('label span').text(text);
+    $('[js-paste-order-option]').find('select').val(text);
   })
 
   // preload images
@@ -384,14 +383,14 @@ $(document).ready(function () {
   var validatePhone = {
     required: true,
     normalizer: function(value) {
-        var PHONE_MASK = '+X (XXX) XXX-XXXX';
+        var PHONE_MASK = '(XXX) XXX-XX-XX';
         if (!value || value === PHONE_MASK) {
             return value;
         } else {
             return value.replace(/[^\d]/g, '');
         }
     },
-    minlength: 11,
+    minlength: 10,
     digits: true
   }
 
@@ -400,8 +399,10 @@ $(document).ready(function () {
     highlight: validateHighlight,
     unhighlight: validateUnhighlight,
     submitHandler: validateSubmitHandler,
+    ignore: "",
     rules: {
       name_big: "required",
+      big_agree: "required",
       email: {
         required: true,
         email: true
@@ -410,6 +411,7 @@ $(document).ready(function () {
     },
     messages: {
       name_big: "Заполните это поле",
+      big_agree: "Согласитесь с условиями",
       email: {
           required: "Заполните это поле",
           email: "Email содержит неправильный формат"

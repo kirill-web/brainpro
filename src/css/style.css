@@ -320,6 +320,7 @@ body {
   width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
   font-family: "univia_proregular"; }
 
 p,
@@ -1354,6 +1355,7 @@ body {
   margin-bottom: 4px;
   color: #284b96; }
   .contacts__info-link span {
+    font-family: "univia_probook";
     display: block;
     font-size: 14px;
     margin-top: 5px;
@@ -1375,6 +1377,8 @@ body {
   padding-top: 85px;
   margin-bottom: 60px; }
   .print-promo-bg {
+    margin-top: -115px;
+    padding-top: 115px;
     background: #f8f8f8;
     margin-bottom: 90px; }
   .print-promo--full-with .print-promo__info {
@@ -1586,6 +1590,11 @@ body {
     margin: 0;
     color: #fff;
     max-width: 75%; }
+    .prices-sec__order-title span {
+      display: inline-block;
+      background: transparent;
+      border-radius: 4px;
+      padding: 3px 5px; }
   .prices-sec__order-link {
     text-align: center;
     text-decoration: none;
@@ -1725,17 +1734,19 @@ body {
   background-color: #fff;
   padding-top: 53px;
   position: relative; }
-  .simple-fast--collumned::before {
-    display: none; }
-  .simple-fast--collumned .simple-fast__info {
-    width: 100%;
-    padding-left: 0;
-    margin: 45px 0; }
-    .simple-fast--collumned .simple-fast__info::before {
+  .simple-fast--collumned {
+    padding-top: 0; }
+    .simple-fast--collumned::before {
       display: none; }
-  .simple-fast--collumned .simple-fast__title {
-    text-align: left;
-    padding-bottom: 25px; }
+    .simple-fast--collumned .simple-fast__info {
+      width: 100%;
+      padding-left: 0;
+      margin: 45px 0; }
+      .simple-fast--collumned .simple-fast__info::before {
+        display: none; }
+    .simple-fast--collumned .simple-fast__title {
+      text-align: left;
+      padding-bottom: 25px; }
   .simple-fast:before {
     content: '';
     position: absolute;
@@ -2321,7 +2332,21 @@ body {
       color: #fff;
       padding: 16px 0; }
     .big-quick-popup__input.has-error input {
-      border-color: tomato; }
+      border-color: #ffcb32; }
+    .big-quick-popup__input[js-paste-order-option] .big-quick-popup__placeholder {
+      padding: 0; }
+    .big-quick-popup__input .selectric {
+      background: transparent !important;
+      border: 0;
+      padding: 0; }
+      .big-quick-popup__input .selectric .label {
+        font-family: "univia_probook";
+        font-size: 20px;
+        line-height: 20px;
+        color: #fff;
+        padding: 16px 0; }
+  .big-quick-popup .has-error .order-form__check-label:before, .big-quick-popup .has-error .quick-popup .agree-wrap:before, .quick-popup .big-quick-popup .has-error .agree-wrap:before, .big-quick-popup .has-error .mobile-form .agree-wrap:before, .mobile-form .big-quick-popup .has-error .agree-wrap:before {
+    border-color: #ffcb32; }
   .big-quick-popup__placeholder {
     position: absolute;
     width: 100%;
@@ -2364,8 +2389,11 @@ body {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .big-quick-popup__submit:hover {
-      background-color: transparent;
-      color: #fff; }
+      background-color: #ffcb32; }
+    .big-quick-popup__submit:active {
+      background-color: #feb637;
+      -webkit-box-shadow: inset 0 2px 2px #ce972e;
+              box-shadow: inset 0 2px 2px #ce972e; }
   .big-quick-popup .order-form__check:checked + label:before {
     background-image: url(../img/check-w.png); }
   .big-quick-popup .order-form__check-label {

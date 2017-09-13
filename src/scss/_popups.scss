@@ -63,10 +63,32 @@
 		}
     &.has-error{
       input{
-        border-color: tomato;
+        border-color: #ffcb32;
+      }
+    }
+    &[js-paste-order-option]{
+      .big-quick-popup__placeholder{
+        padding: 0;
+      }
+    }
+    .selectric{
+      background: transparent !important;
+      border: 0;
+      padding: 0;
+      .label{
+        font-family: "univia_probook";
+        font-size: 20px;
+        line-height: 20px;
+        color: #fff;
+        padding: 16px 0;
       }
     }
 	}
+  .has-error{
+    .order-form__check-label:before{
+      border-color: #ffcb32;
+    }
+  }
 	&__placeholder {
 		position: absolute;
 		width: 100%;
@@ -102,9 +124,13 @@
 		margin-right: 30px;
 		transition: all 0.3s;
 		&:hover {
-			background-color: transparent;
-			color: $white-color;
+			background-color: #ffcb32;
+			// color: $white-color;
 		}
+    &:active{
+      background-color: #feb637;
+      box-shadow: inset 0 2px 2px #ce972e;
+    }
 	}
 	.order-form__check:checked+label:before {
 		background-image: url(../img/check-w.png);
