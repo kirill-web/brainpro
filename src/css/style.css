@@ -320,7 +320,6 @@ body {
   width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
   font-family: "univia_proregular"; }
 
 p,
@@ -1160,6 +1159,7 @@ body {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
+    max-width: 195px;
     margin-right: 20px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1375,10 +1375,8 @@ body {
   padding-top: 85px;
   margin-bottom: 60px; }
   .print-promo-bg {
-    background-image: url("../img/printPromo_bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed; }
+    background: #f8f8f8;
+    margin-bottom: 90px; }
   .print-promo--full-with .print-promo__info {
     width: 100%;
     text-align: center; }
@@ -1632,9 +1630,10 @@ body {
     padding-bottom: 75px; }
     .prices-sec__advant--on-bg .prices-sec__advant-item {
       -webkit-box-flex: 0;
-      -webkit-flex: 0 1 33.3%;
-          -ms-flex: 0 1 33.3%;
-              flex: 0 1 33.3%; }
+      -webkit-flex: 0 1 33%;
+          -ms-flex: 0 1 33%;
+              flex: 0 1 33%;
+      margin-left: 0; }
     .prices-sec__advant--on-bg .prices-sec__advant-title {
       color: #8790a6; }
   .prices-sec__advant-item {
@@ -2321,6 +2320,8 @@ body {
       border-bottom: 2px solid #fff;
       color: #fff;
       padding: 16px 0; }
+    .big-quick-popup__input.has-error input {
+      border-color: tomato; }
   .big-quick-popup__placeholder {
     position: absolute;
     width: 100%;
@@ -5560,6 +5561,8 @@ body {
     border-bottom: 1px solid #d9dfe9;
     text-align: center;
     background-color: #f2f3f7; }
+    .print-promo-bg {
+      margin-bottom: 20px; }
     .print-promo__title {
       font-size: 24px;
       line-height: 32px; }
@@ -5620,7 +5623,25 @@ body {
     .text-sec__img {
       margin-bottom: 25px; }
   .breadcrumbs {
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+  .contacts__info-link span {
+    display: none; }
+  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
+    margin-bottom: 4px; }
+  .contacts--wider-contacts .contacts__info-row--top::after {
+    display: none; }
+  .contacts--wider-contacts .selectric-contacts__select .label {
+    font-size: 20px; }
+  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
+    font-size: 16px; }
+  .contacts__info-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .contacts--wider-contacts .contacts__info-row--top {
+    padding-bottom: 0; } }
 
 @media (max-width: 515px) {
   .contacts--wider-contacts .contacts__info-row--top {

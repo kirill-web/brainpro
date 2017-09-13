@@ -61,6 +61,11 @@
 			color: $white-color;
 			padding: 16px 0;
 		}
+    &.has-error{
+      input{
+        border-color: tomato;
+      }
+    }
 	}
 	&__placeholder {
 		position: absolute;

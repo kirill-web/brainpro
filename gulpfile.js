@@ -54,6 +54,7 @@ gulp.task('scripts', function () {
 		'src/libs/jquery.selectric.min.js',
     'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/masked.min.js',
+    'src/libs/jquery.validate.min.js',
 		'src/libs/wow.min.js'
 	])
 		.pipe(plumber({

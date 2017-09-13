@@ -405,6 +405,9 @@
 		border-bottom: 1px solid $border-color;
 		text-align: center;
 		background-color: $start-grad;
+    &-bg{
+      margin-bottom: 20px;
+    }
 		&__title {
 			font-size: 24px;
 			line-height: 32px;
@@ -480,6 +483,27 @@
 	.breadcrumbs {
 		margin-bottom: 25px;
 	}
+  .contacts__info-link span{
+    display: none;
+  }
+  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link{
+    margin-bottom: 4px;
+  }
+  .contacts--wider-contacts .contacts__info-row--top::after{
+    display: none;
+  }
+  .contacts--wider-contacts .selectric-contacts__select .label{
+    font-size: 20px;
+  }
+  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link{
+    font-size: 16px;
+  }
+  .contacts__info-row{
+    flex-direction: column;
+  }
+  .contacts--wider-contacts .contacts__info-row--top{
+    padding-bottom: 0;
+  }
 }
 @media(max-width: 515px){
 	.contacts{

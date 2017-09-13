@@ -10,10 +10,12 @@
 	padding-top: 85px;
 	margin-bottom: 60px;
   &-bg{
-    background-image: url('../img/printPromo_bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    background: #f8f8f8;
+    margin-bottom: 90px;
+    // background-image: url('../img/printPromo_bg.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-attachment: fixed;
   }
   &--full-with{
     .print-promo__info{
@@ -235,7 +237,9 @@
       margin-bottom: 0;
       padding-bottom: 75px;
       .prices-sec__advant-item{
-        flex: 0 1 33.3%
+        flex: 0 1 33%;
+        margin-left: 0;
+
       }
       .prices-sec__advant-title{
         color: #8790a6;

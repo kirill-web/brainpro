@@ -188,8 +188,13 @@ $(document).ready(function () {
 		}, 300);
 	});
 	$('.big-quick-popup__submit').on('click', function () {
-		$('.big-quick-popup__container').hide();
-		$('.big-quick-popup__done').show();
+    if ( $(this).closest('form').is('.big-quick-popup--v2') ){
+
+    } else {
+      $('.big-quick-popup__container').hide();
+  		$('.big-quick-popup__done').show();
+    }
+
 	});
 
 	// Быстрая заявка
@@ -342,6 +347,78 @@ $(document).ready(function () {
     slidesToShow: 1,
     vertical: false,
     adaptiveHeight: false
+  });
+
+  /////////////////
+  // JQUERY VALIDATE
+  /////////////////
+  var validateErrorPlacement = function(error, element) {
+    return false;
+    // error.addClass('ui-input__validation');
+    // error.appendTo(element.parent("div"));
+  }
+  var validateHighlight = function(element) {
+    $(element).parent('div').addClass("has-error");
+  }
+  var validateUnhighlight = function(element) {
+    $(element).parent('div').removeClass("has-error");
+  }
+  var validateSubmitHandler = function(form) {
+    $(form).addClass('loading');
+    $.ajax({
+      type: "POST",
+      url: $(form).attr('action'),
+      data: $(form).serialize(),
+      success: function(response) {
+        $(form).removeClass('loading');
+        var data = $.parseJSON(response);
+        if (data.status == 'success') {
+          // do something I can't test
+        } else {
+            $(form).find('[data-error]').html(data.message).show();
+        }
+      }
+    });
+  }
+
+  var validatePhone = {
+    required: true,
+    normalizer: function(value) {
+        var PHONE_MASK = '+X (XXX) XXX-XXXX';
+        if (!value || value === PHONE_MASK) {
+            return value;
+        } else {
+            return value.replace(/[^\d]/g, '');
+        }
+    },
+    minlength: 11,
+    digits: true
+  }
+
+  $('.big-quick-popup--v2').validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name_big: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      tel_big: validatePhone
+    },
+    messages: {
+      name_big: "Заполните это поле",
+      email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+      },
+      phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+      }
+    }
   });
 
 });
