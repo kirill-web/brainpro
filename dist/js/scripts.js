@@ -364,20 +364,26 @@ $(document).ready(function () {
   }
   var validateSubmitHandler = function(form) {
     $(form).addClass('loading');
-    $.ajax({
-      type: "POST",
-      url: $(form).attr('action'),
-      data: $(form).serialize(),
-      success: function(response) {
-        $(form).removeClass('loading');
-        var data = $.parseJSON(response);
-        if (data.status == 'success') {
-          // do something I can't test
-        } else {
-            $(form).find('[data-error]').html(data.message).show();
-        }
-      }
-    });
+		$('.big-quick-popup__container').hide();
+		$('.big-quick-popup__done').show();
+    // $.ajax({
+    //   type: "POST",
+    //   url: $(form).attr('action'),
+    //   data: $(form).serialize(),
+    //   success: function(response) {
+    //     $(form).removeClass('loading');
+    //     var data = $.parseJSON(response);
+    //     if (data.status == 'success') {
+    //       // do something I can't test
+		// 			// $('.big-quick-popup__container').hide();
+		//   		// $('.big-quick-popup__done').show();
+    //     } else {
+		// 			// $('.big-quick-popup__container').hide();
+		//   		// $('.big-quick-popup__done').show();
+    //       $(form).find('[data-error]').html(data.message).show();
+    //     }
+    //   }
+    // });
   }
 
   var validatePhone = {
