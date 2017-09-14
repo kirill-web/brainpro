@@ -505,6 +505,9 @@
 			.contacts__info-link{
 				margin-bottom: 25px;
 				font-size: 18px;
+				&[href*='tel'] {
+					font-family: "univia_proregular";
+				}
 			}
 			&::after{
 				position: absolute;
@@ -585,6 +588,15 @@
 			margin-top: 5px;
 			color: #8790a6;
 			text-decoration: none !important;
+		}
+		&--mail{
+			a{
+				color: #284b96;
+				font-size: 16px;
+				&:hover{
+					text-decoration: none;
+				}
+			}
 		}
 		&[href*='tel'] {
 			text-decoration: none;
