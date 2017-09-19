@@ -309,8 +309,10 @@ $(document).ready(function () {
   // переход к форме по заказать
   $('.prices-sec__order-link').on('click', function(){
     var getId = $(this).data('order-id') - 1;
-    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
 
+    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
+      $('.popup__select').prop('selectedIndex', getId).selectric('refresh');
+      console.log(getId);
     } else {
       $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
       $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
