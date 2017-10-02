@@ -309,8 +309,10 @@ $(document).ready(function () {
   // переход к форме по заказать
   $('.prices-sec__order-link').on('click', function(){
     var getId = $(this).data('order-id') - 1;
-    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
 
+    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
+      $('.popup__select').prop('selectedIndex', getId).selectric('refresh');
+      console.log(getId);
     } else {
       $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
       $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
@@ -364,20 +366,26 @@ $(document).ready(function () {
   }
   var validateSubmitHandler = function(form) {
     $(form).addClass('loading');
-    $.ajax({
-      type: "POST",
-      url: $(form).attr('action'),
-      data: $(form).serialize(),
-      success: function(response) {
-        $(form).removeClass('loading');
-        var data = $.parseJSON(response);
-        if (data.status == 'success') {
-          // do something I can't test
-        } else {
-            $(form).find('[data-error]').html(data.message).show();
-        }
-      }
-    });
+		$('.big-quick-popup__container').hide();
+		$('.big-quick-popup__done').show();
+    // $.ajax({
+    //   type: "POST",
+    //   url: $(form).attr('action'),
+    //   data: $(form).serialize(),
+    //   success: function(response) {
+    //     $(form).removeClass('loading');
+    //     var data = $.parseJSON(response);
+    //     if (data.status == 'success') {
+    //       // do something I can't test
+		// 			// $('.big-quick-popup__container').hide();
+		//   		// $('.big-quick-popup__done').show();
+    //     } else {
+		// 			// $('.big-quick-popup__container').hide();
+		//   		// $('.big-quick-popup__done').show();
+    //       $(form).find('[data-error]').html(data.message).show();
+    //     }
+    //   }
+    // });
   }
 
   var validatePhone = {

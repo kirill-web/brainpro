@@ -504,6 +504,9 @@
   .contacts--wider-contacts .contacts__info-row--top{
     padding-bottom: 0;
   }
+	.prices-sec__advant--on-bg .prices-sec__advant-item{
+		flex: 0 0 auto;
+	}
 }
 @media(max-width: 515px){
 	.contacts{

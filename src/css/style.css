@@ -1277,6 +1277,8 @@ body {
   .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
     margin-bottom: 25px;
     font-size: 18px; }
+    .contacts--wider-contacts .contacts__info-row--top .contacts__info-link[href*='tel'] {
+      font-family: "univia_proregular"; }
   .contacts--wider-contacts .contacts__info-row--top::after {
     position: absolute;
     bottom: 0;
@@ -1361,6 +1363,11 @@ body {
     margin-top: 5px;
     color: #8790a6;
     text-decoration: none !important; }
+  .contacts__info-link--mail a {
+    color: #284b96;
+    font-size: 16px; }
+    .contacts__info-link--mail a:hover {
+      text-decoration: none; }
   .contacts__info-link[href*='tel'] {
     text-decoration: none;
     color: #000; }
@@ -2468,7 +2475,7 @@ body {
     background-color: transparent;
     padding: 0;
     position: absolute;
-    top: 20px;
+    top: 52px;
     right: 20px;
     background-repeat: no-repeat;
     background-image: url(../img/popup-close.png);
@@ -5669,7 +5676,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
   .contacts--wider-contacts .contacts__info-row--top {
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .prices-sec__advant--on-bg .prices-sec__advant-item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; } }
 
 @media (max-width: 515px) {
   .contacts--wider-contacts .contacts__info-row--top {
