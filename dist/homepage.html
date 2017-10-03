@@ -5,31 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>BrainPro</title>
-  <style>
-  body {
-    position: relative;
-  }
-  body::after {
-    display: inline-block;
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1001;
-    pointer-events: none;
-    touch-action: none;
-    background-image: linear-gradient(to bottom, #f2f3f7, #fff);
-    transition: opacity 0.3s ease-out;
-  }
-  body.preloader::after {
-    opacity: 1;
-  }
-  body.loaded::after {
-    opacity: 0;
-  }
-  </style>
+	<style>
+		body {
+			position: relative;
+		}
+		
+		body::after {
+			display: inline-block;
+			content: " ";
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1001;
+			pointer-events: none;
+			touch-action: none;
+			background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+			transition: opacity 0.3s ease-out;
+		}
+		
+		body.preloader::after {
+			opacity: 1;
+		}
+		
+		body.loaded::after {
+			opacity: 0;
+		}
+	</style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,13 +48,13 @@
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-          <div class="page-header__hamburger">
-            <button type="button" class="menu-toggle--inside">
+					<div class="page-header__hamburger">
+						<button type="button" class="menu-toggle--inside">
               <span></span>
               <span></span>
               <span></span>
   					</button>
-          </div>
+					</div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -88,14 +91,28 @@
 		</div>
 	</header>
 	<nav class="main-menu">
-		<!--<button type="button" class="main-menu__close" style="background-image: url(../img/close.png);"></button>-->
+		<a href="/" class="main-menu__logo">BrainPro</a>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
-			<li><a href="#" class="main-menu__link">о компании</a></li>
-			<li><a href="#" class="main-menu__link">условия гарантии</a></li>
-			<li><a href="#" class="main-menu__link">доставка</a></li>
-			<li><a href="#" class="main-menu__link">прайс лист</a></li>
+			<li><a href="#" class="main-menu__link">о сервисе</a></li>
+			<li><a href="#" class="main-menu__link">гарантии и возврат</a></li>
+			<li><a href="#" class="main-menu__link">политика конфиденциальности</a></li>
 		</ul>
+		<div class="main-menu__row">
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+		</div>
+		<div class="main-menu__hours">Будни с 9 <span>00</span> до 20 <span>00</span></div>
 	</nav>
 	<section class="service-sec">
 		<div class="container">
@@ -108,7 +125,7 @@
 					<span class="quick-bid__tel">067 353 76 67</span>
 				</div>
 				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
-				<button type="button" class="quick-bid__btn">Быстрая заявка</button>
+<!--				<button type="button" class="quick-bid__btn">Быстрая заявка</button>-->
 			</div>
 			<div class="service-sec__items flex-wrap">
 				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.2s">
@@ -240,12 +257,12 @@
 					<a href="#" class="service-sec__also-link">Ремонт мышки</a>
 					<a href="#" class="service-sec__also-link">Ремонт бытовой техники</a>
 				</div>
-        <div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="2.4s">
+				<div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="2.4s">
 					<h2 class="service-sec__item-title">Установка, подключение и настройка</h2>
-          <div class="service-sec__item-blank">раздел в разработке</div>
+					<div class="service-sec__item-blank">раздел в разработке</div>
 
 				</div>
-      </div>
+			</div>
 		</div>
 		<div class="service-sec__mobile-items">
 			<div class="container">
@@ -299,56 +316,81 @@
 	<section class="our-advant">
 		<div class="container">
 			<div class="flex-wrap">
-				<div class="our-advant__item wow fadeInRight">
-					<h3 class="our-advant__item-title">20 лет на рынке Украины
+				<div class="our-advant__item our-advant__item--twenty wow fadeInRight">
+					<h3 class="our-advant__item-title">Большая сеть магазинов и СЦ
 					</h3>
 				</div>
-				<div class="our-advant__item wow fadeInRight" data-wow-delay="0.2s" data-wow-offset="150">
-					<h3 class="our-advant__item-title">Авторизированый сервис-центр
+				<div class="our-advant__item our-advant__item--author wow fadeInRight" data-wow-delay="0.2s" data-wow-offset="150">
+					<h3 class="our-advant__item-title">Диагностика и доставка бесплатно*
 					</h3>
 				</div>
-				<div class="our-advant__item wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="150">
-					<h3 class="our-advant__item-title">На все работы даем 1 год гарантии</h3>
+				<div class="our-advant__item our-advant__item--year wow fadeInRight" data-wow-delay="0.4s" data-wow-offset="150">
+					<h3 class="our-advant__item-title">Гарантия от сервиса на все работы</h3>
 				</div>
-				<div class="our-advant__item wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="150">
-					<h3 class="our-advant__item-title">Конфидициальность и сохранность данных</h3>
+				<div class="our-advant__item our-advant__item--save wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="150">
+					<h3 class="our-advant__item-title">Сохранность данных и конфидициальность</h3>
 				</div>
 			</div>
 			<div class="our-advant__image-items flex-wrap">
 				<div class="our-advant__img-item our-advant__img-item--first wow fadeInRight" data-wow-delay="0s" data-wow-offset="150">
-					<p class="our-advant__text">Фон цвет или картинка <br>+ текст
+					<p class="our-advant__text"> Корпоративным клиентам
 					</p>
+					<p class="our-advant__descr">индивидуальные условия на весь	 спектр услуг по ремонту и обслуживанию офисной техники, а также поддержку ПО.</p>
+					<a href="#" class="our-advant__link">corpro@brain.com.ua</a>
 				</div>
 				<div class="our-advant__img-item our-advant__img-item--second wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="150">
-					<p class="our-advant__text">Фон цвет или картинка <br>+ текст
+					<p class="our-advant__text"> Защитим!
 					</p>
 				</div>
 				<div class="our-advant__img-item our-advant__img-item--third wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="150">
-					<p class="our-advant__text">Фон цвет или картинка <br>+ текст
+					<p class="our-advant__text"> Настроим!
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="about-us">
-		<div class="container">
-			<div class="flex-wrap">
-				<div class="about-us__info wow fadeInUp" data-wow-offset="150">
-					<h2 class="about-us__title">Brain Pro Сервис</h2>
-					<p class="about-us__descr">Компания с 20 летним опытом работы, на рынке ИТ в сфере оптовых продаж, корпоративных и персональных решениях с наличием национальной сети собственных магазинов "Brain. Магазины умных покупок" и Интернет магазина Brain.com.ua.</p>
-					<span class="about-us__name">— команда BrainPro</span>
-				</div>
-				<div class="about-us__img wow fadeInUp" data-wow-delay='.3s' data-wow-offset="150">
-					<div class="about-us__img-item about-us__img-item--first"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--second"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--third"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--fourth active"><img src="img/slide4.jpg" alt=""></div>
+	<section class="about-us about-us--slider">
+		<div class="about-us__wrapper">
+			<div class="flex-wrap wow fadeInUp" data-wow-offset="150">
+				<div class="aside"></div>
+				<div class="about-us__content">
+					<div class="about-us__info">
+						<h2 class="about-us__title">Brain Pro Сервис</h2>
+						<p class="about-us__descr">
+							<span>Компания с 20 летним опытом работы, на рынке ИТ в сфере оптовых продаж, корпоративных и персональных решениях с наличием национальной сети собственных магазинов "Brain. Магазины умных покупок" и Интернет магазина Brain.com.ua.</span>
+						</p>
+						<div class="about-us__nums">
+							<div class="about-us__num">
+								<div class="about-us__num-num">20</div>
+								<div class="about-us__num-desc">лет на рынке Украины</div>
+							</div>
+							<div class="about-us__num">
+								<div class="about-us__num-num">12</div>
+								<div class="about-us__num-desc">сервисных центров</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="about-us__slider">
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="contacts">
-		<div class="big-container">
+	<section class="contacts contacts--wider-contacts">
+		<div class="big-container big-container--no-pad">
 			<div class="contacts__main flex-wrap wow fadeInUp" data-wow-offset="150">
 				<div class="contacts__map" id="contacts-map"></div>
 				<div class="contacts__info">
@@ -360,81 +402,90 @@
 					</select>
 						<div class="contacts__city active" id="city-ivanovo">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">044 256 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 214 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 256 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 214 25 25<span>многоканальный</span></a>
+									<span class="contacts__info-link contacts__info-link--mail"><span>Эл. адрес:</span><a href="mailto:pro@brain.com.ua">pro@brain.com.ua</a></span>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+									<a href="#" class="contacts__info-link">Вербицкого, 1</a>
+									<a href="#" class="contacts__info-link">Васильковская 34</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 						<div class="contacts__city" id="city-kiev">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 555 555 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">044 444 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 444 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 555 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 555 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 555 25 25<span>многоканальный</span></a>
+									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Киевский магазин</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 						<div class="contacts__city" id="city-odessa">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 333 333 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">333 333 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 214 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 222 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 222 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 222 25 25<span>многоканальный</span></a>
+									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Другой магазин</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+									<a href="#" class="contacts__info-link">Вербицкого, 1</a>
+									<a href="#" class="contacts__info-link">Васильковская 34</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 					</form>
 				</div>
@@ -442,14 +493,14 @@
 			<aside class="aside"></aside>
 		</div>
 	</section>
-	<footer class="page-footer">
+	<footer class="page-footer page-footer--v2">
 		<div class="container flex-wrap">
-				<p class="page-footer__copy">© 1996 - 2016 ООО "Приватинвест" </p>
-				<a href="#" class="page-footer__link">Техническая ссылка</a>
-			<div class="page-footer__socials page-footer__socials--map-sync">
+			<p class="page-footer__copy">© 1996 - 2016 ООО "Приватинвест" </p>
+			<a href="#" class="page-footer__link">Политика конфиденциальности</a>
+			<div class="page-footer__socials page-footer__socials--wider page-footer__socials--map-sync">
+				<a href="#" class="page-footer__social page-footer__social--facebook"></a>
 				<a href="#" class="page-footer__social"></a>
-				<a href="#" class="page-footer__social"></a>
-				<a href="#" class="page-footer__social"></a>
+				<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 			</div>
 		</div>
 	</footer>
