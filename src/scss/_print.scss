@@ -12,7 +12,7 @@
   &-bg{
     margin-top: -115px;
     padding-top: 115px;
-    background: #f8f8f8;
+    background: $print-bg;
     margin-bottom: 90px;
     // background-image: url('../img/printPromo_bg.jpg');
     // background-repeat: no-repeat;
@@ -185,7 +185,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: #3e5c72;
+		background-color: $white-color;
 		border-radius: 8px;
 		padding: 29px 20px 29px 22px;
 		display: flex;
@@ -195,7 +195,7 @@
 		&-title {
 			font-size: 16px;
 			margin: 0;
-			color: $white-color;
+			color: $black-color;
 			max-width: 75%;
       span{
         display: inline-block;
@@ -207,7 +207,7 @@
 		&-link {
 			text-align: center;
 			text-decoration: none;
-			color: $link2-color;
+			color: $black-color;
 			font-size: 16px;
 			font-family: $font-reg;
 			padding: 11px 20px;

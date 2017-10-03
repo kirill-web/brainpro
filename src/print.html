@@ -5,31 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>BrainPro | Print</title>
-  <style>
-    body {
-      position: relative;
-    }
-    body::after {
-      display: inline-block;
-      content: " ";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1001;
-      pointer-events: none;
-      touch-action: none;
-      background-image: linear-gradient(to bottom, #f2f3f7, #fff);
-      transition: opacity 0.3s ease-out;
-    }
-    body.preloader::after {
-      opacity: 1;
-    }
-    body.loaded::after {
-      opacity: 0;
-    }
-  </style>
+	<style>
+		body {
+			position: relative;
+		}
+		
+		body::after {
+			display: inline-block;
+			content: " ";
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1001;
+			pointer-events: none;
+			touch-action: none;
+			background-image: linear-gradient(to bottom, #f2f3f7, #fff);
+			transition: opacity 0.3s ease-out;
+		}
+		
+		body.preloader::after {
+			opacity: 1;
+		}
+		
+		body.loaded::after {
+			opacity: 0;
+		}
+	</style>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -37,7 +40,7 @@
 
 	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
 		<div class="big-container">
-      <aside class="aside">
+			<aside class="aside">
 				<button type="button" class="menu-toggle">
 				  <span></span>
           <span></span>
@@ -46,13 +49,13 @@
 			</aside>
 			<div class="main">
 				<div class="container flex-wrap">
-          <div class="page-header__hamburger">
-            <button type="button" class="menu-toggle--inside">
+					<div class="page-header__hamburger">
+						<button type="button" class="menu-toggle--inside">
               <span></span>
               <span></span>
               <span></span>
   					</button>
-          </div>
+					</div>
 					<div class="page-header__logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
@@ -89,517 +92,195 @@
 		</div>
 	</header>
 	<nav class="main-menu">
+		<a href="/" class="main-menu__logo">BrainPro</a>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
-			<li><a href="#" class="main-menu__link">о компании</a></li>
-			<li><a href="#" class="main-menu__link">условия гарантии</a></li>
-			<li><a href="#" class="main-menu__link">доставка</a></li>
-			<li><a href="#" class="main-menu__link">прайс лист</a></li>
+			<li><a href="#" class="main-menu__link">о сервисе</a></li>
+			<li><a href="#" class="main-menu__link">гарантии и возврат</a></li>
+			<li><a href="#" class="main-menu__link">политика конфиденциальности</a></li>
 		</ul>
+		<div class="main-menu__row">
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+			<div class="main-menu__item">
+				<div class="main-menu__tel">044 353 76 67</div>
+				<span class="main-menu__hint">бесплатно по Украине</span>
+			</div>
+		</div>
+		<div class="main-menu__hours">Будни с 9 <span>00</span> до 20 <span>00</span></div>
 	</nav>
-	<section class="print-promo">
-		<div class="container flex-wrap wow fadeInUp" data-wow-duration="0.6s">
-			<div class="print-promo__info">
-				<h1 class="print-promo__title">Заправка катриджей.<br> Диагностка, ремонт и обслуживание принтеров и мфу</h1>
-				<p class="print-promo__descr">Все работы ведутся только в <span>специально оборудованном помещении!</span> </p>
-				<p class="print-promo__descr">
-					Частицы тонера лазерного принтера/мфу при попадании на кожу или в дыхательные пути <span>могут нанести вред здоровью.</span></p>
-				<div class="quick-bid">
-					<div class="flex-wrap">
-						<span class="quick-bid__tel">0 800 215 500</span>
-						<span class="quick-bid__tel">067 353 76 67</span>
+	<div class="print-promo-bg">
+		<section class="print-promo print-promo--full-with">
+			<div class="container flex-wrap wow fadeInUp" data-wow-duration="0.6s">
+				<div class="print-promo__info">
+					<h1 class="print-promo__title">Заправка катриджей.<br> Диагностка, ремонт и обслуживание принтеров и мфу</h1>
+					<p class="print-promo__descr"><span>Все работы ведутся только в специально оборудованном помещении!</span> </p>
+					<p class="print-promo__descr">
+						Частицы тонера лазерного принтера/мфу при попадании на кожу или в дыхательные пути могут нанести вред здоровью.</p>
+					<div class="quick-bid">
+						<div class="flex-wrap">
+							<span class="quick-bid__tel">0 800 215 500</span>
+							<span class="quick-bid__tel">067 353 76 67</span>
+						</div>
+						<p class="quick-bid__text">Звонки на 0 800 по Украине бесплатны.<br> контакт-центр работает в будни с 9 до 20</p>
+<!--						<button type="button" class="quick-bid__btn">Быстрая заявка</button>-->
 					</div>
-					<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
-					<button type="button" class="quick-bid__btn">Быстрая заявка</button>
-				</div>
-				<button type="button" class="print-promo__btn">Быстрая заявка</button>
-			</div>
-			<div class="print-promo__img"></div>
-		</div>
-	</section>
-	<section class="prices-sec">
-		<div class="container">
-			<div class="prices-sec__title-wrap flex-wrap wow fadeInUp" data-wow-delay="0.8s">
-				<h2 class="prices-sec__title">Стоимость услуг</h2>
-				<div class="prices-sec__tabs flex-wrap">
-					<button type="button" class="prices-sec__tab active" data-id="prices-bw">чб лазерные принтеры и мфу</button>
-					<button type="button" class="prices-sec__tab" data-id="prices-colors">цветные лазерные принтеры и мфу</button>
+					<!-- <button type="button" class="print-promo__btn">Быстрая заявка</button> -->
 				</div>
 			</div>
-		</div>
-		<div class="container wow fadeInUp" data-wow-delay="0.8s">
-			<div class="prices-sec__items flex-wrap active" id="prices-bw">
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id='1'>Заказать</a>
+		</section>
+		<section class="prices-sec">
+			<div class="container wow fadeInUp" data-wow-delay="0.8s">
+				<div class="prices-sec__items flex-wrap active" id="prices-bw">
+					<div class="prices-sec__item">
+						<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
+						<span class="prices-sec__item-price">~ 900 грн</span>
+						<div class="prices-sec__order">
+							<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
+							<a href="#" class="prices-sec__order-link" data-order-id='1' js-quick-order>Заказать</a>
+						</div>
 					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Востановление монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Востановление монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="2">Заказать</a>
+					<div class="prices-sec__item">
+						<h3 class="prices-sec__item-title">Заправка цветного лазерного картриджа</h3>
+						<span class="prices-sec__item-price">~ 900 грн</span>
+						<div class="prices-sec__order">
+							<h3 class="prices-sec__order-title">Заправка цветного лазерного картриджа</h3>
+							<a href="#" class="prices-sec__order-link" data-order-id="2" js-quick-order>Заказать</a>
+						</div>
 					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Диагностика лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Диагностика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="3">Заказать</a>
+					<div class="prices-sec__item">
+						<h3 class="prices-sec__item-title">Диагностика лазерного картриджа</h3>
+						<span class="prices-sec__item-price">~ 900 грн</span>
+						<div class="prices-sec__order">
+							<h3 class="prices-sec__order-title">Диагностика лазерного картриджа</h3>
+							<a href="#" class="prices-sec__order-link" data-order-id="3" js-quick-order>Заказать</a>
+						</div>
 					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Профилакатика лазерного картриджа</h3>
-					<span class="prices-sec__item-price">700-900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Профилакатика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="4">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="5">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-					<span class="prices-sec__item-price">от 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="6">Заказать</a>
-					</div>
-				</div>
-        <div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="7">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-					<span class="prices-sec__item-price">от 900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="8">Заказать</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container wow fadeInUp" data-wow-delay="0.2s">
-			<div class="prices-sec__items flex-wrap" id="prices-colors">
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 1500 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="1">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Востановление монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 1500 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Востановление монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="2">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Диагностика лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 1500 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Диагностика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="3">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Профилакатика лазерного картриджа</h3>
-					<span class="prices-sec__item-price">1000-1900 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Профилакатика лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="4">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Заправка монохромного лазерного картриджа</h3>
-					<span class="prices-sec__item-price">~ 1000 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Заправка монохромного лазерного картриджа</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="5">Заказать</a>
-					</div>
-				</div>
-				<div class="prices-sec__item">
-					<h3 class="prices-sec__item-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-					<span class="prices-sec__item-price">от 1100 грн</span>
-					<div class="prices-sec__order">
-						<h3 class="prices-sec__order-title">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</h3>
-						<a href="#" class="prices-sec__order-link" data-order-id="6">Заказать</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="prices-sec__mobile">
-			<div class="container">
-				<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
-производителя </a></h3>
-				<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
-				<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">Бесплатно*</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
-			</div>
-		</div>
-		<div class="prices-sec__mobile">
-			<div class="container">
-				<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
-производителя </a></h3>
-				<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
-				<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">400-900 грн</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
-			</div>
-		</div>
-		<div class="prices-sec__mobile">
-			<div class="container">
-				<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
-производителя </a></h3>
-				<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
-				<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">8400-12000 грн</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
-			</div>
-		</div>
-		<div class="prices-sec__advant">
-			<div class="container flex-wrap">
-				<div class="prices-sec__advant-item prices-sec__advant-item--source wow fadeInRight" data-wow-delay="0s" data-wow-offset="150">
-					<h3 class="prices-sec__advant-title">Сохраняем исходный ресурс картриджа</h3>
-				</div>
-				<div class="prices-sec__advant-item prices-sec__advant-item--quality wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="150">
-					<h3 class="prices-sec__advant-title">Идеальное качество печати даже после 3-ей заправки</h3>
-				</div>
-				<div class="prices-sec__advant-item prices-sec__advant-item--health wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="150">
-					<h3 class="prices-sec__advant-title">Мы заботимся о Вашем здоровье и окружающей среде</h3>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="simple-fast">
-		<div class="container">
-			<h2 class="simple-fast__title">Все просто и быстро</h2>
-			<div class="flex-wrap">
-				<div class="simple-fast__img wow fadeInLeft" data-wow-offset="150"></div>
-				<div class="simple-fast__info simple-fast__info--first wow fadeInRight" data-wow-offset="150">
-					<h3 class="simple-fast__subtitle">Оформляете заявку</h3>
-					<p class="simple-fast__descr">Оформляйте заявку удобным для вас способом. Наш оператор или сотрудник всегда готов Вас проконсультировать и помочь.</p>
-				</div>
-			</div>
-			<div class="flex-wrap">
-				<div class="simple-fast__info simple-fast__info--second wow fadeInLeft" data-wow-offset="150">
-					<h3 class="simple-fast__subtitle">Передаете нам устройство</h3>
-					<p class="simple-fast__descr">Курьер, почтовая служба или лично Вы передадите устройство в сервисный центр/магазин для бесплатной* диагностики</p>
-				</div>
-				<div class="simple-fast__img wow fadeInRight" data-wow-offset="150"></div>
-			</div>
-			<div class="flex-wrap">
-				<div class="simple-fast__img wow fadeInLeft" data-wow-offset="150"></div>
-				<div class="simple-fast__info simple-fast__info--third wow fadeInRight" data-wow-offset="150">
-					<h3 class="simple-fast__subtitle">Проводим осмотр</h3>
-					<p class="simple-fast__descr">В кратчайшие сроки проведем диагностику и скажем Вам цену и срок работ, если потребуются.</p>
-				</div>
-			</div>
-			<div class="flex-wrap">
-				<div class="simple-fast__info simple-fast__info--fourth wow fadeInLeft" data-wow-offset="150">
-					<h3 class="simple-fast__subtitle">Произносим магические заклинания</h3>
-					<p class="simple-fast__descr">Наши сертифицированные специалисты сделают все, чтобы было как новенькое и работало безупречно.</p>
-				</div>
-				<div class="simple-fast__img wow fadeInRight" data-wow-offset="150"></div>
-			</div>
-			<div class="flex-wrap">
-				<div class="simple-fast__img simple-fast__img--last wow fadeInLeft" data-wow-offset="150"></div>
-				<div class="simple-fast__info simple-fast__info--fifth wow fadeInRight" data-wow-offset="150">
-					<h3 class="simple-fast__subtitle">Получаете исправное устройство. Оплачиваете</h3>
-					<p class="simple-fast__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="order-sec">
-		<div class="container">
-			<form action="#" class="order-form wow fadeInUp" data-wow-offset="150">
-				<h2 class="order-form__title">Оформить заявку</h2>
-				<div class="order-form__block">
-					<div class="flex-wrap">
-						<label for="" class="order-form__label order-form__label--60">Услуга*</label>
-						<label for="" class="order-form__label order-form__label--40">Производитель*</label>
-					</div>
-					<div class="order-form__service flex-wrap">
-						<select name="" id="" class="order-form__select order-form__select--60">
-              <option value="" data-id="1">Заправка монохромного лазерного картриджа</option>
-              <option value="" data-id="2">Востановление монохромного лазерного картриджа</option>
-              <option value="" data-id="3">Диагностика лазерного картриджа</option>
-              <option value="" data-id="4">Профилакатика лазерного картриджа</option>
-              <option value="" data-id="5">Заправка монохромного лазерного картриджа</option>
-              <option value="" data-id="6">Типовой ремонт с заменой роликов, тормозных площадок, термопленок, блок в сборе</option>
-				</select>
-						<select name="" id="" class="order-form__select order-form__select--25">
-					<option value="">Samsung</option>
-					<option value="">Apple</option>
-				</select>
-						<div class="order-form__input order-form__input--15">
-							<input type="text" id="model">
-							<label for="model" class="order-form__placeholder"><span>Модель</span></label>
+					<div class="prices-sec__item">
+						<h3 class="prices-sec__item-title">Профилактика лазерного картриджа</h3>
+						<span class="prices-sec__item-price">700-900 грн</span>
+						<div class="prices-sec__order">
+							<h3 class="prices-sec__order-title">Профилактика лазерного картриджа</h3>
+							<a href="#" class="prices-sec__order-link" data-order-id="4" js-quick-order>Заказать</a>
 						</div>
 					</div>
 				</div>
-				<div class="order-form__block">
-					<div class="order-form__contacts flex-wrap">
-						<div class="order-form__input">
-							<input type="text" id="surname">
-							<label for="surname" class="order-form__placeholder"><span>Фамилия</span></label>
-						</div>
-						<div class="order-form__input">
-							<input type="text" id="name">
-							<label for="name" class="order-form__placeholder"><span>Имя</span></label>
-						</div>
-						<div class="order-form__input">
-							<input type="tel" class="order-form__input--tel" id="tel">
-							<label for="tel" class="order-form__placeholder"><span>Телефон</span></label>
-						</div>
-						<div class="order-form__input error">
-							<input type="email" id="email">
-							<label for="email" class="order-form__placeholder"><span>Эл. почта</span></label>
-						</div>
-					</div>
-				</div>
-				<div class="order-form__block">
-					<div class="flex-wrap order-form__address-labels">
-						<label for="" class="order-form__label order-form__label--33">Ваш город</label>
-						<label for="" class="order-form__label order-form__label--66">Как хотите передать устройство?</label>
-					</div>
-					<div class="order-form__address flex-wrap">
-						<select name="" id="" class="order-form__select order-form__select--40 order-form__select--light">
-					<option value="Киев">Киев</option>
-					<option value="Одесса">Одесса</option>
-						</select>
-						<div class="order-form__more">
-						<!-- ОТДАТЬ.КИЕВ-->
-							<div class="order-form__give" id="give-kiev">
-								<label class="order-form__label order-form__label--hidden">Как хотите передать устройство?</label>
-								<div class="order-form__tabs">
-									<a href="#" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
-									<a href="#" class="order-form__tab active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab for-post">Новая почта</a>
-									<a href="#" class="order-form__tab for-courier">Курьер</a>
-								</div>
-								<div class="order-form__common-tab order-form__shops-wrap">
-									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
-									<div class="order-form__shops">
-										<a href="#" class="order-form__shop">Вадима Гетьмана, 13</a>
-										<div class="order-form__shop-info">
-											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-										</div>
-										<a href="#" class="order-form__shop">Вышгородская, 32/2</a>
-										<div class="order-form__shop-info">
-											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-										</div>
-										<a href="#" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
-										<a href="#" class="order-form__shop">Харьковское шоссе, 1</a>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__post">
-									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-									<!-- <select name="" id="" class="order-form__select">
-										<option value="">№1. Тараса Пудренка 2</option>
-										<option value="">№1. Тараса Пудренка 20</option>
-									</select> -->
-                  <div class="order-form__common-tab order-form__post">
-            				<p class="mobile-form__text">Вы можете передать устройство через любое отделение Новой Почты по всей Украине.</p>
-            				<p class="mobile-form__text">Адресс для отправки: <span>01054 Киев, ул. Дмитриевская 56 Сервисный-центр Brain Pro</span></p>
-            				<p class="mobile-form__text">В пределах страны, доставка малогабаритных грузов стоит 35 грн Детальная информация на <a href="#">сайте НП</a></p>
-            			</div>
-									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give">
-									<label for="check-give" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<div class="order-form__input">
-										<input type="text" id="street1">
-										<label for="street1" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__courier">
-									<div class="order-form__input">
-										<input type="text" id="street11">
-										<label for="street11" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-							</div>
-							<!-- ОТДАТЬ.ОДЕССА-->
-							<div class="order-form__give" id="give-odessa">
-								<label class="order-form__label order-form__label--hidden">Как хотите передать устройство?</label>
-								<div class="order-form__tabs">
-									<a href="#" class="order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
-									<a href="#" class="order-form__tab active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab order-form__tab--disable for-post">Новая почта</a>
-									<a href="#" class="order-form__tab for-courier">Курьер</a>
-								</div>
-								<div class="order-form__common-tab order-form__shops-wrap">
-									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
-									<div class="order-form__shops">
-										<a href="#" class="order-form__shop">Другой адрес, 15</a>
-										<div class="order-form__shop-info">
-											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-										</div>
-										<a href="#" class="order-form__shop">Вышгородская, 32/2</a>
-										<div class="order-form__shop-info">
-											<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-											<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-											<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-										</div>
-										<a href="#" class="order-form__shop">Вообще другой адрес, 56</a>
-										<a href="#" class="order-form__shop">Адрес в Одессе, 1</a>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__post">
-									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-									<select name="" id="" class="order-form__select">
-										<option value="">№1. Тараса Пудренка 2</option>
-										<option value="">№1. Тараса Пудренка 20</option>
-									</select>
-									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give1">
-									<label for="check-give1" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<div class="order-form__input">
-										<input type="text" id="street12">
-										<label for="street12" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__courier">
-									<div class="order-form__input">
-										<input type="text" id="street112">
-										<label for="street112" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-							</div>
-							<!-- ПОЛУЧИТЬ.КИЕВ-->
-							<div class="order-form__take" id="take-kiev">
-								<label class="order-form__label">Как хотите получить устройство?</label>
-								<div class="order-form__tabs-back">
-									<a href="#" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
-									<a href="#" class="order-form__tab-back active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab-back order-form__tab--disable for-post">Новая почта</a>
-									<a href="#" class="order-form__tab-back order-form__tab--disable for-courier">Курьер</a>
-								</div>
-								<div class="order-form__common-tab order-form__shops-wrap">
-									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
-									<div class="order-form__shops">
-										<input type="radio" name="shop-radio" id="shop-radio1" class="order-form__radio">
-										<label for="shop-radio1" class="order-form__radio-label">Вадима Гетьмана, 13</label>
-										<input type="radio" name="shop-radio" id="shop-radio2" class="order-form__radio">
-										<label for="shop-radio2" class="order-form__radio-label">Вышгородская, 32/2</label>
-										<input type="radio" name="shop-radio" id="shop-radio3" class="order-form__radio">
-										<label for="shop-radio3" class="order-form__radio-label">Дмитриевская, 56 (Лукьяновка)</label>
-										<input type="radio" name="shop-radio" id="shop-radio4" class="order-form__radio">
-										<label for="shop-radio4" class="order-form__radio-label">Харьковское шоссе, 1</label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__post">
-									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-									<select name="" id="" class="order-form__select">
-										<option value="">№1. Тараса Пудренка 2</option>
-										<option value="">№1. Тараса Пудренка 20</option>
-									</select>
-									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-post">
-									<label for="check-post" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<div class="order-form__input">
-										<input type="text" id="street2">
-										<label for="street2" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__courier">
-									<div class="order-form__input">
-										<input type="text" id="street22">
-										<label for="street22" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-							</div>
-							<!-- ПОЛУЧИТЬ.ОДЕССА-->
-							<div class="order-form__take" id="take-odessa">
-								<label class="order-form__label">Как хотите получить устройство?</label>
-								<div class="order-form__tabs-back">
-									<a href="#" class="order-form__tab-back order-form__tab-back--disable for-shops">Сервис-центр</a>
-									<a href="#" class="order-form__tab-back active for-shops">Магазины Brain</a>
-									<a href="#" class="order-form__tab-back for-post">Новая почта</a>
-									<a href="#" class="order-form__tab-back for-courier">Курьер</a>
-								</div>
-								<div class="order-form__common-tab order-form__shops-wrap">
-									<label class="order-form__label">Адреса магазинов в вашем городе:</label>
-									<div class="order-form__shops">
-										<input type="radio" name="shop-radio" id="shop-radio11" class="order-form__radio">
-										<label for="shop-radio11" class="order-form__radio-label">Вадима Гетьмана, 13</label>
-										<input type="radio" name="shop-radio" id="shop-radio21" class="order-form__radio">
-										<label for="shop-radio21" class="order-form__radio-label">Вышгородская, 32/2</label>
-										<input type="radio" name="shop-radio" id="shop-radio31" class="order-form__radio">
-										<label for="shop-radio31" class="order-form__radio-label">Дмитриевская, 56 (Лукьяновка)</label>
-										<input type="radio" name="shop-radio" id="shop-radio41" class="order-form__radio">
-										<label for="shop-radio41" class="order-form__radio-label">Харьковское шоссе, 1</label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__post">
-									<p class="order-form__hint"> — мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-									<select name="" id="" class="order-form__select">
-										<option value="">№1. Тараса Пудренка 2</option>
-										<option value="">№1. Тараса Пудренка 20</option>
-									</select>
-									<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-post1">
-									<label for="check-post1" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-									<div class="order-form__input">
-										<input type="text" id="street22">
-										<label for="street22" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-								<div class="order-form__common-tab order-form__courier">
-									<div class="order-form__input">
-										<input type="text" id="street222">
-										<label for="street222" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-									</div>
-								</div>
-							</div>
+			</div>
 
-							<div class="order-form__buttons">
-								<button type="submit" class="order-form__submit">Отправить</button>
-								<input type="checkbox" class="order-form__check" id="check2" checked>
-								<label for="check2" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
-							</div>
-						</div>
+			<div class="prices-sec__mobile">
+				<div class="container">
+					<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
+производителя </a></h3>
+					<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
+					<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">Бесплатно*</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
+				</div>
+			</div>
+			<div class="prices-sec__mobile">
+				<div class="container">
+					<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
+производителя </a></h3>
+					<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
+					<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">400-900 грн</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
+				</div>
+			</div>
+			<div class="prices-sec__mobile">
+				<div class="container">
+					<h3 class="prices-sec__mobile-title"><a href="#">Типовой ремонт с разбором блоков и заменой комплектующих в них, замены по регламенту
+производителя </a></h3>
+					<p class="prices-sec__mobile-descr">разбился экран, битые пиксели, проблема с подсветкой, полосы на экране </p>
+					<div class="prices-sec__mobile-wrap flex-wrap"><span class="prices-sec__mobile-price">8400-12000 грн</span><button type="button" class="prices-sec__mobile-btn">Заказать</button></div>
+				</div>
+			</div>
+			<div class="prices-sec__advant prices-sec__advant--on-bg">
+				<div class="container flex-wrap">
+					<div class="prices-sec__advant-item prices-sec__advant-item--medal wow fadeInRight" data-wow-delay="0s" data-wow-offset="0">
+						<h3 class="prices-sec__advant-title">Гарантируем высокое качество <br> печати после каждой заправки</h3>
+					</div>
+					<div class="prices-sec__advant-item prices-sec__advant-item--printer wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="0">
+						<h3 class="prices-sec__advant-title">Сохраняем ресурс картриджа <br> предумотренный производителем</h3>
+					</div>
+					<div class="prices-sec__advant-item prices-sec__advant-item--eco wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="0">
+						<h3 class="prices-sec__advant-title">Мы заботимся о Вашем здоровье <br> и окружающей среде</h3>
 					</div>
 				</div>
-			</form>
-		</div>
-	</section>
-	<section class="about-us">
+			</div>
+		</section>
+	</div>
+
+	<section class="simple-fast simple-fast--collumned">
 		<div class="container">
-			<div class="flex-wrap wow fadeInUp" data-wow-offset="150">
-				<div class="about-us__info">
-					<h2 class="about-us__title">Brain Pro Сервис</h2>
-					<p class="about-us__descr">Компания с 20 летним опытом работы, на рынке ИТ в сфере оптовых продаж, корпоративных и персональных решениях с наличием национальной сети собственных магазинов "Brain. Магазины умных покупок" и Интернет магазина Brain.com.ua.</p>
-					<span class="about-us__name">— команда BrainPro</span>
+			<div class="simple-fast__wrapper">
+				<div class="simple-fast__left wow fadeInLeft">
+					<img src="img/process.png" srcset='img/process@2x.png 2x' alt="">
 				</div>
-				<div class="about-us__img">
-					<div class="about-us__img-item about-us__img-item--first"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--second"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--third"><img src="img/slide4.jpg" alt=""></div>
-					<div class="about-us__img-item about-us__img-item--fourth active"><img src="img/slide4.jpg" alt=""></div>
+				<div class="simple-fast__right">
+					<h2 class="simple-fast__title">Все просто и быстро</h2>
+					<div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+						<h3 class="simple-fast__subtitle">1. Оформляете заявку и передаете устройство</h3>
+						<p class="simple-fast__descr">Заявку можно оформить любым удобным способом. После, наш курьер, почтовая служба или лично Вы передадите устройство в сервисный центр/магазин для диагностики.</p>
+					</div>
+					<div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+						<h3 class="simple-fast__subtitle">2. Проводим диагностику и сервисные работы</h3>
+						<p class="simple-fast__descr">В кратчайшие сроки проведем диагностику и скажем Вам цену и срок работ. Если таковы потребуются, наши сертифицированные специалисты сделают все, чтобы было как новенькое и работало безупречно.</p>
+					</div>
+					<div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+						<h3 class="simple-fast__subtitle">3. Получаете исправное и готовое к работе устройство</h3>
+						<p class="simple-fast__descr">В кратчайшие сроки проведем диагностику и скажем Вам цену и срок работ. Если таковы потребуются, наши сертифицированные специалисты сделают все, чтобы было как новенькое и работало безупречно.</p>
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</section>
-  <section class="contacts">
-		<div class="big-container">
+
+	<section class="about-us about-us--slider">
+		<div class="about-us__wrapper">
+			<div class="flex-wrap wow fadeInUp" data-wow-offset="150">
+				<div class="aside"></div>
+				<div class="about-us__content">
+					<div class="about-us__info">
+						<h2 class="about-us__title">Brain Pro Сервис</h2>
+						<p class="about-us__descr">
+							<span>Компания с 20 летним опытом работы, на рынке ИТ в сфере оптовых продаж, корпоративных и персональных решениях с наличием национальной сети собственных магазинов "Brain. Магазины умных покупок" и Интернет магазина Brain.com.ua.</span>
+						</p>
+						<div class="about-us__nums">
+							<div class="about-us__num">
+								<div class="about-us__num-num">20</div>
+								<div class="about-us__num-desc">лет на рынке Украины</div>
+							</div>
+							<div class="about-us__num">
+								<div class="about-us__num-num">12</div>
+								<div class="about-us__num-desc">сервисных центров</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="about-us__slider">
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+						<div class="about-us__slide">
+							<img src="img/aboutUsSlide.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contacts contacts--wider-contacts">
+		<div class="big-container big-container--no-pad">
 			<div class="contacts__main flex-wrap wow fadeInUp" data-wow-offset="150">
 				<div class="contacts__map" id="contacts-map"></div>
 				<div class="contacts__info">
@@ -611,81 +292,90 @@
 					</select>
 						<div class="contacts__city active" id="city-ivanovo">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">044 256 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 214 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 256 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 214 25 25<span>многоканальный</span></a>
+									<span class="contacts__info-link contacts__info-link--mail"><span>Эл. адрес:</span><a href="mailto:pro@brain.com.ua">pro@brain.com.ua</a></span>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+									<a href="#" class="contacts__info-link">Вербицкого, 1</a>
+									<a href="#" class="contacts__info-link">Васильковская 34</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 						<div class="contacts__city" id="city-kiev">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 555 555 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">044 444 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 444 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 555 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 555 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 555 25 25<span>многоканальный</span></a>
+									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Киевский магазин</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вадима Гетьмана, 13</a>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 						<div class="contacts__city" id="city-odessa">
 							<div class="contacts__info-item">
-								<a href="tel:0672142525" class="contacts__info-link">0 333 333 52 52</a>
-								<a href="tel:0672142525" class="contacts__info-link">333 333 56 56</a>
-								<a href="tel:0672142525" class="contacts__info-link">067 214 25 25</a>
-								<a href="mailto:pro@brain.com.ua" class="contacts__info-link">pro@brain.com.ua</a>
+								<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 222 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 222 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 222 25 25<span>многоканальный</span></a>
+									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Магазины Brain: </h3>
-								<a href="#" class="contacts__info-link">Другой магазин</a>
-								<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
-								<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
-								<a href="#" class="contacts__info-link">Вербицкого, 1</a>
-								<a href="#" class="contacts__info-link">Васильковская 34</a>
+							<div class="contacts__info-row">
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Магазины Brain: </h3>
+									<a href="#" class="contacts__info-link">Вышгородская, 32/2</a>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56</a>
+									<a href="#" class="contacts__info-link">Харьковское шоссе, 1</a>
+									<a href="#" class="contacts__info-link">Вербицкого, 1</a>
+									<a href="#" class="contacts__info-link">Васильковская 34</a>
+								</div>
+								<div class="contacts__info-item">
+									<h3 class="contacts__info-title">Сервисный центр:</h3>
+									<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+								</div>
 							</div>
-							<div class="contacts__info-item">
-								<h3 class="contacts__info-title">Сервисный центр:</h3>
-								<a href="#" class="contacts__info-link">Дмитриевская, 56 </a>
+							<div class="page-footer__socials page-footer__socials--wider">
+								<a href="#" class="page-footer__social page-footer__social--facebook"></a>
+								<a href="#" class="page-footer__social"></a>
+								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
-              <div class="page-footer__socials">
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        				<a href="#" class="page-footer__social"></a>
-        			</div>
 						</div>
 					</form>
 				</div>
@@ -693,51 +383,62 @@
 			<aside class="aside"></aside>
 		</div>
 	</section>
-	<footer class="page-footer">
+	<footer class="page-footer page-footer--v2">
 		<div class="container flex-wrap">
-				<p class="page-footer__copy">© 1996 - 2016 ООО "Приватинвест" </p>
-				<a href="#" class="page-footer__link">Техническая ссылка</a>
-			<div class="page-footer__socials page-footer__socials--map-sync">
+			<p class="page-footer__copy">© 1996 - 2016 ООО "Приватинвест" </p>
+			<a href="#" class="page-footer__link">Политика конфиденциальности</a>
+			<div class="page-footer__socials page-footer__socials--wider page-footer__socials--map-sync">
+				<a href="#" class="page-footer__social page-footer__social--facebook"></a>
 				<a href="#" class="page-footer__social"></a>
-				<a href="#" class="page-footer__social"></a>
-				<a href="#" class="page-footer__social"></a>
+				<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 			</div>
 		</div>
 	</footer>
 	<div class="overlay"></div>
 	<!-- DESKTOP QUICK POPUP -->
-	<form action="#" class="big-quick-popup">
+	<form action="#" class="big-quick-popup big-quick-popup--v2">
 		<button type="button" class="big-quick-popup__close"></button>
 		<div class="big-quick-popup__container">
 			<div class="flex-wrap">
 				<div class="big-quick-popup__input">
-					<input type="text" id="name-big">
-					<label for="name-big" class="big-quick-popup__placeholder"><span>Имя и фамилия</span></label>
+					<input type="text" name="name_big" id="name_big">
+					<label for="name_big" class="big-quick-popup__placeholder"><span>Имя и фамилия*</span></label>
 				</div>
 				<div class="big-quick-popup__input">
-					<input type="text" id="tel-big" class="big-quick-popup__tel">
-					<label for="tel-big" class="big-quick-popup__placeholder"><span>Телефон</span></label>
+					<input type="text" name="tel_big" id="tel_big" class="big-quick-popup__tel">
+					<label for="tel_big" class="big-quick-popup__placeholder"><span>Телефон*</span></label>
+				</div>
+				<div class="big-quick-popup__input">
+					<input type="text" name="email" id="email">
+					<label for="email" class="big-quick-popup__placeholder"><span>Эл. адрес*</span></label>
 				</div>
 			</div>
 			<div class="big-quick-popup__input">
-				<input type="text" id="problem-big">
-				<label for="problem-big" class="big-quick-popup__placeholder"><span>Пару слов о проблеме</span></label>
+				<input type="text" name="comment" id="comment">
+				<label for="comment" class="big-quick-popup__placeholder"><span>Комментарий (не обязательно)</span></label>
+			</div>
+			<div class="big-quick-popup__input" js-paste-order-option>
+				<input type="text" name="problem-big" id="problem-big" disabled>
+				<label for="problem-big" class="big-quick-popup__placeholder"><span>
+          <select class="popup__select">
+            <option value="Заправка монохромного лазерного картриджа">Заправка монохромного лазерного картриджа</option>
+            <option value="Заправка цветного лазерного картриджа">Заправка цветного лазерного картриджа</option>
+            <option value="Диагностика лазерного картриджа">Диагностика лазерного картриджа</option>
+            <option value="Профилактика лазерного картриджа">Профилактика лазерного картриджа</option>
+          </select>
+        </span></label>
 			</div>
 			<div class="flex-wrap">
-				<button type="button" class="big-quick-popup__submit">Отправить</button>
-				<input type="checkbox" class="order-form__check" id="big-agree" checked>
-				<label for="big-agree" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
+				<button type="submit" class="big-quick-popup__submit">Отправить</button>
+				<input type="checkbox" class="order-form__check" name="big_agree" id="big_agree" required aria-required="true" checked>
+				<label for="big_agree" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
 			</div>
 		</div>
 		<div class="big-quick-popup__done">
 			<h2 class="big-quick-popup__title">Заявка отправлена</h2>
 			<p class="big-quick-popup__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.</p>
-			<p class="big-quick-popup__goodday">Хорошего дня!</p>
 			<div class="quick-bid">
-				<div class="flex-wrap">
-					<span class="quick-bid__tel">0 800 215 500</span>
-					<span class="quick-bid__tel">067 353 76 67</span>
-				</div>
+				<span class="quick-bid__tel">0 800 215 500</span>
 				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
 			</div>
 		</div>
@@ -746,19 +447,27 @@
 	<!-- QUICK POPUP -->
 	<div class="quick-popup">
 		<button type="button" class="quick-popup__close"></button>
-		<h2 class="quick-popup__title">Быстрая заявка</h2>
+		<h2 class="quick-popup__title">Заявка на услугу</h2>
 		<form action="" class="quick-popup__form">
+			<select class="mobile-form__select order-form__select ">
+			<option value="">Заправка монохромного лазерного принтера</option>
+			<option value="">Другая услуга</option>
+		</select>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="name-popup">
-				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия</span></label>
+				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия*</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="tel-popup" class="order-form__input--tel">
-				<label for="tel-popup" class="order-form__placeholder"><span>Телефон</span></label>
+				<label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
-				<textarea class="quick-popup__textarea" id="comment-popup"></textarea>
-				<label for="comment-popup" class="order-form__placeholder"><span>Пару слов о проблеме</span></label>
+				<input type="text" id="email-popup">
+				<label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="comment-popup">
+				<label for="comment-popup" class="order-form__placeholder"><span>Комментарий (необязательно)</span></label>
 			</div>
 			<div class="agree-wrap checked">
 				<input type="checkbox" class="order-form__check" id="check-popup2" checked>
@@ -891,11 +600,11 @@
 										<option value="">№1. Тараса Пудренка 2</option>
 										<option value="">№1. Тараса Пудренка 20</option>
 									</select> -->
-        <div class="order-form__common-tab order-form__post">
-  				<p class="mobile-form__text">Вы можете передать устройство через любое отделение Новой Почты по всей Украине.</p>
-  				<p class="mobile-form__text">Адресс для отправки: <span>01054 Киев, ул. Дмитриевская 56 Сервисный-центр Brain Pro</span></p>
-  				<p class="mobile-form__text">В пределах страны, доставка малогабаритных грузов стоит 35 грн Детальная информация на <a href="#">сайте НП</a></p>
-  			</div>
+				<div class="order-form__common-tab order-form__post">
+					<p class="mobile-form__text">Вы можете передать устройство через любое отделение Новой Почты по всей Украине.</p>
+					<p class="mobile-form__text">Адресс для отправки: <span>01054 Киев, ул. Дмитриевская 56 Сервисный-центр Brain Pro</span></p>
+					<p class="mobile-form__text">В пределах страны, доставка малогабаритных грузов стоит 35 грн Детальная информация на <a href="#">сайте НП</a></p>
+				</div>
 				<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give-mobile">
 				<label for="check-give-mobile" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
 				<div class="order-form__input">
@@ -922,15 +631,12 @@
 			<button type="button" class="mobile-form__prev" data-id="step-three">Шаг назад</button>
 		</div>
 		<div class="mobile-form__steps mobile-form__done" id="step-five">
-			<a href="/" class="mobile-form__logo"><img src="img/logo.svg" alt=""></a>
+			<a href="/" class="mobile-form__logo">BrainPro</a>
 			<h2 class="mobile-form__title">Заявка отправлена</h2>
-			<p class="mobile-form__text">Производитель и модель указаны на устройстве. Также на его упаковке или документации</p>
-			<p class="mobile-form__good-day">Хорошего дня!</p>
+			<p class="mobile-form__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.
+			</p>
 			<div class="quick-bid">
-				<div class="flex-wrap">
-					<span class="quick-bid__tel">0 800 215 500</span>
-					<span class="quick-bid__tel">067 353 76 67</span>
-				</div>
+				<span class="quick-bid__tel">0 800 215 500</span>
 				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
 			</div>
 		</div>

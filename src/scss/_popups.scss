@@ -57,13 +57,19 @@
 			border: 0;
 			font-size: 20px;
 			line-height: 20px;
-			border-bottom: 2px solid $white-color;
+			border-bottom: 2px solid $text-color;
 			color: $white-color;
 			padding: 16px 0;
+			&:focus {
+				border-color: $white-color;
+			}
+			&#problem-big {
+				border-bottom: 0;
+			}
 		}
     &.has-error{
       input{
-        border-color: #ffcb32;
+        border-color: $wrong-color;
       }
     }
     &[js-paste-order-option]{
@@ -86,7 +92,7 @@
 	}
   .has-error{
     .order-form__check-label:before{
-      border-color: #ffcb32;
+      border-color: $wrong-color;
     }
   }
 	&__placeholder {
@@ -105,6 +111,7 @@
 			display: block;
 			transition: all 0.3s;
 			transform-origin: left top;
+			width: 100%;
 		}
 		&.active {
 			span {
@@ -168,7 +175,7 @@
 		font-size: 16px;
 		line-height: 28px;
 		margin-top: 0;
-		margin-bottom: 40px;
+		margin-bottom: 70px;
 	}
 	&__goodday {
 		color: $white-color;
@@ -180,6 +187,7 @@
 		display: block;
 		max-width: 320px;
 		margin-bottom: 0;
+		text-align: left;
 		.flex-wrap {
 			justify-content: flex-start;
 			margin-bottom: 0;
@@ -187,10 +195,49 @@
 		&__tel {
 			font-size: 20px;
 			color: $white-color;
+			&:before {
+				display: none;
+			}
 		}
 		&__text {
 			color: $text-color;
 			font-size: 16px;
+		}
+	}
+	.selectric-wrapper {
+		position: relative;
+			&:after {
+				transition: all 0.3s;
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
+				background-repeat: no-repeat;
+				background-image: url(../img/dropdown.png);
+				width: 12px;
+				height: 6px;
+			}
+		&.selectric-open:after {
+			transform: translateY(-50%) rotate(-180deg);
+		}
+	}
+	.selectric-items {
+		border-radius: 0;
+		border: 0;
+		background-color: $menu-bg;
+		li {
+			font-size: 16px;
+			border-radius: 0;
+			background-color: transparent;
+			&:hover {
+				color: $white-color;
+				background-color: transparent;
+			}
+			&.highlighted {
+				background-color: transparent;
+				color: $white-color;
+			}
 		}
 	}
 	&--v2{
@@ -234,6 +281,9 @@
 		margin-bottom: 30px;
 	}
 	&__input {
+		margin-bottom: 15px;
+	}
+	.selectric-wrapper {
 		margin-bottom: 15px;
 	}
 	.agree-wrap {
@@ -405,6 +455,12 @@
 		&.active {
 			display: flex;
 		}
+		.mobile-form__logo {
+			text-decoration: none;
+			font-size: 30px;
+			font-family: $font-med;
+			color: #38404f;
+		}
 		p {
 			text-align: center;
 			margin-top: 10px;
@@ -412,6 +468,11 @@
 		.quick-bid {
 			margin-top: auto;
 			margin-bottom: 0;
+			&__tel {
+				&:before {
+					display: none;
+				}
+			}
 		}
 	}
 	&__logo {

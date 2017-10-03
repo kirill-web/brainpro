@@ -184,7 +184,7 @@
 				border-top: 0;
 			}
 			&.active {
-				background-color: $start-grad;
+				background-color: #ffeee9;
 				position: relative;
 				.service-sec__mobile-item {
 					font-family: $font-med;
@@ -257,7 +257,7 @@
 	}
 	&__item {
     flex: 0 1 25%;
-		padding-left: 80px;
+		padding-left: 70px;
 		margin-left: 60px;
 		position: relative;
 		border-radius: 4px;
@@ -284,30 +284,62 @@
 			height: 60px;
 			background-repeat: no-repeat;
 			background-color: transparent;
-			background-image: url(../img/health.svg);
 		}
+		&--twenty:before {
+			background-image: url(../img/ico_main_1.svg);
+			}
+			&--author:before {
+			background-image: url(../img/ico_main_2.svg);
+			}
+			&--year:before {
+			background-image: url(../img/ico_main_3.svg);
+			}
+			&--save:before {
+			background-image: url(../img/ico_main_4.svg);
+			}
 	}
 	&__img-item {
 		border-radius: 6px;
-		padding: 27px;
+		padding: 23px 27px;
 		min-height: 160px;
 		width: calc(25% - 20px);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 		&--first {
-			background-color: $bg1;
+			background-color: transparent;
+			border: 1px solid $text-color;
 			width: calc(50% - 20px);
+			.our-advant__text {
+				color: $black-color;
+			}
 		}
 		&--second {
 			background-color: $bg2;
+			background-image: url(../img/advant1.png);
 		}
 		&--third {
 			background-color: $bg3;
+			background-image: url(../img/advant2.png);
 		}
 	}
 	&__text {
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 22px;
 		margin: 0;
 		font-family: $font-reg;
+		color: $white-color;
+	}
+	&__descr {
+		color: $text-color;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	&__link {
+		font-size: 16px;
+		color: $link-color;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -341,11 +373,11 @@
 		margin-right: auto;
 		padding-bottom: 30px;
 		.aside{
-			width: 19%;
+			width: 16.66%;
 		}
 	}
 	&__content{
-		width: 81%;
+		width: 83.33%;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;

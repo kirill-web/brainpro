@@ -20,7 +20,7 @@ var gulp         = require('gulp'),
 
 // Default task
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'scripts', 'img', 'list-pages'], 'watch',
+  runSequence(['sass', 'scripts', 'img'], 'watch',
     callback
   )
 })
@@ -121,17 +121,17 @@ gulp.task('clean', function () {
 	return del.sync('dist/**');
 });
 
-
-gulp.task('list-pages', function() {
-  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
-  var pages = require('./src/list-pages/index.yaml');
-  return gulp
-    .src('src/list-pages/index.html')
-    .pipe(consolidate('lodash', {
-      pages: pages
-    }))
-    .pipe(gulp.dest('src'));
-});
+//
+//gulp.task('list-pages', function() {
+//  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
+//  var pages = require('./src/list-pages/index.yaml');
+//  return gulp
+//    .src('src/list-pages/index.html')
+//    .pipe(consolidate('lodash', {
+//      pages: pages
+//    }))
+//    .pipe(gulp.dest('src'));
+//});
 
 
 gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
@@ -141,7 +141,7 @@ gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
   gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'list-pages'], function () {
+gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
 
 	var buildCss = gulp.src('src/css/style.css')
 		.pipe(csso({

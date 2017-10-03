@@ -14,6 +14,9 @@ $(document).ready(function () {
 		$('body').toggleClass('no-scroll');
 		$('.main-menu').toggle(300);
 		$('.main-menu').css('display', 'flex');
+		if ($(window).width() < 768) {
+			$('.main-menu').css('display', 'block');
+		}
     $(this).toggleClass('active');
     $('.page-header').toggleClass('active-menu');
 	});
@@ -223,17 +226,17 @@ $(document).ready(function () {
 	$('.prices-sec__mobile-btn').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.overlay').show();
-		$('.mobile-form').fadeIn(200);
-		$('.mobile-form__steps').removeClass('active');
-		$('.mobile-form__steps#step-one').addClass('active');
+		$('.quick-popup').fadeIn(200);
+//		$('.mobile-form__steps').removeClass('active');
+//		$('.mobile-form__steps#step-one').addClass('active');
 	});
-	$('.mobile-form__close').on('click', function () {
-		$('.mobile-form').fadeOut(200);
+	$('.quick-popup__close').on('click', function () {
+		$('.quick-popup').fadeOut(200);
 		$('.overlay').hide();
 		$('body').removeClass('no-scroll');
 	});
 	$(document).mouseup(function (a) {
-		var form = $('.mobile-form');
+		var form = $('.quick-popup');
 		if (form.is(':visible')) {
 			if (a.target != form[0] && !form.has(a.target).length && form.is(':visible')) {
 				$('body').removeClass('no-scroll');
