@@ -155,7 +155,7 @@
 							<a href="#" class="service-sec__more-text">Замена баттареи</a>
 							<p class="service-sec__more-text">1500-2100 грн</p>
 						</div>
-						<a href="#" class="service-sec__more-btn">еще услуги</a>
+						<a href="print.html" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
 				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.4s">
@@ -172,7 +172,7 @@
 							<a href="#" class="service-sec__more-text">Замена баттареи</a>
 							<p class="service-sec__more-text">1500-2100 грн</p>
 						</div>
-						<a href="#" class="service-sec__more-btn">еще услуги</a>
+						<a href="print.html" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
 				<!--
@@ -289,7 +289,7 @@
 						</p>
 						<span class="service-sec__mobile-price">~ 450-550 грн</span>
 					</div>
-					<a href="#" class="service-sec__mobile-more">еще услуги</a>
+					<a href="print.html" class="service-sec__mobile-more">еще услуги</a>
 				</div>
 			</div>
 			<div class="container">
@@ -306,7 +306,7 @@
 						</p>
 						<span class="service-sec__mobile-price">~ 450-550 грн</span>
 					</div>
-					<a href="#" class="service-sec__mobile-more">еще услуги</a>
+					<a href="print.html" class="service-sec__mobile-more">еще услуги</a>
 				</div>
 			</div>
 			<div class="container">
@@ -515,19 +515,27 @@
 	<!-- POPUP -->
 	<div class="quick-popup">
 		<button type="button" class="quick-popup__close"></button>
-		<h2 class="quick-popup__title">Быстрая заявка</h2>
+		<h2 class="quick-popup__title">Заявка на услугу</h2>
 		<form action="" class="quick-popup__form">
+			<select class="mobile-form__select order-form__select ">
+			<option value="">Заправка монохромного лазерного принтера</option>
+			<option value="">Другая услуга</option>
+		</select>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="name-popup">
-				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия</span></label>
+				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия*</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="tel-popup" class="order-form__input--tel">
-				<label for="tel-popup" class="order-form__placeholder"><span>Телефон</span></label>
+				<label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
-				<textarea class="quick-popup__textarea" id="comment-popup"></textarea>
-				<label for="comment-popup" class="order-form__placeholder"><span>Пару слов о проблеме</span></label>
+				<input type="text" id="email-popup">
+				<label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="comment-popup">
+				<label for="comment-popup" class="order-form__placeholder"><span>Комментарий (необязательно)</span></label>
 			</div>
 			<div class="agree-wrap checked">
 				<input type="checkbox" class="order-form__check" id="check-popup2" checked>

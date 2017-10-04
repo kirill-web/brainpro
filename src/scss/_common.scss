@@ -75,7 +75,9 @@ a {
   &.active-menu{
     background: transparent;
     border-color: transparent;
-    .page-header__logo, .page-header__contacts, .page-header__status{
+    .page-header__logo, .page-header__contacts, .page-header__status,
+		.page-header__hours,
+		.page-header__chat {
       opacity: 0;
       pointer-events: none;
     }
@@ -163,6 +165,7 @@ a {
 		}
 	}
 	&__status {
+		transition: all 0.3s;
     margin-left: auto;
 		font-size: 14px;
 		padding: 12px 19px 15px 19px;
@@ -197,6 +200,7 @@ a {
 		margin: 0;
 	}
 	&__chat {
+		transition: all 0.3s;
 		display: block;
 		border-radius: 50%;
 		border: 0;

@@ -11,7 +11,8 @@
 		font-size: 42px;
 		margin-top: 0;
 		margin-bottom: 20px;
-		font-family: $font-reg;
+		font-family: $font-med;
+		letter-spacing: 0.01em;
 		color: $white-color;
 	}
 	&__descr {
@@ -282,7 +283,7 @@
 			font-size: 16px;
 			line-height: 26px;
 			margin: 0;
-			font-family: $font-reg;
+			font-family: $font-book;
 		}
 		&:before {
 			content: '';
@@ -410,7 +411,9 @@
     .slick-dots{
       position: absolute;
       left: 40px;
-      bottom: 35px;
+      bottom: 30px;
+			padding: 0;
+			margin: 0;
       li{
         -webkit-apperance: none;
         font-size: 0;
@@ -422,13 +425,13 @@
           height: 14px;
           border-radius: 50%;
           background: transparent;
-          border: 1px solid #feab39;
+          border: 1px solid $black-color;
           margin-right: 10px;
           transition: all .24s ease
         }
         &.slick-active{
           &::after{
-            background: #feab39;
+            background: $black-color;
           }
         }
 

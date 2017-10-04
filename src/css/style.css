@@ -401,7 +401,9 @@ a {
   .page-header.active-menu {
     background: transparent;
     border-color: transparent; }
-    .page-header.active-menu .page-header__logo, .page-header.active-menu .page-header__contacts, .page-header.active-menu .page-header__status {
+    .page-header.active-menu .page-header__logo, .page-header.active-menu .page-header__contacts, .page-header.active-menu .page-header__status,
+    .page-header.active-menu .page-header__hours,
+    .page-header.active-menu .page-header__chat {
       opacity: 0;
       pointer-events: none; }
     .page-header.active-menu .page-header__select {
@@ -429,7 +431,7 @@ a {
     margin-right: auto; }
     .page-header__logo a {
       text-decoration: none;
-      color: #8790a6; }
+      color: #7e89a5; }
     .page-header__logo img {
       display: block;
       height: auto;
@@ -447,7 +449,7 @@ a {
     font-size: 14px;
     line-height: 14px;
     text-decoration: none;
-    color: #8790a6;
+    color: #7e89a5;
     padding: 5px 7px 7px 7px;
     border: 2px solid transparent;
     border-radius: 15px;
@@ -467,7 +469,7 @@ a {
     font-size: 14px;
     line-height: 22px;
     margin: 0;
-    color: #8790a6; }
+    color: #7e89a5; }
   .page-header__hours {
     margin-top: -5px;
     margin-left: auto;
@@ -479,6 +481,8 @@ a {
       vertical-align: super;
       font-size: 12px; }
   .page-header__status {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     margin-left: auto;
     font-size: 14px;
     padding: 12px 19px 15px 19px;
@@ -486,8 +490,7 @@ a {
     text-align: center;
     background-color: transparent;
     border: 2px solid #d9dfe9;
-    color: #8790a6;
-    -webkit-transition: all 0.3s;
+    color: #7e89a5;
     transition: all 0.3s; }
     .page-header__status:hover {
       background-color: #d9dfe9; }
@@ -511,6 +514,8 @@ a {
     font-family: "univia_proregular";
     margin: 0; }
   .page-header__chat {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     display: block;
     border-radius: 50%;
     border: 0;
@@ -630,7 +635,7 @@ a {
     top: 72px;
     width: 100%;
     height: 1px;
-    background-color: #8790a6; }
+    background-color: #7e89a5; }
   .main-menu__close, .big-quick-popup__close {
     position: absolute;
     top: 42px;
@@ -726,7 +731,7 @@ a {
     display: block; }
   .main-menu__hint {
     font-size: 14px;
-    color: #8790a6; }
+    color: #7e89a5; }
   .main-menu__hours {
     -webkit-transform: translateX(20%);
         -ms-transform: translateX(20%);
@@ -781,10 +786,10 @@ a {
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
         right: -11px;
-        color: #8790a6; }
+        color: #7e89a5; }
   .quick-bid__text {
     font-size: 13px;
-    color: #8790a6;
+    color: #7e89a5;
     margin-top: 0;
     margin-bottom: 35px; }
   .quick-bid__btn {
@@ -816,7 +821,7 @@ body {
   .page-footer__copy {
     font-size: 14px;
     margin: 0;
-    color: #8790a6; }
+    color: #7e89a5; }
   .page-footer__link {
     font-size: 14px;
     color: #284b96; }
@@ -866,7 +871,8 @@ body {
   font-size: 42px;
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: "univia_proregular";
+  font-family: "univia_promedium";
+  letter-spacing: 0.01em;
   color: #fff; }
 
 .service-sec__descr {
@@ -1028,7 +1034,7 @@ body {
   text-transform: lowercase;
   margin-top: 0;
   margin-bottom: 19px;
-  color: #8790a6; }
+  color: #7e89a5; }
 
 .service-sec__also-link {
   font-size: 20px;
@@ -1099,7 +1105,7 @@ body {
   margin-bottom: 5px; }
 
 .service-sec__mobile-text {
-  color: #8790a6;
+  color: #7e89a5;
   font-size: 14px;
   line-height: 16px;
   margin-top: 0;
@@ -1151,7 +1157,7 @@ body {
       font-size: 16px;
       line-height: 26px;
       margin: 0;
-      font-family: "univia_proregular"; }
+      font-family: "univia_probook"; }
     .our-advant__item:before {
       content: '';
       position: absolute;
@@ -1182,7 +1188,7 @@ body {
     background-size: 100% 100%; }
     .our-advant__img-item--first {
       background-color: transparent;
-      border: 1px solid #8790a6;
+      border: 1px solid #7e89a5;
       width: -webkit-calc(50% - 20px);
       width: calc(50% - 20px); }
       .our-advant__img-item--first .our-advant__text {
@@ -1200,7 +1206,7 @@ body {
     font-family: "univia_proregular";
     color: #fff; }
   .our-advant__descr {
-    color: #8790a6;
+    color: #7e89a5;
     font-size: 16px;
     line-height: 26px; }
   .our-advant__link {
@@ -1272,7 +1278,9 @@ body {
     .about-us__slider .slick-dots {
       position: absolute;
       left: 40px;
-      bottom: 35px; }
+      bottom: 30px;
+      padding: 0;
+      margin: 0; }
       .about-us__slider .slick-dots li {
         -webkit-apperance: none;
         font-size: 0;
@@ -1285,12 +1293,12 @@ body {
           height: 14px;
           border-radius: 50%;
           background: transparent;
-          border: 1px solid #feab39;
+          border: 1px solid #000;
           margin-right: 10px;
           -webkit-transition: all .24s ease;
           transition: all .24s ease; }
         .about-us__slider .slick-dots li.slick-active::after {
-          background: #feab39; }
+          background: #000; }
         .about-us__slider .slick-dots li button {
           display: none; }
   .about-us__nums {
@@ -1388,7 +1396,7 @@ body {
   .about-us__descr {
     font-size: 16px;
     line-height: 26px;
-    color: #8790a6;
+    color: #7e89a5;
     padding-right: 50px;
     margin-top: 0;
     margin-bottom: 32px; }
@@ -1547,7 +1555,7 @@ body {
     line-height: 26px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #8790a6; }
+    color: #7e89a5; }
     .print-promo__descr span {
       color: #df535d;
       font-family: "univia_promedium"; }
@@ -1694,7 +1702,7 @@ body {
   .prices-sec__item-price {
     font-size: 16px;
     margin: 0;
-    color: #8790a6;
+    color: #7e89a5;
     text-align: right; }
   .prices-sec__item:hover {
     -webkit-box-shadow: none;
@@ -1842,7 +1850,8 @@ body {
 .prices-sec__mobile {
   position: relative;
   display: none;
-  padding-top: 40px; }
+  padding-top: 40px;
+  background-color: #fff; }
   .prices-sec__mobile-title {
     font-size: 16px;
     line-height: 24px;
@@ -1854,7 +1863,7 @@ body {
   .prices-sec__mobile-descr {
     font-size: 14px;
     line-height: 18px;
-    color: #8790a6;
+    color: #7e89a5;
     margin-top: 0;
     margin-bottom: 10px; }
   .prices-sec__mobile-wrap {
@@ -1869,7 +1878,8 @@ body {
     padding-bottom: 20px;
     border-bottom: 2px solid #d9dfe9; }
   .prices-sec__mobile-price {
-    font-size: 14px; }
+    font-size: 14px;
+    font-family: "univia_promedium"; }
   .prices-sec__mobile-btn {
     text-align: center;
     border-radius: 30px;
@@ -1980,7 +1990,7 @@ body {
   .simple-fast__descr {
     font-size: 16px;
     line-height: 26px;
-    color: #8790a6;
+    color: #7e89a5;
     margin: 0;
     max-width: 525px; }
 
@@ -2017,7 +2027,7 @@ body {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 14px;
-    color: #8790a6;
+    color: #7e89a5;
     text-align: left; }
     .order-form__label--60 {
       width: 60%; }
@@ -2089,7 +2099,7 @@ body {
     top: 0;
     left: 0;
     font-size: 16px;
-    color: #8790a6;
+    color: #7e89a5;
     padding: 0 16px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2220,11 +2230,11 @@ body {
       text-decoration: none;
       color: #000; }
       .order-form__shop.active:before {
-        background-color: #8790a6; }
+        background-color: #7e89a5; }
   .order-form__shop-info {
     display: none; }
   .order-form__shop-text {
-    color: #8790a6;
+    color: #7e89a5;
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -2262,7 +2272,7 @@ body {
     display: none; }
   .order-form__hint {
     font-size: 14px;
-    color: #8790a6;
+    color: #7e89a5;
     margin-top: -10px;
     margin-bottom: 25px; }
   .order-form__check {
@@ -2318,7 +2328,7 @@ body {
     .order-form__buttons .order-form__check-label {
       display: inline-block;
       vertical-align: middle;
-      color: #8790a6;
+      color: #7e89a5;
       margin-left: 32px; }
     .order-form__buttons a {
       font-size: 16px;
@@ -2393,7 +2403,7 @@ body {
           -ms-transform: translateY(-50%);
               transform: translateY(-50%);
       right: -22px;
-      color: #8790a6; }
+      color: #7e89a5; }
     .breadcrumbs__link:last-child {
       margin-right: 0; }
       .breadcrumbs__link:last-child:after {
@@ -2401,7 +2411,7 @@ body {
     .breadcrumbs__link:hover {
       text-decoration: underline; }
     .breadcrumbs__link.active {
-      color: #8790a6;
+      color: #7e89a5;
       cursor: default; }
       .breadcrumbs__link.active:hover {
         text-decoration: none; }
@@ -2478,7 +2488,7 @@ body {
       border: 0;
       font-size: 20px;
       line-height: 20px;
-      border-bottom: 2px solid #8790a6;
+      border-bottom: 2px solid #7e89a5;
       color: #fff;
       padding: 16px 0; }
       .big-quick-popup__input input:focus {
@@ -2552,7 +2562,7 @@ body {
   .big-quick-popup .order-form__check:checked + label:before {
     background-image: url(../img/check-w.png); }
   .big-quick-popup .order-form__check-label {
-    color: #8790a6;
+    color: #7e89a5;
     font-size: 14px; }
     .big-quick-popup .order-form__check-label + a {
       color: #fff;
@@ -2601,7 +2611,7 @@ body {
       .big-quick-popup .quick-bid__tel:before {
         display: none; }
     .big-quick-popup .quick-bid__text {
-      color: #8790a6;
+      color: #7e89a5;
       font-size: 16px; }
   .big-quick-popup .selectric-wrapper {
     position: relative; }
@@ -2682,7 +2692,7 @@ body {
       padding-left: 0;
       display: inline-block;
       vertical-align: bottom;
-      color: #8790a6;
+      color: #7e89a5;
       text-align: left;
       font-size: 14px;
       line-height: 14px;
@@ -2728,7 +2738,7 @@ body {
   display: block;
   margin-bottom: 23px;
   font-size: 14px;
-  color: #8790a6; }
+  color: #7e89a5; }
 
 .mobile-form__label {
   margin-bottom: 8px !important; }
@@ -2744,7 +2754,7 @@ body {
   line-height: 22px;
   margin-top: 23px;
   margin-bottom: 0;
-  color: #8790a6; }
+  color: #7e89a5; }
   .mobile-form__text span {
     color: #000;
     font-family: "univia_proregular"; }
@@ -3062,7 +3072,7 @@ body {
 .selectric-items li {
   display: block;
   padding: 10px;
-  color: #8790a6;
+  color: #7e89a5;
   cursor: pointer; }
   .selectric-items li:first-child {
     border-top-left-radius: 8px;
@@ -5731,7 +5741,7 @@ body {
     font-size: 14px; }
   .main-menu__hours {
     font-size: 16px;
-    color: #8790a6; }
+    color: #7e89a5; }
   .service-sec {
     padding-top: 47px; }
     .service-sec__promo {
@@ -5746,7 +5756,7 @@ body {
       font-size: 16px;
       line-height: 24px;
       margin-bottom: 30px;
-      color: #8790a6; }
+      color: #7e89a5; }
     .service-sec__items {
       display: none; }
     .service-sec__mobile-items {
@@ -5773,9 +5783,6 @@ body {
         margin-bottom: 0; }
       .our-advant__item-title {
         color: #fff; }
-      .our-advant__item:before {
-        border-color: #8790a6;
-        background-color: #c1d5e3; }
     .our-advant__image-items {
       display: none; }
   .about-us {

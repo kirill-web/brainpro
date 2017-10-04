@@ -223,7 +223,7 @@ $(document).ready(function () {
 	});
 
 	// Заявка на мобильных
-	$('.prices-sec__mobile-btn').on('click', function () {
+	$('.prices-sec__mobile-btn, .prices-sec__mobile-title, .service-sec__mobile-link').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.overlay').show();
 		$('.quick-popup').fadeIn(200);
