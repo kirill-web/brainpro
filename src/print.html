@@ -38,7 +38,7 @@
 
 <body class="preloader print-body">
 
-	<header class="page-header wow fadeInDown" data-wow-delay="0.8s">
+<header class="page-header wow fadeInDown" data-wow-delay="0.9s">
 		<div class="big-container">
 			<aside class="aside">
 				<button type="button" class="menu-toggle">
@@ -58,7 +58,7 @@
 					</div>
 					<div class="page-header__logo">
 						<a href="/">
-							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
+							<img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"><span>сервис-центр</span>
 						</a>
 					</div>
 					<div class="page-header__contacts flex-wrap">
@@ -85,10 +85,17 @@
 							<option value="">укр</option>
 						</select>
 					</form>
-					<button class="page-header__status">Статус заказа</button>
+					<div class="page-header__hours page-header__contacts-item">
+						<p class="page-header__tel">Будни с 9<span>00</span> до 20<span>00</span></p>
+						<p class="page-header__tel-descr">работа контакт-центра</p>
+					</div>
+					<button type="button" class="page-header__chat page-header__chat--inside"></button>
+					<!--					<button type="button" class="page-header__status">Статус заказа</button>-->
 				</div>
 			</div>
-			<aside class="aside"></aside>
+			<aside class="aside">
+				<button type="button" class="page-header__chat"></button>
+			</aside>
 		</div>
 	</header>
 	<nav class="main-menu">

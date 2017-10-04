@@ -438,8 +438,7 @@ a {
     .page-header__logo span {
       display: block;
       font-size: 14px;
-      line-height: 22px;
-      padding-left: 35px; }
+      line-height: 22px; }
   .page-header__contacts-item {
     padding-left: 22px;
     padding-right: 22px; }
@@ -455,7 +454,7 @@ a {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .page-header__lang.active {
-      border-color: #d9dfe9;
+      border-color: #ffcb32;
       color: #000; }
     .page-header__lang:hover {
       color: #000; }
@@ -469,6 +468,16 @@ a {
     line-height: 22px;
     margin: 0;
     color: #8790a6; }
+  .page-header__hours {
+    margin-top: -5px;
+    margin-left: auto;
+    padding-right: 0; }
+    .page-header__hours .page-header__tel {
+      margin-top: 0;
+      line-height: 18px; }
+    .page-header__hours span {
+      vertical-align: super;
+      font-size: 12px; }
   .page-header__status {
     margin-left: auto;
     font-size: 14px;
@@ -501,6 +510,17 @@ a {
     background-color: transparent;
     font-family: "univia_proregular";
     margin: 0; }
+  .page-header__chat {
+    display: block;
+    border-radius: 50%;
+    border: 0;
+    background-color: #ffcb32;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    margin-left: auto; }
+    .page-header__chat--inside {
+      display: none; }
 
 .menu-toggle,
 .menu-toggle--inside {
@@ -834,104 +854,76 @@ body {
   .page-footer--v2 .page-footer__link {
     margin-left: 60px; }
 
-.service-sec {
-  padding-top: 77px; }
-  .service-sec__title {
-    text-align: center;
-    font-size: 42px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: "univia_proregular"; }
-  .service-sec__descr {
-    text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-    color: #8790a6;
-    margin-top: 0;
-    margin-bottom: 82px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 725px; }
-  .service-sec__items {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-  .service-sec__item {
-    width: -webkit-calc(33.3% - 20px);
-    width: calc(33.3% - 20px);
-    border-radius: 8px;
-    -webkit-box-shadow: 5px 5px 30px rgba(13, 15, 39, 0.1);
-            box-shadow: 5px 5px 30px rgba(13, 15, 39, 0.1);
-    background-color: #fff;
-    padding: 25px 30px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: bottom right;
-    min-height: 280px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-bottom: 30px; }
-    .service-sec__item--org {
-      background-image: url(../img/serv-img1.png); }
-    .service-sec__item--comp {
-      padding-top: 35px;
-      background-image: url(../img/serv-img2.png); }
-      .service-sec__item--comp .service-sec__more {
-        padding-top: 35px; }
-    .service-sec__item--mobile {
-      padding-top: 35px;
-      background-image: url(../img/serv-img3.png); }
-      .service-sec__item--mobile .service-sec__more {
-        padding-top: 35px; }
-    .service-sec__item--also {
-      padding-top: 40px;
-      -webkit-box-shadow: none;
-              box-shadow: none;
-      background-color: transparent; }
-    .service-sec__item--empty {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      .service-sec__item--empty .service-sec__item-title {
-        color: #8790a6; }
-    .service-sec__item-title {
-      margin: 0;
-      font-size: 20px;
-      line-height: 26px;
-      max-width: 240px;
-      font-family: "univia_proregular"; }
-    .service-sec__item-blank {
-      margin-top: auto;
-      font-size: 14px;
-      font-family: "univia_proregular";
-      color: #8790a6; }
-    .service-sec__item:hover .service-sec__more {
-      visibility: visible;
-      z-index: 2;
-      opacity: 1; }
-  .service-sec__more {
-    visibility: hidden;
-    z-index: -1;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    padding: 25px 30px;
-    border-radius: 6px;
-    background-color: #fff;
+.service-sec__promo {
+  background-repeat: no-repeat;
+  background-image: url(../img/back.jpg);
+  background-size: 100% 100%;
+  padding-top: 100px;
+  padding-bottom: 180px; }
+
+.service-sec__title {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "univia_proregular";
+  color: #fff; }
+
+.service-sec__descr {
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 82px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 725px; }
+
+.service-sec__items {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: -80px; }
+
+.service-sec__item {
+  width: -webkit-calc(33.3% - 20px);
+  width: calc(33.3% - 20px);
+  border-radius: 8px;
+  -webkit-box-shadow: 5px 5px 30px rgba(13, 15, 39, 0.1);
+          box-shadow: 5px 5px 30px rgba(13, 15, 39, 0.1);
+  background-color: #fff;
+  padding: 25px 30px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top right;
+  min-height: 280px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 30px; }
+  .service-sec__item--org {
+    background-image: url(../img/bg-img-main1.png); }
+  .service-sec__item--comp {
+    padding-top: 35px;
+    background-image: url(../img/serv-img2.png); }
+    .service-sec__item--comp .service-sec__more {
+      padding-top: 35px; }
+  .service-sec__item--mobile {
+    padding-top: 35px;
+    background-image: url(../img/serv-img3.png); }
+    .service-sec__item--mobile .service-sec__more {
+      padding-top: 35px; }
+  .service-sec__item--also {
+    padding-top: 40px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: transparent; }
+  .service-sec__item--empty {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -940,140 +932,191 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-    .service-sec__more-row {
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      width: 100%; }
-    .service-sec__more-title {
-      color: #000;
-      font-size: 20px;
-      line-height: 26px;
-      margin-top: 0;
-      margin-bottom: 18px;
-      max-width: 240px;
-      font-family: "univia_proregular"; }
-    .service-sec__more-text {
-      font-size: 14px;
-      margin-top: 0;
-      margin-bottom: 12px;
-      text-decoration: none;
-      color: #000; }
-      .service-sec__more-text[href] {
-        text-decoration: underline;
-        color: #284b96; }
-        .service-sec__more-text[href]:hover {
-          text-decoration: none; }
-      .service-sec__more-text:last-child {
-        text-align: right; }
-    .service-sec__more-btn {
-      color: #8790a6;
-      font-size: 14px;
-      display: inline-block;
-      margin-top: auto;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      padding: 5px 12px 9px 12px;
-      border: 2px solid #d9dfe9;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 20px; }
-      .service-sec__more-btn:hover {
-        background-color: #d9dfe9;
-        color: #000; }
-  .service-sec__also-title {
-    font-size: 14px;
-    text-transform: lowercase;
-    margin-top: 0;
-    margin-bottom: 19px;
-    color: #8790a6; }
-  .service-sec__also-link {
+            flex-direction: column; }
+    .service-sec__item--empty .service-sec__item-title {
+      color: #8790a6; }
+  .service-sec__item-title {
+    margin: 0;
     font-size: 20px;
-    line-height: 1.2;
-    display: block;
+    line-height: 26px;
+    max-width: 240px;
+    font-family: "univia_proregular"; }
+  .service-sec__item-blank {
+    margin-top: auto;
+    font-size: 14px;
+    font-family: "univia_proregular";
+    color: #8790a6; }
+  .service-sec__item:hover .service-sec__more {
+    visibility: visible;
+    z-index: 2;
+    opacity: 1; }
+
+.service-sec__more {
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .service-sec__more-row {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%; }
+  .service-sec__more-title {
     color: #000;
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d9dfe9;
+    max-width: 240px;
+    font-family: "univia_proregular"; }
+  .service-sec__more-text {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 12px;
     text-decoration: none;
+    color: #000; }
+    .service-sec__more-text[href] {
+      text-decoration: underline;
+      color: #284b96; }
+      .service-sec__more-text[href]:hover {
+        text-decoration: none; }
+    .service-sec__more-text:last-child {
+      text-align: right; }
+  .service-sec__more-btn {
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: auto;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    border-bottom: 1px solid transparent;
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: auto;
-    font-family: "univia_proregular"; }
-    .service-sec__also-link:last-child {
-      margin-bottom: 0; }
-    .service-sec__also-link:hover {
-      text-decoration: none;
-      border-bottom: 1px solid #000; }
-  .service-sec__mobile-items {
-    display: none;
-    border-top: 1px solid #d9dfe9; }
-    .service-sec__mobile-items .container {
-      background-color: #fff; }
-      .service-sec__mobile-items .container:first-child .service-sec__mobile-item {
-        border-top: 0; }
-      .service-sec__mobile-items .container.active {
-        background-color: #ffeee9;
-        position: relative; }
-        .service-sec__mobile-items .container.active .service-sec__mobile-item {
-          font-family: "univia_promedium";
-          border-top: none; }
-        .service-sec__mobile-items .container.active:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -2px;
-          height: 2px;
-          width: 100%;
-          background-color: #f2f3f7; }
-  .service-sec__mobile-item {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0;
-    padding: 22px 0;
-    border-top: 1px solid #d9dfe9; }
-  .service-sec__mobile-hide {
-    display: none; }
-  .service-sec__mobile-wrap {
-    border-bottom: 1px solid #fff;
-    padding: 15px 0; }
-    .service-sec__mobile-wrap:first-child {
-      padding-top: 0; }
-  .service-sec__mobile-link {
-    font-size: 16px;
-    line-height: 18px;
-    display: block;
-    color: #284b96;
+    padding: 5px 12px 9px 12px;
+    border: 2px solid #ffcb32;
+    text-align: center;
     text-decoration: none;
-    margin-bottom: 5px; }
-  .service-sec__mobile-text {
-    color: #8790a6;
-    font-size: 14px;
-    line-height: 16px;
-    margin-top: 0;
-    margin-bottom: 7px; }
-  .service-sec__mobile-price {
-    font-size: 14px;
-    line-height: 16px;
-    color: #000; }
-  .service-sec__mobile-more {
-    font-size: 16px;
-    line-height: 18px;
-    display: block;
-    color: #284b96;
+    border-radius: 20px; }
+    .service-sec__more-btn:hover {
+      background-color: #ffcb32;
+      color: #000; }
+
+.service-sec__also-title {
+  font-size: 14px;
+  text-transform: lowercase;
+  margin-top: 0;
+  margin-bottom: 19px;
+  color: #8790a6; }
+
+.service-sec__also-link {
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+  color: #000;
+  margin-bottom: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  font-family: "univia_proregular"; }
+  .service-sec__also-link:last-child {
+    margin-bottom: 0; }
+  .service-sec__also-link:hover {
     text-decoration: none;
-    padding: 15px 0; }
+    border-bottom: 1px solid #000; }
+
+.service-sec__mobile-items {
+  display: none;
+  border-top: 1px solid #d9dfe9; }
+  .service-sec__mobile-items .container {
+    background-color: #fff; }
+    .service-sec__mobile-items .container:first-child .service-sec__mobile-item {
+      border-top: 0; }
+    .service-sec__mobile-items .container.active {
+      background-color: #ffeee9;
+      position: relative; }
+      .service-sec__mobile-items .container.active .service-sec__mobile-item {
+        font-family: "univia_promedium";
+        border-top: none; }
+      .service-sec__mobile-items .container.active:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 2px;
+        width: 100%;
+        background-color: #f2f3f7; }
+
+.service-sec__mobile-item {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  padding: 22px 0;
+  border-top: 1px solid #d9dfe9; }
+
+.service-sec__mobile-hide {
+  display: none; }
+
+.service-sec__mobile-wrap {
+  border-bottom: 1px solid #fff;
+  padding: 15px 0; }
+  .service-sec__mobile-wrap:first-child {
+    padding-top: 0; }
+
+.service-sec__mobile-link {
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+  color: #284b96;
+  text-decoration: none;
+  margin-bottom: 5px; }
+
+.service-sec__mobile-text {
+  color: #8790a6;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 7px; }
+
+.service-sec__mobile-price {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000; }
+
+.service-sec__mobile-more {
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+  color: #284b96;
+  text-decoration: none;
+  padding: 15px 0; }
 
 .our-advant {
   margin-top: 28px; }
@@ -5447,6 +5490,12 @@ body {
     width: 100%; }
   .page-header .big-container {
     padding: 0; }
+  .page-header__chat {
+    display: none; }
+    .page-header__chat--inside {
+      display: block; }
+  .page-header__hours {
+    display: none; }
   .page-header__hamburger {
     display: block; }
   .main-menu__close, .big-quick-popup__close {
@@ -5522,6 +5571,7 @@ body {
     padding-left: 15px;
     padding-right: 15px; }
     .page-header__contacts-item--lang {
+      display: none;
       -webkit-box-ordinal-group: 4;
       -webkit-order: 3;
           -ms-flex-order: 3;
@@ -5643,7 +5693,11 @@ body {
     .page-header__logo span {
       display: none; }
     .page-header__form {
-      display: block; }
+      display: none; }
+    .page-header__chat {
+      width: 38px;
+      height: 38px;
+      background-color: #006f9f; }
   .main-menu:before {
     display: block; }
   .main-menu__logo {
@@ -5680,13 +5734,19 @@ body {
     color: #8790a6; }
   .service-sec {
     padding-top: 47px; }
+    .service-sec__promo {
+      background-image: none;
+      padding-top: 0;
+      padding-bottom: 0; }
     .service-sec__title {
       font-size: 24px;
-      line-height: 36px; }
+      line-height: 36px;
+      color: #000; }
     .service-sec__descr {
       font-size: 16px;
       line-height: 24px;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      color: #8790a6; }
     .service-sec__items {
       display: none; }
     .service-sec__mobile-items {

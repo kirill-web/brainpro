@@ -112,7 +112,7 @@ a {
 			display: block;
 			font-size: 14px;
 			line-height: 22px;
-			padding-left: 35px;
+//			padding-left: 35px;
 		}
 	}
 	&__contacts-item {
@@ -130,7 +130,7 @@ a {
 		border-radius: 15px;
 		transition: all 0.3s;
 		&.active {
-			border-color: $border-color;
+			border-color: $link2-color;
 			color: $black-color;
 		}
 		&:hover {
@@ -148,6 +148,19 @@ a {
 		line-height: 22px;
 		margin: 0;
 		color: $text-color;
+	}
+	&__hours {
+		margin-top: -5px;
+		margin-left: auto;
+		padding-right: 0;
+		.page-header__tel {
+			margin-top: 0;
+			line-height: 18px;
+		}
+		span {
+			vertical-align: super;
+			font-size: 12px;
+		}
 	}
 	&__status {
     margin-left: auto;
@@ -182,6 +195,19 @@ a {
 		background-color: transparent;
 		font-family: $font-reg;
 		margin: 0;
+	}
+	&__chat {
+		display: block;
+		border-radius: 50%;
+		border: 0;
+		background-color: $link2-color;
+		width: 55px;
+		height: 55px;
+		padding: 0;
+		margin-left: auto;
+		&--inside {
+			display: none;
+		}
 	}
 }
 

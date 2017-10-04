@@ -57,7 +57,7 @@
 					</div>
 					<div class="page-header__logo">
 						<a href="/">
-							<img src="img/logo.svg" alt="logo"><span>сервис-центр</span>
+							<img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"><span>сервис-центр</span>
 						</a>
 					</div>
 					<div class="page-header__contacts flex-wrap">
@@ -84,10 +84,17 @@
 							<option value="">укр</option>
 						</select>
 					</form>
-					<button type="button" class="page-header__status">Статус заказа</button>
+					<div class="page-header__hours page-header__contacts-item">
+						<p class="page-header__tel">Будни с 9<span>00</span> до 20<span>00</span></p>
+						<p class="page-header__tel-descr">работа контакт-центра</p>
+					</div>
+					<button type="button" class="page-header__chat page-header__chat--inside"></button>
+					<!--					<button type="button" class="page-header__status">Статус заказа</button>-->
 				</div>
 			</div>
-			<aside class="aside"></aside>
+			<aside class="aside">
+				<button type="button" class="page-header__chat"></button>
+			</aside>
 		</div>
 	</header>
 	<nav class="main-menu">
@@ -115,24 +122,30 @@
 		<div class="main-menu__hours">Будни с 9 <span>00</span> до 20 <span>00</span></div>
 	</nav>
 	<section class="service-sec">
-		<div class="container">
-			<h1 class="service-sec__title wow fadeInUp" data-wow-duration="0.5s">Качественно новый сервис-центр</h1>
-			<p class="service-sec__descr wow fadeInUp" data-wow-duration="0.6s">Посыл, идея, лозунг dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
-			</p>
-			<div class="quick-bid">
+		<div class="service-sec__promo">
+			<div class="container">
+				<h1 class="service-sec__title wow fadeInUp" data-wow-duration="0.5s">Качественно новый сервис-центр</h1>
+				<p class="service-sec__descr wow fadeInUp" data-wow-duration="0.6s">по ремонту и комплексному обслуживанию компьютерной и оргтехники, мобильных устройств, телевизоров, а также сетевого оборудования и гиробордов.
+				</p>
+			</div>
+		</div>
+		<div class="quick-bid">
+			<div class="container">
 				<div class="flex-wrap">
 					<span class="quick-bid__tel">0 800 215 500</span>
 					<span class="quick-bid__tel">067 353 76 67</span>
 				</div>
 				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
-<!--				<button type="button" class="quick-bid__btn">Быстрая заявка</button>-->
+				<!--				<button type="button" class="quick-bid__btn">Быстрая заявка</button>-->
 			</div>
+		</div>
+		<div class="container">
 			<div class="service-sec__items flex-wrap">
 				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.2s">
-					<h2 class="service-sec__item-title">Ремонт и обслуживание оргтехники
+					<h2 class="service-sec__item-title">Ремонт и обслуживание принтеров и МФУ
 					</h2>
 					<div class="service-sec__more">
-						<h2 class="service-sec__more-title">Ремонт и обслуживание оргтехники
+						<h2 class="service-sec__more-title">Ремонт и обслуживание принтеров и МФУ
 						</h2>
 						<div class="service-sec__more-row flex-wrap">
 							<a href="#" class="service-sec__more-text">Замена разбитого экрана <br> обрыв и вторая строка</a>
@@ -141,23 +154,15 @@
 						<div class="service-sec__more-row flex-wrap">
 							<a href="#" class="service-sec__more-text">Замена баттареи</a>
 							<p class="service-sec__more-text">1500-2100 грн</p>
-						</div>
-						<div class="service-sec__more-row flex-wrap">
-							<a href="#" class="service-sec__more-text">Чистка от пыли</a>
-							<p class="service-sec__more-text">~ 2300 грн</p>
-						</div>
-						<div class="service-sec__more-row flex-wrap">
-							<a href="#" class="service-sec__more-text">Замена вибромоторчика</a>
-							<p class="service-sec__more-text">от 500 грн</p>
 						</div>
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
 				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.4s">
-					<h2 class="service-sec__item-title">Ремонт мобильных телефонов
+					<h2 class="service-sec__item-title">Ремонт смартфонов и планшетов
 					</h2>
 					<div class="service-sec__more">
-						<h2 class="service-sec__more-title">Ремонт мобильных телефонов
+						<h2 class="service-sec__more-title">Ремонт смартфонов и планшетов
 						</h2>
 						<div class="service-sec__more-row flex-wrap">
 							<a href="#" class="service-sec__more-text">Замена разбитого экрана <br> обрыв и вторая строка</a>
@@ -167,17 +172,10 @@
 							<a href="#" class="service-sec__more-text">Замена баттареи</a>
 							<p class="service-sec__more-text">1500-2100 грн</p>
 						</div>
-						<div class="service-sec__more-row flex-wrap">
-							<a href="#" class="service-sec__more-text">Чистка от пыли</a>
-							<p class="service-sec__more-text">~ 2300 грн</p>
-						</div>
-						<div class="service-sec__more-row flex-wrap">
-							<a href="#" class="service-sec__more-text">Замена вибромоторчика</a>
-							<p class="service-sec__more-text">от 500 грн</p>
-						</div>
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
+				<!--
 				<div class="service-sec__item service-sec__item--org wow fadeInUp" data-wow-delay="1.6s">
 					<h2 class="service-sec__item-title">Ремонт ноутбуков</h2>
 					<div class="service-sec__more">
@@ -201,6 +199,12 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
+-->
+				<div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="1.6s">
+					<h2 class="service-sec__item-title">Ремонт ноутбуков и компьютеров</h2>
+					<div class="service-sec__item-blank">Вся информация по телефону или в чате</div>
+				</div>
+				<!--
 				<div class="service-sec__item service-sec__item--comp wow fadeInUp" data-wow-delay="1.8s">
 					<h2 class="service-sec__item-title">Ремонт компьютеров и комплектующих</h2>
 					<div class="service-sec__more">
@@ -224,6 +228,12 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
+-->
+				<div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="1.8s">
+					<h2 class="service-sec__item-title">Ремонт мониторов и телевизоров </h2>
+					<div class="service-sec__item-blank">Вся информация по телефону или в чате</div>
+				</div>
+				<!--
 				<div class="service-sec__item service-sec__item--mobile wow fadeInUp" data-wow-delay="2s">
 					<h2 class="service-sec__item-title">Ремонт мобильных телефонов и планшетов
 					</h2>
@@ -249,18 +259,15 @@
 						<a href="#" class="service-sec__more-btn">еще услуги</a>
 					</div>
 				</div>
+-->
+				<div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="2s">
+					<h2 class="service-sec__item-title">Установка, подключение и настройка</h2>
+					<div class="service-sec__item-blank">Вся информация по телефону или в чате</div>
+				</div>
 				<div class="service-sec__item service-sec__item--also wow fadeInUp" data-wow-delay="2.2s">
 					<h2 class="service-sec__also-title">мы также делаем:</h2>
-					<a href="#" class="service-sec__also-link">Ремонт холодильника</a>
-					<a href="#" class="service-sec__also-link">Ремонт телевизора</a>
-					<a href="#" class="service-sec__also-link">Ремонт стиральной машинки</a>
-					<a href="#" class="service-sec__also-link">Ремонт мышки</a>
-					<a href="#" class="service-sec__also-link">Ремонт бытовой техники</a>
-				</div>
-				<div class="service-sec__item service-sec__item--empty wow fadeInUp" data-wow-delay="2.4s">
-					<h2 class="service-sec__item-title">Установка, подключение и настройка</h2>
-					<div class="service-sec__item-blank">раздел в разработке</div>
-
+					<a href="#" class="service-sec__also-link">Ремонт сетевых устройств</a>
+					<a href="#" class="service-sec__also-link">Ремонт гиробордов</a>
 				</div>
 			</div>
 		</div>
@@ -335,7 +342,7 @@
 				<div class="our-advant__img-item our-advant__img-item--first wow fadeInRight" data-wow-delay="0s" data-wow-offset="150">
 					<p class="our-advant__text"> Корпоративным клиентам
 					</p>
-					<p class="our-advant__descr">индивидуальные условия на весь	 спектр услуг по ремонту и обслуживанию офисной техники, а также поддержку ПО.</p>
+					<p class="our-advant__descr">индивидуальные условия на весь спектр услуг по ремонту и обслуживанию офисной техники, а также поддержку ПО.</p>
 					<a href="#" class="our-advant__link">corpro@brain.com.ua</a>
 				</div>
 				<div class="our-advant__img-item our-advant__img-item--second wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="150">

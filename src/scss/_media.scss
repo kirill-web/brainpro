@@ -10,6 +10,15 @@
 		.big-container {
 			padding: 0;
 		}
+		&__chat {
+			display: none;
+			&--inside {
+				display: block;
+			}
+		}
+		&__hours {
+			display: none;
+		}
 	}
 	.page-header__hamburger {
 		display: block;
@@ -132,6 +141,7 @@
 			padding-left: 15px;
 			padding-right: 15px;
 			&--lang {
+				display: none;
 				order: 3;
 				padding-right: 0;
 			}
@@ -280,7 +290,12 @@
 			}
 		}
 		&__form {
-			display: block;
+			display: none;
+		}
+		&__chat {
+			width: 38px;
+			height: 38px;
+			background-color: #006f9f;
 		}
 	}
 	.main-menu {
@@ -331,14 +346,21 @@
 	}
 	.service-sec {
 		padding-top: 47px;
+		&__promo {
+			background-image: none;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 		&__title {
 			font-size: 24px;
 			line-height: 36px;
+			color: $black-color;
 		}
 		&__descr {
 			font-size: 16px;
 			line-height: 24px;
 			margin-bottom: 30px;
+			color: $text-color;
 		}
 		&__items {
 			display: none;
