@@ -2,15 +2,15 @@
 google.maps.event.addDomListener(window, 'load', initMap);
 
 	function initMap() {
-	var ivano = {
-		lat: 48.924104,
-		lng: 24.711977
+	var kiev = {
+		lat: 50.452228,
+		lng: 30.522073
 	};
 
 	var myicon = '../img/map-marker.png';
 
 	var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
-		center: ivano,
+		center: kiev,
 		zoom: 12
 //		styles: [
 //			{

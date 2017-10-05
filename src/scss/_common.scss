@@ -16,6 +16,11 @@ a {
 	font-family: $font-book;
 }
 
+body {
+	background-image: linear-gradient(to bottom, $start-grad, $white-color);
+	position: relative;
+}
+
 .big-container {
 	width: 100%;
 	max-width: 1900px;
@@ -286,18 +291,26 @@ a {
 }
 
 .main-menu {
-	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	flex-direction: column;
 	background-color: $menu-bg;
 	padding-top: 22px;
-	z-index: 10;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.7s;
+	&.active {
+		visibility: visible;
+		z-index: 10;
+		opacity: 1;
+	}
 	&:before {
 		display: none;
 		content: '';
@@ -470,11 +483,6 @@ a {
 			background-color: $btn-active;
 		}
 	}
-}
-
-body {
-	background-image: linear-gradient(to bottom, $start-grad, $white-color);
-	position: relative;
 }
 
 .page-footer {

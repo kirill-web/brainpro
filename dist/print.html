@@ -293,11 +293,16 @@
 				<div class="contacts__info">
 					<form action="#" class="contacts__form">
 						<select class="contacts__select">
-						<option value="Ивано-франковск">Ивано-франковск</option>
 						<option value="Киев">Киев</option>
+						<option value="Ивано-франковск">Ивано-франковск</option>
 						<option value="Одесса">Одесса</option>
+						<option value="Винница">Винница</option>
+						<option value="Львов">Львов</option>
+						<option value="Днепр">Днепр</option>
+						<option value="Мариуполь">Мариуполь</option>
+						<option value="Николаев">Николаев</option>
 					</select>
-						<div class="contacts__city active" id="city-ivanovo">
+						<div class="contacts__city" id="city-ivanovo">
 							<div class="contacts__info-item">
 								<div class="contacts__info-row contacts__info-row--top">
 									<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52<span>бесплатная линия</span></a>
@@ -305,6 +310,10 @@
 									<a href="tel:0672142525" class="contacts__info-link">067 214 25 25<span>многоканальный</span></a>
 									<span class="contacts__info-link contacts__info-link--mail"><span>Эл. адрес:</span><a href="mailto:pro@brain.com.ua">pro@brain.com.ua</a></span>
 								</div>
+							</div>
+							<div class="contacts__hours">
+								<p class="contacts__tel">Будни с 9<span>00</span> до 20<span>00</span></p>
+								<span>График работы контакт-центра</span>
 							</div>
 							<div class="contacts__info-row">
 								<div class="contacts__info-item">
@@ -327,14 +336,16 @@
 								<a href="#" class="page-footer__social page-footer__social--youtube"></a>
 							</div>
 						</div>
-						<div class="contacts__city" id="city-kiev">
-							<div class="contacts__info-item">
-								<div class="contacts__info-row contacts__info-row--top">
-									<a href="tel:0672142525" class="contacts__info-link">0 800 555 52 52<span>бесплатная линия</span></a>
-									<a href="tel:0672142525" class="contacts__info-link">044 555 56 56<span>многоканальный</span></a>
-									<a href="tel:0672142525" class="contacts__info-link">067 555 25 25<span>многоканальный</span></a>
-									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+						<div class="contacts__city active" id="city-kiev">
+							<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 256 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 214 25 25<span>многоканальный</span></a>
+									<span class="contacts__info-link contacts__info-link--mail"><span>Эл. адрес:</span><a href="mailto:pro@brain.com.ua">pro@brain.com.ua</a></span>
 								</div>
+							<div class="contacts__hours">
+								<p class="contacts__tel">Будни с 9<span>00</span> до 20<span>00</span></p>
+								<span>График работы контакт-центра</span>
 							</div>
 							<div class="contacts__info-row">
 								<div class="contacts__info-item">
@@ -356,13 +367,15 @@
 							</div>
 						</div>
 						<div class="contacts__city" id="city-odessa">
-							<div class="contacts__info-item">
-								<div class="contacts__info-row contacts__info-row--top">
-									<a href="tel:0672142525" class="contacts__info-link">0 800 222 52 52<span>бесплатная линия</span></a>
-									<a href="tel:0672142525" class="contacts__info-link">044 222 56 56<span>многоканальный</span></a>
-									<a href="tel:0672142525" class="contacts__info-link">067 222 25 25<span>многоканальный</span></a>
-									<a href="mailto:pro@brain.com.ua" class="contacts__info-link"><span>Эл. адрес:</span>pro@brain.com.ua</a>
+							<div class="contacts__info-row contacts__info-row--top">
+									<a href="tel:0672142525" class="contacts__info-link">0 800 456 52 52<span>бесплатная линия</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">044 256 56 56<span>многоканальный</span></a>
+									<a href="tel:0672142525" class="contacts__info-link">067 214 25 25<span>многоканальный</span></a>
+									<span class="contacts__info-link contacts__info-link--mail"><span>Эл. адрес:</span><a href="mailto:pro@brain.com.ua">pro@brain.com.ua</a></span>
 								</div>
+							<div class="contacts__hours">
+								<p class="contacts__tel">Будни с 9<span>00</span> до 20<span>00</span></p>
+								<span>График работы контакт-центра</span>
 							</div>
 							<div class="contacts__info-row">
 								<div class="contacts__info-item">
@@ -410,14 +423,17 @@
 				<div class="big-quick-popup__input">
 					<input type="text" name="name_big" id="name_big">
 					<label for="name_big" class="big-quick-popup__placeholder"><span>Имя и фамилия*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
 				</div>
 				<div class="big-quick-popup__input">
 					<input type="text" name="tel_big" id="tel_big" class="big-quick-popup__tel">
 					<label for="tel_big" class="big-quick-popup__placeholder"><span>Телефон*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
 				</div>
 				<div class="big-quick-popup__input">
 					<input type="text" name="email" id="email">
 					<label for="email" class="big-quick-popup__placeholder"><span>Эл. адрес*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
 				</div>
 			</div>
 			<div class="big-quick-popup__input">
@@ -463,14 +479,17 @@
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="name-popup">
 				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия*</span></label>
+				<div class="quick-popup__error">Обязательное поле</div>
 			</div>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="tel-popup" class="order-form__input--tel">
-				<label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
+				<div class="quick-popup__error">Обязательное поле</div><label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
+				
 			</div>
 			<div class="quick-popup__input order-form__input">
-				<input type="text" id="email-popup">
+				<div class="quick-popup__error">Обязательное поле</div><input type="text" id="email-popup">
 				<label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
+				
 			</div>
 			<div class="quick-popup__input order-form__input">
 				<input type="text" id="comment-popup">
@@ -487,156 +506,6 @@
 	<!-- MOBILE STEP BY STEP FORM -->
 	<form action="#" class="mobile-form">
 		<button type="button" class="mobile-form__close"></button>
-		<div class="mobile-form__steps active" id="step-one">
-			<h2 class="mobile-form__title">Что делаем?</h2>
-			<span class="mobile-form__step">шаг 1 из 4</span>
-			<label class="order-form__label mobile-form__label">Услуга*</label>
-			<select class="mobile-form__select order-form__select ">
-			<option value="">Заправка монохромного лазерного принтера</option>
-			<option value="">Другая услуга</option>
-		</select>
-			<label class="order-form__label mobile-form__label">Производитель*</label>
-			<select class="order-form__select mobile-form__select">
-			<option value="">Samsung</option>
-			<option value="">Apple</option>
-		</select>
-			<div class="order-form__input">
-				<input type="text" id="model-mobile">
-				<label for="model-mobile" class="order-form__placeholder"><span>Модель</span></label>
-			</div>
-			<p class="mobile-form__text">Производитель и модель указаны на устройстве. Также на его упаковке или документации</p>
-			<button type="button" class="mobile-form__next" data-id="step-two">Далее</button>
-		</div>
-		<div class="mobile-form__steps" id="step-two">
-			<h2 class="mobile-form__title">Для кого?</h2>
-			<span class="mobile-form__step">шаг 2 из 4</span>
-			<div class="mobile-form__input order-form__input">
-				<input type="text" id="surname-mobile">
-				<label for="surname-mobile" class="order-form__placeholder"><span>Фамилия</span></label>
-			</div>
-			<div class="mobile-form__input order-form__input">
-				<input type="text" id="name-mobile">
-				<label for="name-mobile" class="order-form__placeholder"><span>Имя</span></label>
-			</div>
-			<div class="mobile-form__input order-form__input">
-				<input type="tel" class="order-form__input--tel" id="tel-mobile">
-				<label for="tel-mobile" class="order-form__placeholder"><span>Телефон</span></label>
-			</div>
-			<div class="mobile-form__input order-form__input">
-				<input type="email" id="email-mobile">
-				<label for="email-mobile" class="order-form__placeholder"><span>Эл. почта</span></label>
-			</div>
-			<label class="order-form__label mobile-form__label">Ваш город</label>
-			<select class="order-form__select mobile-form__select">
-			<option value="">Киев</option>
-			<option value="">Одесса</option>
-		</select>
-			<button type="button" class="mobile-form__next" data-id="step-three">Далее</button>
-			<button type="button" class="mobile-form__prev" data-id="step-one">Шаг назад</button>
-		</div>
-		<div class="mobile-form__steps" id="step-three">
-			<h2 class="mobile-form__title">Как удобно передать устройство?</h2>
-			<span class="mobile-form__step">шаг 3 из 4</span>
-			<div class="mobile-form__tabs order-form__tabs">
-				<a href="#" class="mobile-form__tab order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
-				<a href="#" class="mobile-form__tab order-form__tab active for-shops">Магазины Brain</a>
-				<a href="#" class="mobile-form__tab order-form__tab for-post">Новая почта</a>
-				<a href="#" class="mobile-form__tab order-form__tab for-courier">Курьер</a>
-			</div>
-			<div class="order-form__common-tab order-form__shops-wrap">
-				<label class="order-form__label">Адреса СЦ в вашем городе:</label>
-				<div class="order-form__shops">
-					<a href="#" class="order-form__shop">Вадима Гетьмана, 13</a>
-					<div class="order-form__shop-info">
-						<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-						<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-						<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-					</div>
-					<a href="#" class="order-form__shop">Вышгородская, 32/2</a>
-					<div class="order-form__shop-info">
-						<p class="order-form__shop-text">+380 (44) 393-48-85</p>
-						<p class="order-form__shop-text">+380 (63) 661-38-87</p>
-						<p class="order-form__shop-text">ПН-ПТ : 09-19, СБ: 09-17</p>
-					</div>
-					<a href="#" class="order-form__shop">Дмитриевская, 56 (Лукьяновка)</a>
-					<a href="#" class="order-form__shop">Харьковское шоссе, 1</a>
-				</div>
-			</div>
-			<div class="order-form__common-tab order-form__post">
-				<p class="mobile-form__text">Вы можете передать устройство через любое отделение Новой Почты по всей Украине.</p>
-				<p class="mobile-form__text">Адресс для отправки: <span>01054 Киев, ул. Дмитриевская 56 Сервисный-центр Brain Pro</span></p>
-				<p class="mobile-form__text">В пределах страны, доставка малогабаритных грузов стоит 35 грн Детальная информация на <a href="#">сайте НП</a></p>
-			</div>
-			<div class="order-form__common-tab order-form__courier">
-				<p class="mobile-form__text">Наш курьер может забрать Ваше устройство в определенное время.
-				</p>
-				<p class="mobile-form__text">Для Вас, <span>Имя и Фамилия</span> услуги курьера бесплатны!</p>
-				<div class="order-form__input">
-					<input type="text" id="street-mobile">
-					<label for="street-mobile" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-				</div>
-			</div>
-			<button type="button" class="mobile-form__next" data-id="step-four">Далее</button>
-			<button type="button" class="mobile-form__prev" data-id="step-two">Шаг назад</button>
-		</div>
-		<div class="mobile-form__steps" id="step-four">
-			<h2 class="mobile-form__title">Как удобно получить устройство?</h2>
-			<span class="mobile-form__step">шаг 4 из 4</span>
-			<div class="mobile-form__tabs order-form__tabs">
-				<a href="#" class="mobile-form__tab order-form__tab order-form__tab--disable for-shops">Сервис-центр</a>
-				<a href="#" class="mobile-form__tab order-form__tab active for-shops">Магазины Brain</a>
-				<a href="#" class="mobile-form__tab order-form__tab for-post">Новая почта</a>
-				<a href="#" class="mobile-form__tab order-form__tab for-courier">Курьер</a>
-			</div>
-			<div class="order-form__common-tab order-form__shops-wrap">
-				<label class="order-form__label">Адреса СЦ в вашем городе:</label>
-				<div class="order-form__shops">
-					<input type="radio" name="shop-radio-mobile" id="shop-radio-mobile1" class="order-form__radio">
-					<label for="shop-radio-mobile1" class="order-form__radio-label">Вадима Гетьмана, 13</label>
-					<input type="radio" name="shop-radio-mobile" id="shop-radio-mobile2" class="order-form__radio">
-					<label for="shop-radio-mobile2" class="order-form__radio-label">Вышгородская, 32/2</label>
-					<input type="radio" name="shop-radio-mobile" id="shop-radio-mobile3" class="order-form__radio">
-					<label for="shop-radio-mobile3" class="order-form__radio-label">Дмитриевская, 56 (Лукьяновка)</label>
-					<input type="radio" name="shop-radio-mobile" id="shop-radio-mobile4" class="order-form__radio">
-					<label for="shop-radio-mobile4" class="order-form__radio-label">Харьковское шоссе, 1</label>
-				</div>
-			</div>
-			<div class="order-form__common-tab order-form__post">
-				<p class="order-form__hint">Мы отправляем устройство на отделение НП. Стоимость ~35 грн</p>
-				<!-- <select class="order-form__select">
-										<option value="">№1. Тараса Пудренка 2</option>
-										<option value="">№1. Тараса Пудренка 20</option>
-									</select> -->
-				<div class="order-form__common-tab order-form__post">
-					<p class="mobile-form__text">Вы можете передать устройство через любое отделение Новой Почты по всей Украине.</p>
-					<p class="mobile-form__text">Адресс для отправки: <span>01054 Киев, ул. Дмитриевская 56 Сервисный-центр Brain Pro</span></p>
-					<p class="mobile-form__text">В пределах страны, доставка малогабаритных грузов стоит 35 грн Детальная информация на <a href="#">сайте НП</a></p>
-				</div>
-				<input type="checkbox" class="order-form__check order-form__check--deliv" id="check-give-mobile">
-				<label for="check-give-mobile" class="order-form__check-label">Доплачу ~20 грн за адресную доставку</label>
-				<div class="order-form__input">
-					<input type="text" id="street1-mobile">
-					<label for="street1-mobile" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-				</div>
-			</div>
-			<div class="order-form__common-tab order-form__courier">
-				<p class="mobile-form__text">Наш курьер может забрать Ваше устройство в определенное время.
-				</p>
-				<p class="mobile-form__text">Для Вас, <span>Имя и Фамилия</span> услуги курьера бесплатны!</p>
-				<div class="order-form__input">
-					<input type="text" id="street5-mobile">
-					<label for="street5-mobile" class="order-form__placeholder"><span>Улица, номер дома и квартира</span></label>
-				</div>
-			</div>
-			<div class="mobile-form__agree">
-				<div class="agree-wrap checked">
-					<input type="checkbox" class="order-form__check" id="check2-mobile" checked>
-					<label for="check2-mobile" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
-				</div>
-			</div>
-			<button type="button" class="mobile-form__next mobile-form__next--send" data-id="step-five">Отправить</button>
-			<button type="button" class="mobile-form__prev" data-id="step-three">Шаг назад</button>
-		</div>
 		<div class="mobile-form__steps mobile-form__done" id="step-five">
 			<a href="/" class="mobile-form__logo">BrainPro</a>
 			<h2 class="mobile-form__title">Заявка отправлена</h2>

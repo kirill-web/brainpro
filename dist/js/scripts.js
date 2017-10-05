@@ -12,8 +12,7 @@ $(document).ready(function () {
 	// Мобильное меню
 	$('.menu-toggle, .menu-toggle--inside').on('click', function () {
 		$('body').toggleClass('no-scroll');
-		$('.main-menu').toggle(300);
-		$('.main-menu').css('display', 'flex');
+		$('.main-menu').toggleClass('active');
 		if ($(window).width() < 768) {
 			$('.main-menu').css('display', 'block');
 		}
@@ -177,13 +176,13 @@ $(document).ready(function () {
 	});
 
 	// Быстрая заявка десктоп
-	$('.print-promo__btn, [js-quick-order-desktop], [js-quick-order]').on('click', function () {
+	$('.print-promo__btn, .prices-sec__order-link, [js-quick-order-desktop], [js-quick-order]').on('click', function () {
 		$('body').addClass('no-scroll');
-		$('.big-quick-popup').show(300);
-		$('.big-quick-popup').css('display', 'flex');
+		$('.big-quick-popup').addClass('active');
+//		$('.big-quick-popup').css('display', 'flex');
 	});
 	$('.big-quick-popup__close').on('click', function () {
-		$('.big-quick-popup').hide(300);
+		$('.big-quick-popup').removeClass('active');
 		setTimeout(function () {
 			$('body').removeClass('no-scroll');
 			$('.big-quick-popup__container').show();
@@ -200,7 +199,7 @@ $(document).ready(function () {
 
 	});
 
-	// Быстрая заявка
+	// Заявка на услгугу
 	$('.quick-bid__btn').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.overlay').show();
@@ -245,6 +244,11 @@ $(document).ready(function () {
 			}
 		}
 	});
+	$('.mobile-form__close').on('click', function () {
+		$('.mobile-form').fadeOut(200);
+		$('.overlay').hide();
+		$('body').removeClass('no-scroll');
+	});
 
 	$('.quick-popup__submit').on('click', function(e){
 		e.preventDefault();
@@ -284,6 +288,10 @@ $(document).ready(function () {
 
 	// Кастомные селекты
 	$('.order-form__select, .popup__select, .contacts__select').selectric();
+	
+	//Обернуть элементы селекта
+	
+	$('.contacts .selectric-items li').wrapInner("<span></span>");
 
 
 	// Смена инфы при смене города в большой форме
@@ -310,18 +318,18 @@ $(document).ready(function () {
 
 
   // переход к форме по заказать
-  $('.prices-sec__order-link').on('click', function(){
-    var getId = $(this).data('order-id') - 1;
-
-    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
-      $('.popup__select').prop('selectedIndex', getId).selectric('refresh');
-      console.log(getId);
-    } else {
-      $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
-      $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
-      return false;
-    }
-  })
+//  $('.prices-sec__order-link').on('click', function(){
+//    var getId = $(this).data('order-id') - 1;
+//
+//    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
+//      $('.popup__select').prop('selectedIndex', getId).selectric('refresh');
+//      console.log(getId);
+//    } else {
+//      $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
+//      $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
+//      return false;
+//    }
+//  })
 
 	$('[js-quick-order]').on('click', function(){
     var text = $(this).parent().find('h3').text();

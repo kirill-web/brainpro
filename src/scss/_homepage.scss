@@ -34,7 +34,7 @@
 	&__item {
 		width: calc(33.3% - 20px);
 		border-radius: 8px;
-		box-shadow: 5px 5px 30px rgba(#0d0f27, .1);
+		box-shadow: 1px 3px 3px #cfd2db;
 		background-color: $white-color;
 		padding: 25px 30px;
 		position: relative;
@@ -42,8 +42,17 @@
 		background-size: auto;
 		background-position: top right;
 		min-height: 280px;
-		transition: all 0.3s;
+		transition: all 0.5s;
 		margin-bottom: 30px;
+		&:hover {
+			box-shadow: 1px 3px 30px #cfd2db;
+			transform: translate(5px, -5px);
+			.service-sec__more {
+				visibility: visible;
+				z-index: 2;
+				opacity: 1;
+			}
+		}
 		&--org {
 			background-image: url(../img/bg-img-main1.png);
 		}
@@ -65,6 +74,10 @@
 			padding-top: 40px;
 			box-shadow: none;
 			background-color: transparent;
+			&:hover {
+				box-shadow: none !important;
+				transform: none !important;
+			}
 		}
     &--empty{
       display: flex;
@@ -86,13 +99,6 @@
       font-family: $font-reg;
       color: #8790a6;
     }
-		&:hover {
-			.service-sec__more {
-				visibility: visible;
-				z-index: 2;
-				opacity: 1;
-			}
-		}
 	}
 	&__more {
 		visibility: hidden;
@@ -544,6 +550,44 @@
 				font-size: 34px;
 			}
 		}
+		.selectric-items {
+			min-width: 390px !important;
+			padding: 25px;
+			box-shadow: 0 0 10px #eff0f2;
+			border: 0;
+			left: -25px;
+			ul {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			li {
+				width: 47%;
+				border-radius: 0 !important;
+				font-size: 16px;
+				margin: 8px 0;
+				white-space: nowrap;
+				padding: 0;
+				&.highlighted {
+					font-family: $font-book;
+					background-color: transparent;
+					span {
+						background-color: $start-grad;
+					}
+				}
+				&:hover {
+					background-color: transparent;
+					span {
+						background-color: $start-grad;
+					}
+				}
+			}
+			span {
+				border-radius: 6px;
+				padding: 5px 7px;
+			}
+		}
 		.contacts__info-row--top{
 			position: relative;
 			padding-bottom: 15px;
@@ -592,6 +636,24 @@
         flex: 0 1 50%;
       }
     }
+	}
+	&__hours {
+		margin-top: 20px;
+		font-size: 16px;
+		color: $black-color;
+		font-family: $font-book;
+		span {
+			font-size: 13px;
+			color: $text-color;
+		}
+	}
+	&__tel {
+		margin: 0;
+		span {
+			vertical-align: super;
+			font-size: 12px;
+			color: $black-color;
+		}
 	}
 	&__select {
 		display: block;
