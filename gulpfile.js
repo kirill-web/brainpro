@@ -122,7 +122,7 @@ gulp.task('clean', function () {
 });
 
 //
-//gulp.task('list-pages', function() {
+// gulp.task('list-pages', function() {
 //  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
 //  var pages = require('./src/list-pages/index.yaml');
 //  return gulp
@@ -131,7 +131,7 @@ gulp.task('clean', function () {
 //      pages: pages
 //    }))
 //    .pipe(gulp.dest('src'));
-//});
+// });
 
 
 gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {

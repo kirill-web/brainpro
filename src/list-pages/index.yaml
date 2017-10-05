@@ -5,7 +5,5 @@ PageList:
   ready: 100
 - file: print.html
   ready: 100
-- file: print2.html
-  ready: 100
 - file: text-page.html
   ready: 100
