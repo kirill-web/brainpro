@@ -17,7 +17,7 @@
 	transform: translate(-50%, -50%);
 	width: 100%;
 	height: 100vh;
-	background-color: $menu-bg;
+	background-color: #3e5d72;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -32,6 +32,12 @@
 	}
 	&__close {
 		@extend .main-menu__close;
+		background-image: url(../img/close.svg);
+		background-size: 16px 16px;
+		height: 16px;
+		width: 16px;
+		top: 47px;
+		left: 52px;
 	}
 	&__container {
 		width: 100%;
@@ -44,7 +50,7 @@
 	.flex-wrap {
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 30px;
+		margin-bottom: 25px;
 		&:last-child {
 			justify-content: flex-start;
 		}
@@ -53,11 +59,14 @@
 			margin-bottom: 0;
 		}
 	}
+	&__buttons {
+		margin-top: 65px;
+	}
 	&__input {
 		display: block;
 		width: 100%;
 		position: relative;
-		margin-bottom: 65px;
+		margin-bottom: 30px;
 		input {
 			width: 100%;
 			display: block;
@@ -65,7 +74,7 @@
 			border: 0;
 			font-size: 20px;
 			line-height: 20px;
-			border-bottom: 2px solid $text-color;
+			border-bottom: 2px solid #939db5;
 			color: $white-color;
 			padding: 16px 0;
 			&:focus {
@@ -122,7 +131,7 @@
 		left: 0;
 		font-size: 20px;
 		line-height: 20px;
-		color: $white-color;
+		color: #939db5;
 		padding: 16px 0;
 		display: flex;
 		align-items: center;
@@ -149,6 +158,7 @@
 		border-radius: 30px;
 		margin-right: 30px;
 		transition: all 0.3s;
+		font-size: 18px;
 		&:hover {
 			background-color: #ffcb32;
 			// color: $white-color;
@@ -159,7 +169,8 @@
     }
 	}
 	.order-form__check:checked+label:before {
-		background-image: url(../img/check-w.png);
+		background-image: url(../img/check.svg);
+		background-size: 24px 16px;
 	}
 	.order-form__check-label {
 		color: $text-color;
@@ -233,9 +244,10 @@
 				transform: translateY(-50%);
 				right: 0;
 				background-repeat: no-repeat;
-				background-image: url(../img/dropdown.png);
-				width: 12px;
-				height: 6px;
+				background-image: url(../img/dropdown.svg);
+				background-size: 20px 10px;
+				width: 20px;
+				height: 10px;
 			}
 		&.selectric-open:after {
 			transform: translateY(-50%) rotate(-180deg);
@@ -244,7 +256,7 @@
 	.selectric-items {
 		border-radius: 0;
 		border: 0;
-		background-color: $menu-bg;
+		background-color: #3e5d72;
 		li {
 			font-size: 16px;
 			border-radius: 0;

@@ -1,3 +1,11 @@
+@media (max-width: 1700px) {
+	.service-sec {
+		&__promo {
+			min-height: 550px;
+		}
+	}
+}
+
 @media (max-width: 1440px) {
 	.page-header {
 		.aside {
@@ -29,17 +37,35 @@
 			left: 30px;
 		}
 	}
+	.service-sec {
+		&__promo {
+			min-height: 450px;
+		}
+	}
 	.about-us{
 		&__wrapper {
 			max-width: 1205px;
 			padding-left: 30px;
 			padding-right: 30px;
 		}
+		.big-container {
+			max-width: 1205px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 		&__content{
 			width: 100%;
+			padding-left: 0;
 		}
 		.aside {
 			display: none;
+		}
+	}
+	.our-advant {
+		&__item-title {
+			span {
+				display: inline;
+			}
 		}
 	}
 	.contacts {
@@ -151,6 +177,14 @@
 		&__item {
 			width: 48%;
 		}
+		&__promo {
+			&:before,
+			video {
+				display: none;
+			}
+			background-image: url(../img/back.jpg);
+		}
+
 	}
 	.our-advant {
 		.flex-wrap {

@@ -125,6 +125,9 @@ body {
 	&__contacts-item {
 		padding-left: 22px;
 		padding-right: 22px;
+		&:last-child {
+			padding-right: 0;
+		}
 	}
 	&__lang {
 		display: block;

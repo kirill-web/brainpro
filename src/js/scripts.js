@@ -5,7 +5,7 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
-	$('.order-form__input textarea').focusout(function(){
+	$('.order-form__input textarea').focusout(function () {
 		var vav = $(this).val();
 	})
 
@@ -16,9 +16,24 @@ $(document).ready(function () {
 		if ($(window).width() < 768) {
 			$('.main-menu').css('display', 'block');
 		}
-    $(this).toggleClass('active');
-    $('.page-header').toggleClass('active-menu');
+		$(this).toggleClass('active');
+		$('.page-header').toggleClass('active-menu');
 	});
+
+	$(document).ready(function () {
+		if ($(window).width() < 1899 && $(window).width() > 1440) {
+			var asideWidth = $('.page-header .aside').width();
+			$('.about-us .aside').width(asideWidth);
+			$('.about-us__content').css('width', 'calc(100% - ' + asideWidth + 'px)');
+		}
+		$(window).resize(function(){
+			if ($(window).width() < 1899 && $(window).width() > 1440) {
+			var asideWidth = $('.page-header .aside').width();
+			$('.about-us .aside').width(asideWidth);
+			$('.about-us__content').css('width', 'calc(100% - ' + asideWidth + 'px)');
+		}
+		});
+	})
 
 	// Услуги на мобильных на главной
 	$('.service-sec__mobile-item').on('click', function () {
@@ -34,7 +49,7 @@ $(document).ready(function () {
 	});
 
 	// Смена контактов при смене города
-	$('.contacts__select').change(function(){
+	$('.contacts__select').change(function () {
 		var selectVal = $(this).val();
 		if (selectVal == 'Ивано-франковск') {
 			console.log('im here')
@@ -116,12 +131,14 @@ $(document).ready(function () {
 	// Маска для телефона
 	$(".order-form__input--tel, .big-quick-popup__tel").mask("(999) 999-99-99", {
 		placeholder: "(___) ___-__-__"
-	}, {clearIfNotMatch: true});
+	}, {
+		clearIfNotMatch: true
+	});
 
-  // reset mask on load
-  $(window).on('load', function(){
-    $(".order-form__input--tel, .big-quick-popup__tel").val("")
-  });
+	// reset mask on load
+	$(window).on('load', function () {
+		$(".order-form__input--tel, .big-quick-popup__tel").val("")
+	});
 
 	// Подробная инфа о магазине
 	$('.order-form__shop').click(function (e) {
@@ -176,10 +193,10 @@ $(document).ready(function () {
 	});
 
 	// Быстрая заявка десктоп
-	$('.print-promo__btn, .prices-sec__order-link, [js-quick-order-desktop], [js-quick-order]').on('click', function () {
+	$('.print-promo__btn, .prices-sec__order-link, a.service-sec__more-text, [js-quick-order-desktop], [js-quick-order]').on('click', function () {
 		$('body').addClass('no-scroll');
 		$('.big-quick-popup').addClass('active');
-//		$('.big-quick-popup').css('display', 'flex');
+		//		$('.big-quick-popup').css('display', 'flex');
 	});
 	$('.big-quick-popup__close').on('click', function () {
 		$('.big-quick-popup').removeClass('active');
@@ -190,12 +207,12 @@ $(document).ready(function () {
 		}, 300);
 	});
 	$('.big-quick-popup__submit').on('click', function () {
-    if ( $(this).closest('form').is('.big-quick-popup--v2') ){
+		if ($(this).closest('form').is('.big-quick-popup--v2')) {
 
-    } else {
-      $('.big-quick-popup__container').hide();
-  		$('.big-quick-popup__done').show();
-    }
+		} else {
+			$('.big-quick-popup__container').hide();
+			$('.big-quick-popup__done').show();
+		}
 
 	});
 
@@ -226,8 +243,8 @@ $(document).ready(function () {
 		$('body').addClass('no-scroll');
 		$('.overlay').show();
 		$('.quick-popup').fadeIn(200);
-//		$('.mobile-form__steps').removeClass('active');
-//		$('.mobile-form__steps#step-one').addClass('active');
+		//		$('.mobile-form__steps').removeClass('active');
+		//		$('.mobile-form__steps#step-one').addClass('active');
 	});
 	$('.quick-popup__close').on('click', function () {
 		$('.quick-popup').fadeOut(200);
@@ -250,7 +267,7 @@ $(document).ready(function () {
 		$('body').removeClass('no-scroll');
 	});
 
-	$('.quick-popup__submit').on('click', function(e){
+	$('.quick-popup__submit').on('click', function (e) {
 		e.preventDefault();
 		$('.quick-popup').hide();
 		$('.mobile-form').show();
@@ -258,19 +275,19 @@ $(document).ready(function () {
 		$('.mobile-form #step-five').addClass('active');
 	});
 
-  // смит главной формы
-  $('.order-form').on('submit', function(e){
+	// смит главной формы
+	$('.order-form').on('submit', function (e) {
 		e.preventDefault();
-    $('body').addClass('no-scroll');
+		$('body').addClass('no-scroll');
 		$('.big-quick-popup').show(300);
 		$('.big-quick-popup').css('display', 'flex');
-    $('.big-quick-popup__container').hide();
+		$('.big-quick-popup__container').hide();
 		$('.big-quick-popup__done').show();
 	});
 
 	// Check i agree
-	$('.agree-wrap .order-form__check-label, .mobile-form__agree .order-form__check-label').on('click', function(){
-		if ( $(this).parent().find('input').is(':checked')) {
+	$('.agree-wrap .order-form__check-label, .mobile-form__agree .order-form__check-label').on('click', function () {
+		if ($(this).parent().find('input').is(':checked')) {
 			$(this).parent().addClass('checked');
 		} else {
 			$(this).parent().removeClass('checked');
@@ -288,14 +305,14 @@ $(document).ready(function () {
 
 	// Кастомные селекты
 	$('.order-form__select, .popup__select, .contacts__select').selectric();
-	
+
 	//Обернуть элементы селекта
-	
+
 	$('.contacts .selectric-items li').wrapInner("<span></span>");
 
 
 	// Смена инфы при смене города в большой форме
-	$('.order-form__select').change(function(){
+	$('.order-form__select').change(function () {
 		if ($(this).val() == 'Киев') {
 			$('.order-form__give, .order-form__take').hide();
 			$('#give-kiev, #take-kiev').show();
@@ -306,148 +323,150 @@ $(document).ready(function () {
 		}
 	});
 
-  // WOW
-  wow = new WOW({
-    boxClass:     'wow',
-    animateClass: 'animated',
-    offset:       0,
-    mobile:       false,
-    live:         true
-  })
-  wow.init();
+	// WOW
+	wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: false,
+		live: true
+	})
+	wow.init();
 
 
-  // переход к форме по заказать
-  $('.prices-sec__order-link').on('click', function(){
-    var getId = $(this).data('order-id') - 1;
+	// переход к форме по заказать
+	$('.prices-sec__order-link').on('click', function () {
+		var getId = $(this).data('order-id') - 1;
 
-    if ( $(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]') ) {
-      $('.popup__select').prop('selectedIndex', getId).selectric('refresh');
-      console.log(getId);
-    } else {
-      $('body, html').animate({scrollTop: $('.order-sec').offset().top - 15}, 1000);
-      $('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
-      return false;
-    }
-  })
+		if ($(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]')) {
+			$('.popup__select').prop('selectedIndex', getId).selectric('refresh');
+			console.log(getId);
+		} else {
+			$('body, html').animate({
+				scrollTop: $('.order-sec').offset().top - 15
+			}, 1000);
+			$('.order-form__select').prop('selectedIndex', getId).selectric('refresh');
+			return false;
+		}
+	})
 
-	$('[js-quick-order]').on('click', function(){
-    var text = $(this).parent().find('h3').text();
-    $('[js-paste-order-option]').find('select').val(text);
-  })
+	$('[js-quick-order]').on('click', function () {
+		var text = $(this).parent().find('h3').text();
+		$('[js-paste-order-option]').find('select').val(text);
+	})
 
-  // preload images
-  $.fn.preload = function() {
-    this.each(function(){
-      $('<img/>')[0].src = this;
-    });
-  }
-  $(['img/popup-close.png']).preload();
+	// preload images
+	$.fn.preload = function () {
+		this.each(function () {
+			$('<img/>')[0].src = this;
+		});
+	}
+	$(['img/popup-close.png']).preload();
 
 
-  // print v2
-  $('.about-us__slider').slick({
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: false,
-    infinite: true,
-    speed: 400,
-    cssEase: 'ease-in',
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    slidesToShow: 1,
-    vertical: false,
-    adaptiveHeight: false
-  });
+	// print v2
+	$('.about-us__slider').slick({
+		autoplay: true,
+		autoplaySpeed: 4000,
+		dots: true,
+		arrows: false,
+		infinite: true,
+		speed: 400,
+		cssEase: 'ease-in',
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		slidesToShow: 1,
+		vertical: false,
+		adaptiveHeight: false
+	});
 
-  /////////////////
-  // JQUERY VALIDATE
-  /////////////////
-  var validateErrorPlacement = function(error, element) {
-    return false;
-    // error.addClass('ui-input__validation');
-    // error.appendTo(element.parent("div"));
-  }
-  var validateHighlight = function(element) {
-    $(element).parent('div').addClass("has-error");
-  }
-  var validateUnhighlight = function(element) {
-    $(element).parent('div').removeClass("has-error");
-  }
-  var validateSubmitHandler = function(form) {
-    $(form).addClass('loading');
+	/////////////////
+	// JQUERY VALIDATE
+	/////////////////
+	var validateErrorPlacement = function (error, element) {
+		return false;
+		// error.addClass('ui-input__validation');
+		// error.appendTo(element.parent("div"));
+	}
+	var validateHighlight = function (element) {
+		$(element).parent('div').addClass("has-error");
+	}
+	var validateUnhighlight = function (element) {
+		$(element).parent('div').removeClass("has-error");
+	}
+	var validateSubmitHandler = function (form) {
+		$(form).addClass('loading');
 		$('.big-quick-popup__container').hide();
 		$('.big-quick-popup__done').show();
-    // $.ajax({
-    //   type: "POST",
-    //   url: $(form).attr('action'),
-    //   data: $(form).serialize(),
-    //   success: function(response) {
-    //     $(form).removeClass('loading');
-    //     var data = $.parseJSON(response);
-    //     if (data.status == 'success') {
-    //       // do something I can't test
+		// $.ajax({
+		//   type: "POST",
+		//   url: $(form).attr('action'),
+		//   data: $(form).serialize(),
+		//   success: function(response) {
+		//     $(form).removeClass('loading');
+		//     var data = $.parseJSON(response);
+		//     if (data.status == 'success') {
+		//       // do something I can't test
 		// 			// $('.big-quick-popup__container').hide();
 		//   		// $('.big-quick-popup__done').show();
-    //     } else {
+		//     } else {
 		// 			// $('.big-quick-popup__container').hide();
 		//   		// $('.big-quick-popup__done').show();
-    //       $(form).find('[data-error]').html(data.message).show();
-    //     }
-    //   }
-    // });
-  }
+		//       $(form).find('[data-error]').html(data.message).show();
+		//     }
+		//   }
+		// });
+	}
 
-  var validatePhone = {
-    required: true,
-    normalizer: function(value) {
-        var PHONE_MASK = '(XXX) XXX-XX-XX';
-        if (!value || value === PHONE_MASK) {
-            return value;
-        } else {
-            return value.replace(/[^\d]/g, '');
-        }
-    },
-    minlength: 10,
-    digits: true
-  }
+	var validatePhone = {
+		required: true,
+		normalizer: function (value) {
+			var PHONE_MASK = '(XXX) XXX-XX-XX';
+			if (!value || value === PHONE_MASK) {
+				return value;
+			} else {
+				return value.replace(/[^\d]/g, '');
+			}
+		},
+		minlength: 10,
+		digits: true
+	}
 
-  $('.big-quick-popup--v2').validate({
-    errorPlacement: validateErrorPlacement,
-    highlight: validateHighlight,
-    unhighlight: validateUnhighlight,
-    submitHandler: validateSubmitHandler,
-    ignore: "",
-    rules: {
-      name_big: "required",
-      big_agree: "required",
-      email: {
-        required: true,
-        email: true
-      },
-      tel_big: validatePhone
-    },
-    messages: {
-      name_big: "Заполните это поле",
-      big_agree: "Согласитесь с условиями",
-      email: {
-          required: "Заполните это поле",
-          email: "Email содержит неправильный формат"
-      },
-      phone: {
-          required: "Заполните это поле",
-          minlength: "Введите корректный телефон"
-      }
-    }
-  });
+	$('.big-quick-popup--v2').validate({
+		errorPlacement: validateErrorPlacement,
+		highlight: validateHighlight,
+		unhighlight: validateUnhighlight,
+		submitHandler: validateSubmitHandler,
+		ignore: "",
+		rules: {
+			name_big: "required",
+			big_agree: "required",
+			email: {
+				required: true,
+				email: true
+			},
+			tel_big: validatePhone
+		},
+		messages: {
+			name_big: "Заполните это поле",
+			big_agree: "Согласитесь с условиями",
+			email: {
+				required: "Заполните это поле",
+				email: "Email содержит неправильный формат"
+			},
+			phone: {
+				required: "Заполните это поле",
+				minlength: "Введите корректный телефон"
+			}
+		}
+	});
 
 });
 
 
-$(window).on('load', function(){
-  // preloader
-  setTimeout(function(){
-    $('body').addClass('loaded');
-  }, 100);
+$(window).on('load', function () {
+	// preloader
+	setTimeout(function () {
+		$('body').addClass('loaded');
+	}, 100);
 });
