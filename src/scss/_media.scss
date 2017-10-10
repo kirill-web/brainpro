@@ -1,7 +1,7 @@
 @media (max-width: 1700px) {
 	.service-sec {
 		&__promo {
-			min-height: 550px;
+			min-height: 650px;
 		}
 	}
 }
@@ -39,7 +39,8 @@
 	}
 	.service-sec {
 		&__promo {
-			min-height: 450px;
+			min-height: 550px;
+      padding-top: 17%;
 		}
 	}
 	.about-us{
@@ -117,6 +118,11 @@
 			line-height: 32px;
 		}
 	}
+    .service-sec {
+        &__promo {
+            padding-top: 20%;
+        }
+    }
 	.our-advant {
 		&__item {
       flex: 0 1 50%;
@@ -178,6 +184,7 @@
 			width: 48%;
 		}
 		&__promo {
+        padding-top: 25%;
 			&:before,
 			video {
 				display: none;
@@ -380,10 +387,12 @@
 	}
 	.service-sec {
 		padding-top: 47px;
+      margin-top: 0;
 		&__promo {
 			background-image: none;
 			padding-top: 0;
 			padding-bottom: 0;
+        min-height: 1px;
 		}
 		&__title {
 			font-size: 24px;
@@ -409,7 +418,7 @@
 	.our-advant {
 		margin-top: 0;
 		padding: 40px 0;
-		background-color: $menu-bg;
+		background-color: $new-bg;
 		&:after {
 			display: block;
 		}
@@ -476,6 +485,8 @@
     &__socials{
       flex: 0 0 auto;
       padding-left: 0;
+      margin-left: 0;
+      margin-right: auto;
     }
 		&__social {
 			margin-left: 0;
@@ -522,7 +533,7 @@
 		}
 		&__advant {
 			margin-bottom: 0;
-			background-color: $menu-bg;
+			background-color: $new-bg;
 			padding: 45px 0;
       margin-top: -2px;
 			.container {
@@ -530,6 +541,9 @@
 				justify-content: flex-start;
 				align-items: flex-start;
 			}
+        &-title {
+            color: $white-color !important;
+        }
 			&-item {
 				margin-left: 0;
 				color: $white-color;
