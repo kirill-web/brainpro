@@ -353,7 +353,7 @@
 		min-height: 160px;
 		width: calc(25% - 20px);
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: contain;
 		&--first {
 			background-color: transparent;
 			border: 2px solid #a2a8b8;
@@ -363,11 +363,11 @@
 			}
 		}
 		&--second {
-			background-color: $bg2;
+			background-color: #3e5d72;
 			background-image: url(../img/advant1.png);
 		}
 		&--third {
-			background-color: $bg3;
+			background-color: #f59e1c;
 			background-image: url(../img/advant2.png);
 		}
 	}
