@@ -1226,7 +1226,8 @@ body {
     width: -webkit-calc(25% - 20px);
     width: calc(25% - 20px);
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    background-position: 100% 100%; }
     .our-advant__img-item--first {
       background-color: transparent;
       border: 2px solid #a2a8b8;
