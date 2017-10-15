@@ -74,7 +74,7 @@ body {
   position: relative;
   z-index: 11;
 	background-color: $white-color;
-	padding: 27px 0;
+	padding: 25px 0;
 	border-bottom: 0px solid $border-color;
   box-shadow: 0px 0px 15px rgba(#0d0f27, .05);
   &.active-menu{
@@ -105,6 +105,7 @@ body {
   }
 	&__logo {
     margin-right: auto;
+    margin-top: -10px;
 		a {
 			text-decoration: none;
 			color: $text-color;
@@ -116,7 +117,7 @@ body {
 			max-width: 137px;
 		}
 		span {
-			display: block;
+			display: none;
 			font-size: 14px;
 			line-height: 22px;
 //			padding-left: 35px;
@@ -153,6 +154,20 @@ body {
 		margin: 3px 0 5px 0;
 		font-family: $font-reg;
 	}
+  &__mail {
+    display: block;
+    text-decoration: none;
+    color: $link-color;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    font-family: $font-book;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 	&__tel-descr {
 		font-size: 14px;
 		line-height: 22px;
@@ -209,7 +224,7 @@ body {
 	}
 	&__chat {
 		transition: all 0.3s;
-		display: block;
+		display: none;
 		border-radius: 50%;
 		border: 0;
 		background-color: transparent;

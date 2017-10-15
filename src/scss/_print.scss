@@ -7,17 +7,40 @@
 }
 
 .print-promo {
-	padding-top: 85px;
-	margin-bottom: 60px;
+	padding-top: 270px;
+  margin-top: -110px;
+  padding-bottom: 65px;
+	margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  > .flex-wrap {
+    flex-direction: column;
+  }
+  &:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(36,66,88, 0.9);
+			z-index: 1;
+		}
+		video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+		}
   &-bg{
-    margin-top: -115px;
-    padding-top: 115px;
+//    margin-top: -115px;
+//    padding-top: 115px;
     background: $print-bg;
     margin-bottom: 90px;
-    // background-image: url('../img/printPromo_bg.jpg');
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-attachment: fixed;
   }
   &--full-with{
     .print-promo__info{
@@ -25,25 +48,36 @@
       text-align: center;
     }
   }
+  .prices-sec__advant {
+    display: block;
+  }
 	&__info {
 		width: 50%;
-    padding-right: 15px;
+    margin-bottom: 160px;
 	}
 	&__title {
 		font-size: 34px;
 		line-height: 42px;
 		margin-top: 0;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+    color: $white-color;
 	}
 	&__descr {
 		font-size: 16px;
 		line-height: 26px;
 		margin-top: 0;
 		margin-bottom: 0;
-		color: $text-color;
+		color: $white-color;
+    position: relative;
+    z-index: 1;
+    font-family: $font-thin;
 		span {
-			color: $wrong-color;
-			font-family: $font-med;
+			color: $white-color;
+      font-family: $font-thin;
+//			font-family: $font-med;
 		}
 	}
 	&__btn {
@@ -75,6 +109,7 @@
 }
 
 .prices-sec {
+  padding-bottom: 65px;
 	&__title-wrap {
 		justify-content: space-between;
 		align-items: stretch;
@@ -128,7 +163,6 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		display: none;
-		margin-bottom: 67px;
 		&.active {
 			display: flex;
 		}
@@ -173,7 +207,7 @@
 			font-size: 16px;
 			margin: 0;
 			color: $text-color;
-			font-family: $font-med;
+			font-family: $font-reg;
 			text-align: right;
 		}
 	}
@@ -213,7 +247,8 @@
 			text-decoration: none;
 			color: $black-color;
 			font-size: 16px;
-			font-family: $font-reg;
+			font-family: $font-book;
+      font-weight: 300;
 			padding: 11px 20px;
 			border: 2px solid $link2-color;
 			border-radius: 25px;
@@ -229,7 +264,9 @@
 		}
 	}
 	&__advant {
+    display: none;
 		position: relative;
+    z-index: 1;
 		&:after {
 			display: none;
 			content: '';
@@ -247,14 +284,13 @@
 		margin-bottom: 75px;
     &--on-bg{
       margin-bottom: 0;
-      padding-bottom: 75px;
       .prices-sec__advant-item{
         flex: 0 1 33%;
         margin-left: 0;
 
       }
       .prices-sec__advant-title{
-        color: #8790a6;
+        color: $white-color;
       }
     }
 		&-item {
@@ -262,7 +298,7 @@
 			align-items: center;
 			margin-left: 95px;
 			position: relative;
-			padding-left: 78px;
+			padding-left: 80px;
 			min-height: 60px;
 			&:first-child {
 				margin-left: 0;
@@ -288,19 +324,22 @@
 				background-image: url(../img/health.png);
 			}
 			&--medal:before {
-				background-image: url(../img/medal64.svg);
+        transform: translateY(-60%);
+				background-image: url(../img/new1.svg);
 			}
 			&--printer:before {
-				background-image: url(../img/printer64.svg);
+				background-image: url(../img/new2.svg);
 			}
 			&--eco:before {
-				background-image: url(../img/eco64.svg);
+				background-image: url(../img/new3.svg);
 			}
 		}
 		&-title {
 			font-size: 16px;
 			line-height: 26px;
 			margin: 0;
+      color: $white-color;
+      font-family: $font-med;
 		}
 	}
 	&__mobile {
@@ -361,7 +400,7 @@
     .simple-fast__info{
       width: 100%;
       padding-left: 0;
-      margin: 45px 0;
+      margin: 35px 0;
       &::before{
         display: none;
       }
@@ -389,7 +428,8 @@
     flex: 0 1 50%;
     padding-right: 30px;
     img{
-      max-width: 100%;
+      max-width: 120%;
+      transform: translateX(-20%);
     }
   }
   &__right{

@@ -400,7 +400,7 @@ body {
   position: relative;
   z-index: 11;
   background-color: #fff;
-  padding: 27px 0;
+  padding: 25px 0;
   border-bottom: 0px solid #d9dfe9;
   -webkit-box-shadow: 0px 0px 15px rgba(13, 15, 39, 0.05);
           box-shadow: 0px 0px 15px rgba(13, 15, 39, 0.05); }
@@ -434,7 +434,8 @@ body {
         -ms-flex: 0 0 60px;
             flex: 0 0 60px; }
   .page-header__logo {
-    margin-right: auto; }
+    margin-right: auto;
+    margin-top: -10px; }
     .page-header__logo a {
       text-decoration: none;
       color: #7e89a5; }
@@ -444,7 +445,7 @@ body {
       width: 100%;
       max-width: 137px; }
     .page-header__logo span {
-      display: block;
+      display: none;
       font-size: 14px;
       line-height: 22px; }
   .page-header__contacts-item {
@@ -473,6 +474,19 @@ body {
     line-height: 22px;
     margin: 3px 0 5px 0;
     font-family: "univia_proregular"; }
+  .page-header__mail {
+    display: block;
+    text-decoration: none;
+    color: #284b96;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    font-family: "univia_probook";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .page-header__mail:hover {
+      text-decoration: underline; }
   .page-header__tel-descr {
     font-size: 14px;
     line-height: 22px;
@@ -524,7 +538,7 @@ body {
   .page-header__chat {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    display: block;
+    display: none;
     border-radius: 50%;
     border: 0;
     background-color: transparent;
@@ -873,7 +887,7 @@ body {
     margin-left: 60px; }
 
 .service-sec {
-  margin-top: -114px; }
+  margin-top: -110px; }
   .service-sec__promo {
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1313,12 +1327,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  .about-us--slider .about-us__descr {
-    width: 130%; }
-    .about-us--slider .about-us__descr span {
-      display: inline;
-      background: rgba(255, 255, 255, 0.9);
-      padding-right: 4px; }
   .about-us--slider .slick-list img {
     width: 100%; }
   .about-us__slider {
@@ -1640,33 +1648,70 @@ body {
     padding-top: 0; }
 
 .print-promo {
-  padding-top: 85px;
-  margin-bottom: 60px; }
+  padding-top: 270px;
+  margin-top: -110px;
+  padding-bottom: 65px;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden; }
+  .print-promo > .flex-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .print-promo:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 66, 88, 0.9);
+    z-index: 1; }
+  .print-promo video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%; }
   .print-promo-bg {
-    margin-top: -115px;
-    padding-top: 115px;
     background: #eceff6;
     margin-bottom: 90px; }
   .print-promo--full-with .print-promo__info {
     width: 100%;
     text-align: center; }
+  .print-promo .prices-sec__advant {
+    display: block; }
   .print-promo__info {
     width: 50%;
-    padding-right: 15px; }
+    margin-bottom: 160px; }
   .print-promo__title {
     font-size: 34px;
     line-height: 42px;
     margin-top: 0;
-    margin-bottom: 20px; }
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+    color: #fff; }
   .print-promo__descr {
     font-size: 16px;
     line-height: 26px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #7e89a5; }
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-family: "univia_prothin"; }
     .print-promo__descr span {
-      color: #df535d;
-      font-family: "univia_promedium"; }
+      color: #fff;
+      font-family: "univia_prothin"; }
   .print-promo__btn {
     margin-top: 45px;
     text-align: center;
@@ -1692,212 +1737,156 @@ body {
     background-repeat: no-repeat;
     background-size: 100%; }
 
-.prices-sec__title-wrap {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin-bottom: 38px; }
-
-.prices-sec__title {
-  font-size: 34px;
-  margin: 0;
-  width: 33.33%; }
-
-.prices-sec__tabs {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 66.66%;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-
-.prices-sec__tab {
-  border: 2px solid transparent;
-  background-color: transparent;
-  padding: 7px 12px;
-  border-radius: 30px;
-  text-align: center;
-  font-size: 16px;
-  text-transform: lowercase;
-  color: #284b96;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  position: relative; }
-  .prices-sec__tab:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    bottom: 6px;
-    border-bottom: 1px dashed #284b96;
-    width: 95%; }
-  .prices-sec__tab:hover {
-    color: #000; }
-    .prices-sec__tab:hover:after {
-      border-color: #000; }
-  .prices-sec__tab.active {
-    color: #000;
-    border-color: #fff; }
-    .prices-sec__tab.active:after {
-      display: none; }
-
-.prices-sec__items {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: none;
-  margin-bottom: 67px; }
-  .prices-sec__items.active {
+.prices-sec {
+  padding-bottom: 65px; }
+  .prices-sec__title-wrap {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin-bottom: 38px; }
+  .prices-sec__title {
+    font-size: 34px;
+    margin: 0;
+    width: 33.33%; }
+  .prices-sec__tabs {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 66.66%;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .prices-sec__tab {
+    border: 2px solid transparent;
+    background-color: transparent;
+    padding: 7px 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: lowercase;
+    color: #284b96;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative; }
+    .prices-sec__tab:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      bottom: 6px;
+      border-bottom: 1px dashed #284b96;
+      width: 95%; }
+    .prices-sec__tab:hover {
+      color: #000; }
+      .prices-sec__tab:hover:after {
+        border-color: #000; }
+    .prices-sec__tab.active {
+      color: #000;
+      border-color: #fff; }
+      .prices-sec__tab.active:after {
+        display: none; }
+  .prices-sec__items {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: none; }
+    .prices-sec__items.active {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+  .prices-sec__item {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 49.5%;
+    padding: 29px 20px 29px 22px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
-
-.prices-sec__item {
-  background-color: #fff;
-  border-radius: 8px;
-  width: 49.5%;
-  padding: 29px 20px 29px 22px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  margin-bottom: 10px;
-  max-height: 80px;
-  -webkit-box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.2);
-          box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.2);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out; }
-  .prices-sec__item:hover {
-    -webkit-box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.1);
-            box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.1);
-    -webkit-transform: translateY(-5px);
-        -ms-transform: translateY(-5px);
-            transform: translateY(-5px); }
-    .prices-sec__item:hover .prices-sec__order {
-      opacity: 1;
-      visibility: visible;
-      z-index: 1; }
-  .prices-sec__item-title {
-    font-family: "univia_promedium";
-    font-size: 16px;
-    margin: 0;
-    max-width: 75%; }
-    .prices-sec__item-title span {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    max-height: 80px;
+    -webkit-box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.2);
+            box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.2);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
+    .prices-sec__item:hover {
+      -webkit-box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.1);
+              box-shadow: 0px 1px 3px rgba(13, 15, 39, 0.1);
+      -webkit-transform: translateY(-5px);
+          -ms-transform: translateY(-5px);
+              transform: translateY(-5px); }
+      .prices-sec__item:hover .prices-sec__order {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1; }
+    .prices-sec__item-title {
       font-family: "univia_promedium";
-      display: inline-block;
-      background: #e3ffda;
-      border-radius: 4px;
-      padding: 3px 5px; }
-  .prices-sec__item-price {
-    font-size: 16px;
-    margin: 0;
-    color: #7e89a5;
-    font-family: "univia_promedium";
-    text-align: right; }
-
-.prices-sec__order {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 29px 20px 29px 22px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .prices-sec__order-title {
-    font-size: 16px;
-    margin: 0;
-    color: #000;
-    max-width: 75%;
-    font-family: "univia_promedium"; }
-    .prices-sec__order-title span {
-      display: inline-block;
-      background: transparent;
-      border-radius: 4px;
-      padding: 3px 5px;
-      font-family: "univia_promedium"; }
-  .prices-sec__order-link {
-    text-align: center;
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-    font-family: "univia_proregular";
-    padding: 11px 20px;
-    border: 2px solid #ffcb32;
-    border-radius: 25px;
+      font-size: 16px;
+      margin: 0;
+      max-width: 75%; }
+      .prices-sec__item-title span {
+        font-family: "univia_promedium";
+        display: inline-block;
+        background: #e3ffda;
+        border-radius: 4px;
+        padding: 3px 5px; }
+    .prices-sec__item-price {
+      font-size: 16px;
+      margin: 0;
+      color: #7e89a5;
+      font-family: "univia_proregular";
+      text-align: right; }
+  .prices-sec__order {
     -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-    .prices-sec__order-link:hover {
-      background-color: #ffcb32;
-      color: #000; }
-    .prices-sec__order-link:active {
-      background-color: #feb637;
-      border-color: #feb637; }
-
-.prices-sec__advant {
-  position: relative;
-  margin-bottom: 75px; }
-  .prices-sec__advant:after {
-    display: none;
-    content: '';
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
     position: absolute;
-    height: 2px;
     width: 100%;
-    top: -2px;
+    height: 100%;
+    top: 0;
     left: 0;
-    background-color: #fff; }
-  .prices-sec__advant .container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 29px 20px 29px 22px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -1906,103 +1895,159 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .prices-sec__advant--on-bg {
-    margin-bottom: 0;
-    padding-bottom: 75px; }
-    .prices-sec__advant--on-bg .prices-sec__advant-item {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 33%;
-          -ms-flex: 0 1 33%;
-              flex: 0 1 33%;
-      margin-left: 0; }
-    .prices-sec__advant--on-bg .prices-sec__advant-title {
-      color: #8790a6; }
-  .prices-sec__advant-item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: 95px;
+    .prices-sec__order-title {
+      font-size: 16px;
+      margin: 0;
+      color: #000;
+      max-width: 75%;
+      font-family: "univia_promedium"; }
+      .prices-sec__order-title span {
+        display: inline-block;
+        background: transparent;
+        border-radius: 4px;
+        padding: 3px 5px;
+        font-family: "univia_promedium"; }
+    .prices-sec__order-link {
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      font-family: "univia_probook";
+      font-weight: 300;
+      padding: 11px 20px;
+      border: 2px solid #ffcb32;
+      border-radius: 25px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .prices-sec__order-link:hover {
+        background-color: #ffcb32;
+        color: #000; }
+      .prices-sec__order-link:active {
+        background-color: #feb637;
+        border-color: #feb637; }
+  .prices-sec__advant {
+    display: none;
     position: relative;
-    padding-left: 78px;
-    min-height: 60px; }
-    .prices-sec__advant-item:first-child {
-      margin-left: 0; }
-    .prices-sec__advant-item:before {
+    z-index: 1;
+    margin-bottom: 75px; }
+    .prices-sec__advant:after {
+      display: none;
       content: '';
       position: absolute;
-      top: 50%;
+      height: 2px;
+      width: 100%;
+      top: -2px;
       left: 0;
-      background-repeat: no-repeat;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
-      width: 50px;
-      height: 50px;
-      background-size: 100% 100%; }
-    .prices-sec__advant-item--source:before {
-      background-image: url(../img/source.png); }
-    .prices-sec__advant-item--quality:before {
-      background-image: url(../img/quality.png); }
-    .prices-sec__advant-item--health:before {
-      background-image: url(../img/health.png); }
-    .prices-sec__advant-item--medal:before {
-      background-image: url(../img/medal64.svg); }
-    .prices-sec__advant-item--printer:before {
-      background-image: url(../img/printer64.svg); }
-    .prices-sec__advant-item--eco:before {
-      background-image: url(../img/eco64.svg); }
-  .prices-sec__advant-title {
-    font-size: 16px;
-    line-height: 26px;
-    margin: 0; }
-
-.prices-sec__mobile {
-  position: relative;
-  display: none;
-  padding-top: 40px;
-  background-color: #fff; }
-  .prices-sec__mobile-title {
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 0;
-    margin-bottom: 17px; }
-    .prices-sec__mobile-title a {
-      color: #284b96;
-      text-decoration: none; }
-  .prices-sec__mobile-descr {
-    font-size: 14px;
-    line-height: 18px;
-    color: #7e89a5;
-    margin-top: 0;
-    margin-bottom: 10px; }
-  .prices-sec__mobile-wrap {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #d9dfe9; }
-  .prices-sec__mobile-price {
-    font-size: 14px;
-    font-family: "univia_promedium"; }
-  .prices-sec__mobile-btn {
-    text-align: center;
-    border-radius: 30px;
-    font-size: 16px;
-    padding: 10px 18px;
-    border: 2px solid #ffcb32;
-    background-color: transparent; }
-    .prices-sec__mobile-btn:active {
-      background-color: #ffcb32; }
+      background-color: #fff; }
+    .prices-sec__advant .container {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .prices-sec__advant--on-bg {
+      margin-bottom: 0; }
+      .prices-sec__advant--on-bg .prices-sec__advant-item {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 33%;
+            -ms-flex: 0 1 33%;
+                flex: 0 1 33%;
+        margin-left: 0; }
+      .prices-sec__advant--on-bg .prices-sec__advant-title {
+        color: #fff; }
+    .prices-sec__advant-item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-left: 95px;
+      position: relative;
+      padding-left: 80px;
+      min-height: 60px; }
+      .prices-sec__advant-item:first-child {
+        margin-left: 0; }
+      .prices-sec__advant-item:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-repeat: no-repeat;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-size: 100% 100%; }
+      .prices-sec__advant-item--source:before {
+        background-image: url(../img/source.png); }
+      .prices-sec__advant-item--quality:before {
+        background-image: url(../img/quality.png); }
+      .prices-sec__advant-item--health:before {
+        background-image: url(../img/health.png); }
+      .prices-sec__advant-item--medal:before {
+        -webkit-transform: translateY(-60%);
+            -ms-transform: translateY(-60%);
+                transform: translateY(-60%);
+        background-image: url(../img/new1.svg); }
+      .prices-sec__advant-item--printer:before {
+        background-image: url(../img/new2.svg); }
+      .prices-sec__advant-item--eco:before {
+        background-image: url(../img/new3.svg); }
+    .prices-sec__advant-title {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0;
+      color: #fff;
+      font-family: "univia_promedium"; }
+  .prices-sec__mobile {
+    position: relative;
+    display: none;
+    padding-top: 40px;
+    background-color: #fff; }
+    .prices-sec__mobile-title {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 0;
+      margin-bottom: 17px; }
+      .prices-sec__mobile-title a {
+        color: #284b96;
+        text-decoration: none; }
+    .prices-sec__mobile-descr {
+      font-size: 14px;
+      line-height: 18px;
+      color: #7e89a5;
+      margin-top: 0;
+      margin-bottom: 10px; }
+    .prices-sec__mobile-wrap {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #d9dfe9; }
+    .prices-sec__mobile-price {
+      font-size: 14px;
+      font-family: "univia_promedium"; }
+    .prices-sec__mobile-btn {
+      text-align: center;
+      border-radius: 30px;
+      font-size: 16px;
+      padding: 10px 18px;
+      border: 2px solid #ffcb32;
+      background-color: transparent; }
+      .prices-sec__mobile-btn:active {
+        background-color: #ffcb32; }
 
 .simple-fast {
   background-color: #fff;
@@ -2015,7 +2060,7 @@ body {
     .simple-fast--collumned .simple-fast__info {
       width: 100%;
       padding-left: 0;
-      margin: 45px 0; }
+      margin: 35px 0; }
       .simple-fast--collumned .simple-fast__info::before {
         display: none; }
     .simple-fast--collumned .simple-fast__title {
@@ -2043,7 +2088,10 @@ body {
             flex: 0 1 50%;
     padding-right: 30px; }
     .simple-fast__left img {
-      max-width: 100%; }
+      max-width: 120%;
+      -webkit-transform: translateX(-20%);
+          -ms-transform: translateX(-20%);
+              transform: translateX(-20%); }
   .simple-fast__right {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 50%;
@@ -5661,10 +5709,6 @@ body {
     padding: 0; }
   .page-header__chat {
     display: none; }
-    .page-header__chat--inside {
-      display: block; }
-  .page-header__hours {
-    display: none; }
   .page-header__hamburger {
     display: block; }
   .main-menu__close, .big-quick-popup__close {
@@ -5711,11 +5755,33 @@ body {
             flex-basis: 450px; } }
 
 @media (max-width: 1199px) {
+  .page-header__contacts-item--mail {
+    display: none; }
+  .page-header__hours {
+    margin-left: 0;
+    margin-right: auto; }
   .main-menu__link {
     font-size: 32px;
     line-height: 32px; }
   .service-sec__promo {
     padding-top: 20%; }
+  .print-promo {
+    padding-top: 195px;
+    margin-bottom: 45px; }
+    .print-promo-bg {
+      margin-bottom: 75px; }
+    .print-promo__info {
+      margin-bottom: 95px; }
+  .prices-sec {
+    padding-bottom: 40px; }
+  .simple-fast__right {
+    position: relative;
+    z-index: 1; }
+  .simple-fast__left img {
+    max-width: 140%;
+    -webkit-transform: translateX(-15%);
+        -ms-transform: translateX(-15%);
+            transform: translateX(-15%); }
   .our-advant__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 50%;
@@ -5723,6 +5789,14 @@ body {
             flex: 0 1 50%;
     margin-left: 20px;
     padding-left: 75px; }
+  .about-us__info {
+    width: 40%; }
+  .about-us__slider {
+    width: 60%; }
+  .about-us__slide img {
+    min-height: 370px;
+    margin-left: auto;
+    margin-right: auto; }
   .about-us__descr {
     padding-right: 35px; }
   .contacts__info {
@@ -5751,13 +5825,8 @@ body {
   .page-header__contacts-item {
     padding-left: 15px;
     padding-right: 15px; }
-    .page-header__contacts-item--lang {
-      display: none;
-      -webkit-box-ordinal-group: 4;
-      -webkit-order: 3;
-          -ms-flex-order: 3;
-              order: 3;
-      padding-right: 0; }
+  .page-header__contacts-item--lang {
+    display: none; }
   .service-sec__item {
     width: 48%; }
   .service-sec__promo {
@@ -5790,7 +5859,7 @@ body {
     margin-bottom: 25px; }
   .about-us__descr {
     margin-bottom: 20px;
-    padding-right: 0; }
+    padding-right: 15px; }
   .about-us__info, .about-us__img {
     width: 100%; }
   .about-us__info {
@@ -5858,6 +5927,51 @@ body {
         -ms-flex-preferred-size: 240px;
             flex-basis: 240px; } }
 
+@media (max-width: 969px) {
+  .about-us {
+    margin-bottom: 0; }
+    .about-us--slider {
+      padding-top: 0; }
+    .about-us__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      width: 100% !important; }
+    .about-us__slider {
+      width: -webkit-calc(100% + 60px);
+      width: calc(100% + 60px);
+      -webkit-transform: translateX(-30px);
+          -ms-transform: translateX(-30px);
+              transform: translateX(-30px); }
+    .about-us__info {
+      width: 100%;
+      margin-top: 40px;
+      padding-left: 60px;
+      padding-right: 60px;
+      margin-bottom: 0; }
+    .about-us__descr {
+      margin-bottom: 0; }
+    .about-us__nums {
+      display: none; }
+  .contacts {
+    background-color: #fff;
+    padding-top: 30px; }
+    .contacts__map {
+      display: none; }
+    .contacts__main {
+      padding-left: 60px;
+      padding-right: 60px; }
+    .contacts__info {
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 40px; }
+      .contacts__info-title {
+        margin-top: 20px; }
+    .contacts--wider-contacts .contacts__info {
+      padding-left: 0px; } }
+
 @media (max-width: 767px) {
   .page-header {
     padding: 22px 0; }
@@ -5875,7 +5989,7 @@ body {
       -webkit-transform: translateX(-10px);
           -ms-transform: translateX(-10px);
               transform: translateX(-10px); }
-    .page-header__contacts {
+    .page-header__contacts-item--lang {
       display: none; }
     .page-header__logo span {
       display: none; }
@@ -5964,37 +6078,23 @@ body {
         color: #fff; }
     .our-advant__image-items {
       display: none; }
-  .about-us {
-    display: none; }
-  .contacts {
-    background-color: #fff;
-    padding-top: 40px; }
-    .contacts__map {
-      display: none; }
-    .contacts__info {
-      padding-left: 0;
-      width: 100%;
-      margin-bottom: 40px; }
-      .contacts__info-title {
-        margin-top: 20px; }
-    .contacts--wider-contacts .contacts__info {
-      padding-left: 0px; }
   .page-footer {
     background-color: #fff;
-    padding: 0 0 40px 0; }
+    padding: 35px 0 40px 0;
+    border-top: 2px solid #000;
+    margin-left: 85px;
+    margin-right: 85px; }
     .page-footer .flex-wrap {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-    .page-footer__link {
-      display: none; }
+      padding: 0;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
     .page-footer__copy {
-      padding-top: 35px;
-      border-top: 2px solid #acb2c2;
+      padding-top: 0;
       margin-bottom: 15px; }
     .page-footer__socials {
+      display: none;
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
           -ms-flex: 0 0 auto;
@@ -6011,63 +6111,74 @@ body {
     background-color: #fff;
     background-image: none; }
   .print-promo {
-    padding-top: 55px;
-    margin-bottom: 0;
-    border-bottom: 1px solid #d9dfe9;
+    padding-bottom: 40px;
     text-align: center;
-    background-color: #f2f3f7; }
+    background-color: #385468; }
+    .print-promo video {
+      display: none; }
+    .print-promo:before {
+      display: none; }
+    .print-promo .quick-bid {
+      display: none; }
     .print-promo .container {
       padding-left: 25px;
       padding-right: 25px; }
     .print-promo-bg {
-      margin-bottom: 20px; }
+      margin-bottom: 50px; }
+    .print-promo__info {
+      margin-bottom: 55px; }
     .print-promo__title {
       font-size: 24px;
       line-height: 32px; }
     .print-promo__descr {
       font-size: 16px;
-      line-height: 26px;
-      margin-bottom: 27px; }
+      line-height: 26px; }
     .print-promo__btn {
       display: none; }
-  .prices-sec__title-wrap, .prices-sec__items {
+  .prices-sec__title-wrap {
     display: none !important; }
   .prices-sec__advant {
-    margin-bottom: 0;
-    background-color: #3e5c72;
-    padding: 45px 0;
-    margin-top: -2px; }
-    .prices-sec__advant .container {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-          -ms-flex-align: start;
-              align-items: flex-start; }
+    margin-bottom: 0; }
     .prices-sec__advant-title {
       color: #fff !important; }
+    .prices-sec__advant .container {
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-left: 15px;
+      padding-right: 15px; }
     .prices-sec__advant-item {
       margin-left: 0;
       color: #fff;
-      margin-bottom: 15px;
-      padding-left: 78px; }
-      .prices-sec__advant-item:last-child {
-        margin-bottom: 0; }
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 65px;
+      -webkit-box-flex: 0 !important;
+      -webkit-flex: 0 1 auto !important;
+          -ms-flex: 0 1 auto !important;
+              flex: 0 1 auto !important; }
       .prices-sec__advant-item:before {
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         background-size: 60px 60px;
         width: 60px;
         height: 60px; }
-  .prices-sec__mobile {
-    display: block; }
   .simple-fast {
-    display: none; }
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px; }
+    .simple-fast__title {
+      margin-bottom: 15px; }
+    .simple-fast__left {
+      display: none; }
+    .simple-fast__right {
+      width: 100%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 100%;
+          -ms-flex: 0 1 100%;
+              flex: 0 1 100%; }
   .order-sec {
     display: none; }
   .text-sec {
@@ -6084,6 +6195,127 @@ body {
       margin-bottom: 25px; }
   .breadcrumbs {
     margin-bottom: 25px; }
+  .prices-sec__advant--on-bg .prices-sec__advant-item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; } }
+
+@media (max-width: 749px) {
+  .page-header {
+    padding: 30px 0; }
+    .page-header__contacts-item {
+      display: none; }
+  .print-promo-bg {
+    margin-bottom: 15px; }
+  .print-promo {
+    padding-top: 130px;
+    margin-top: -80px;
+    background-color: #eceff6;
+    border-bottom: 1px solid #d9dfe9;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+    .print-promo .quick-bid {
+      display: block;
+      margin-top: 33px; }
+    .print-promo .prices-sec__advant {
+      display: none; }
+    .print-promo__title {
+      color: #000; }
+    .print-promo__info {
+      margin-bottom: 0; }
+    .print-promo__descr {
+      color: #7e89a5;
+      font-family: "univia_probook";
+      margin-bottom: 20px; }
+      .print-promo__descr span {
+        color: #7e89a5;
+        font-family: "univia_probook"; }
+  .prices-sec {
+    background-color: #3e5c72;
+    padding-bottom: 0; }
+    .prices-sec .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .prices-sec__advant {
+      display: block;
+      padding: 45px 0;
+      position: relative; }
+      .prices-sec__advant:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fff; }
+      .prices-sec__advant .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 30px;
+        padding-right: 30px; }
+      .prices-sec__advant-item {
+        padding-top: 0;
+        padding-left: 65px;
+        margin-bottom: 27px; }
+        .prices-sec__advant-item:last-child {
+          margin-bottom: 0; }
+        .prices-sec__advant-item:before {
+          -webkit-transform: translateX(-10px);
+              -ms-transform: translateX(-10px);
+                  transform: translateX(-10px);
+          left: 0;
+          top: 0; }
+      .prices-sec__advant-title {
+        font-size: 16px;
+        line-height: 26px; }
+    .prices-sec__items {
+      display: none !important; }
+    .prices-sec__mobile {
+      display: block; }
+  .simple-fast {
+    display: none; }
+  .about-us {
+    display: none; }
+  .page-footer {
+    background-color: #fff;
+    padding: 0 0 40px 0;
+    border-top: 0;
+    margin-left: 0;
+    margin-right: 0; }
+    .page-footer .flex-wrap {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 0 30px;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+    .page-footer__link {
+      display: none; }
+    .page-footer__socials {
+      display: block; }
+    .page-footer__copy {
+      padding-top: 35px;
+      border-top: 2px solid #acb2c2;
+      margin-bottom: 15px; }
+  .contacts__main {
+    padding-left: 0;
+    padding-right: 0; }
   .contacts__info-link span {
     display: none; }
   .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
@@ -6101,12 +6333,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
   .contacts--wider-contacts .contacts__info-row--top {
-    padding-bottom: 0; }
-  .prices-sec__advant--on-bg .prices-sec__advant-item {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto; } }
+    padding-bottom: 0; } }
 
 @media (max-width: 515px) {
   .contacts--wider-contacts .contacts__info-row--top {
