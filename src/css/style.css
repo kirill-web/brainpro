@@ -442,6 +442,7 @@ body {
     .page-header__logo img {
       display: block;
       height: auto;
+      min-height: 31px;
       width: 100%;
       max-width: 137px; }
     .page-header__logo span {
@@ -1659,7 +1660,9 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    position: relative;
+    z-index: 2; }
   .print-promo:before {
     content: '';
     position: absolute;
