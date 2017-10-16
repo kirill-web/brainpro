@@ -52,6 +52,11 @@
   }
   .prices-sec__advant {
     display: block;
+    &-title {
+      .span-tablet {
+        display: none;
+      }
+    }
   }
 	&__info {
 		width: 50%;

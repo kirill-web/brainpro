@@ -335,7 +335,7 @@ $(document).ready(function () {
 
 
 	// переход к форме по заказать
-	$('.prices-sec__order-link').on('click', function () {
+	$('.prices-sec__order-link, .prices-sec__item').on('click', function () {
 		var getId = $(this).data('order-id') - 1;
 
 		if ($(this).is('[js-quick-order]') || $(this).is('[js-quick-order-desktop]')) {

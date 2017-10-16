@@ -141,6 +141,16 @@
     &__info {
       margin-bottom: 95px;
     }
+    .prices-sec__advant {
+      &-title {
+        .span-desktop {
+          display: none;
+        }
+        .span-tablet {
+          display: block;
+        }
+      }
+    }
   }
   .prices-sec {
     padding-bottom: 40px;
@@ -288,6 +298,41 @@
     &__info {
       width: 100%;
     }
+    .prices-sec {
+      &__advant {
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        margin-bottom: 0;
+        &-title {
+          color: $white-color !important;
+        }
+        .container {
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        &-item {
+          margin-left: 0;
+          color: $white-color;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 65px;
+          flex: 0 1 auto !important;
+          text-align: center;
+          &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-size: 60px 60px;
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
   }
   .prices-sec {
     &__title-wrap {
@@ -308,18 +353,18 @@
         overflow: hidden;
       }
     }
-    &__advant-title {
-      font-size: 15px;
-      line-height: 23px;
-    }
-    &__advant-item {
-      margin-left: 20px;
-      padding-left: 60px;
-      &:before {
-        width: 50px;
-        height: 50px;
-        background-size: 50px 50px;
-      }
+  }
+  &__advant-title {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  &__advant-item {
+    margin-left: 20px;
+    padding-left: 60px;
+    &:before {
+      width: 50px;
+      height: 50px;
+      background-size: 50px 50px;
     }
   }
   .order-form {
@@ -351,13 +396,32 @@
   }
   .page-footer {
     &__socials {
+      display: none;
       flex-basis: 240px;
     }
+    background-color: $white-color;
+    padding: 35px 0 40px 0;
+    border-top: 2px solid $black-color;
+    margin-left: 85px;
+    margin-right: 85px;
+    .flex-wrap {
+      padding: 0;
+      justify-content: space-between;
+    }
+    &__copy {
+      padding-top: 0;
+      margin-bottom: 15px;
+    }
   }
-  
-}
-
-@media (max-width: 969px) {
+  .print-promo {
+    background-color: #385468;
+    video {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+  }
   .about-us {
     margin-bottom: 0;
     &--slider {
@@ -407,6 +471,21 @@
       .contacts__info {
         padding-left: 0px;
       }
+    }
+  }
+  .simple-fast {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 30px;
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__left {
+      display: none;
+    }
+    &__right {
+      width: 100%;
+      flex: 0 1 100%;
     }
   }
 }
@@ -551,27 +630,7 @@
     }
   }
   .page-footer {
-    background-color: $white-color;
-    padding: 35px 0 40px 0;
-    border-top: 2px solid $black-color;
-    margin-left: 85px;
-    margin-right: 85px;
-    .flex-wrap {
-//      flex-direction: column;
-      padding: 0;
-      justify-content: space-between;
-    }
-    &__link {
-//      display: none;
-    }
-    &__copy {
-      padding-top: 0;
-//      padding-top: 35px;
-//      border-top: 2px solid #acb2c2;
-      margin-bottom: 15px;
-    }
     &__socials {
-      display: none;
       flex: 0 0 auto;
       padding-left: 0;
       margin-left: 0;
@@ -591,15 +650,7 @@
   }
   .print-promo {
     padding-bottom: 40px;
-//    border-bottom: 1px solid $border-color;
     text-align: center;
-    background-color: #385468;
-    video {
-      display: none;
-    }
-    &:before {
-      display: none;
-    }
     .quick-bid {
       display: none;
     }
@@ -629,58 +680,6 @@
     &__title-wrap {
       display: none !important;
     }
-    &__advant {
-      margin-bottom: 0;
-      //			background-color: $new-bg;
-      //			.container {
-      //				flex-direction: column;
-      //				justify-content: flex-start;
-      //				align-items: flex-start;
-      //			}
-      &-title {
-        color: $white-color !important;
-      }
-      .container {
-        margin-left: -10px;
-        margin-right: -10px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-      &-item {
-        margin-left: 0;
-        color: $white-color;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 65px;
-        flex: 0 1 auto !important;
-        &:before {
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          background-size: 60px 60px;
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-    &__mobile {
-//      display: block;
-    }
-  }
-  .simple-fast {
-    padding-left: 60px;
-    padding-right: 60px;
-    margin-bottom: 30px;
-    &__title {
-      margin-bottom: 15px;
-    }
-    &__left {
-      display: none;
-    }
-    &__right {
-      width: 100%;
-      flex: 0 1 100%;
-    }
   }
   .order-sec {
     display: none;
@@ -707,33 +706,7 @@
   .breadcrumbs {
     margin-bottom: 25px;
   }
-//  .contacts__info-link span {
-//    display: none;
-//  }
-//  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
-//    margin-bottom: 4px;
-//  }
-//  .contacts--wider-contacts .contacts__info-row--top::after {
-//    display: none;
-//  }
-//  .contacts--wider-contacts .selectric-contacts__select .label {
-//    font-size: 20px;
-//  }
-//  .contacts--wider-contacts .contacts__info-row--top .contacts__info-link {
-//    font-size: 16px;
-//  }
-//  .contacts__info-row {
-//    flex-direction: column;
-//  }
-//  .contacts--wider-contacts .contacts__info-row--top {
-//    padding-bottom: 0;
-//  }
-  .prices-sec__advant--on-bg .prices-sec__advant-item {
-    flex: 0 0 auto;
-  }
-}
-
-@media (max-width: 749px) {
+  // PRINT NEW
   .page-header {
     padding: 30px 0;
     &__contacts-item {
@@ -777,9 +750,9 @@
     background-color: $new-bg;
     padding-bottom: 0;
     .container {
-    	flex-direction: column;
-    	justify-content: flex-start;
-    	align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
     &__advant {
       display: block;
@@ -808,9 +781,11 @@
           margin-bottom: 0;
         }
         &:before {
-          transform: translateX(-10px);
+          transform: translate(-10px, -50%);
           left: 0;
-          top: 0;
+          top: 50%;
+          width: 55px;
+          height: 55px;
         }
       }
       &-title {
@@ -880,6 +855,9 @@
   }
   .contacts--wider-contacts .contacts__info-row--top {
     padding-bottom: 0;
+  }
+  .prices-sec__advant--on-bg .prices-sec__advant-item {
+    flex: 0 0 auto;
   }
 }
 
