@@ -261,6 +261,7 @@
 			font-size: 16px;
 			border-radius: 0;
 			background-color: transparent;
+      padding-left: 0;
 			&:hover {
 				color: $white-color;
 				background-color: transparent;
@@ -271,6 +272,9 @@
 			}
 		}
 	}
+  .selected.highlighted {
+    padding-left: 0;
+  }
 	&--v2{
 		.flex-wrap{
 			.big-quick-popup__input{
@@ -359,8 +363,8 @@
 		}
 		&.checked {
 			&:before {
-				background-image: url(../img/check.png);
-			background-size: 18px 12px;
+				background-image: url(../img/check-black.svg);
+			background-size: 16px 16px;
 			}
 		}
 	}
