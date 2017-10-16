@@ -21,7 +21,7 @@ var gulp         = require('gulp'),
 
 // Default task
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'scripts', 'img'], 'watch',
+  runSequence(['sass', 'scripts', 'img', 'fonts', 'html'], 'watch',
     callback
   )
 })
@@ -43,10 +43,10 @@ gulp.task('sass', function () {
 		.pipe(autoprefixer(['last 10 versions', '>3%']))
     .pipe( postcss(postCssProcessors) )
     .pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('src/css'))
-		.pipe(browserSync.reload({
-			stream: true
+    .pipe(csso({
+			sourceMap: false
 		}))
+		.pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('scripts', function () {
@@ -56,7 +56,8 @@ gulp.task('scripts', function () {
     'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/masked.min.js',
     'src/libs/jquery.validate.min.js',
-		'src/libs/scrollmonitor.js'
+		'src/libs/scrollmonitor.js',
+    'src/js/*.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {
@@ -64,40 +65,20 @@ gulp.task('scripts', function () {
 				this.emit('end');
 			}
 		}))
-		.pipe(concat('libs.min.js'))
+		.pipe(concat('app.min.js'))
 		.pipe(uglifyjs())
-		.pipe(gulp.dest('src/js'))
+		.pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('src/fonts/**/*')
+  .pipe(gulp.dest('dist/fonts'));
+})
 
-gulp.task('browser-sync', function () {
-	browserSync({
-		server: {
-			baseDir: 'src'
-		}
-	});
-});
-
-gulp.task('sprite', function () {
-	var spriteData =
-		gulp.src('./src/img/sprites/*.*')
-		.pipe(plumber({
-			errorHandler: function (error) {
-				gutil.log('Error: ' + error.message);
-				this.emit('end');
-			}
-		}))
-		.pipe(spritesmith({
-			imgName: 'sprite.png',
-			cssName: 'sprite.css',
-			cssFormat: 'css',
-			algorithm: 'binary-tree',
-			padding: 3
-		}));
-
-	spriteData.img.pipe(gulp.dest('./src/img/'));
-	spriteData.css.pipe(gulp.dest('./src/css/'));
-});
+gulp.task('html', function () {
+  return gulp.src('src/*.html')
+  .pipe(gulp.dest('dist'));
+})
 
 gulp.task('img', function () {
 	return gulp.src('src/img/**/*')
@@ -122,6 +103,20 @@ gulp.task('clean', function () {
 	return del.sync('dist/**');
 });
 
+gulp.task('browser-sync', function () {
+	browserSync({
+		server: {
+			baseDir: 'dist'
+		},
+    files: [
+      'dist/*.html',
+      'dist/*.css',
+      'dist/*.js',
+      'dist/img/**/*'
+    ],
+	});
+});
+
 //
 // gulp.task('list-pages', function() {
 //  delete require.cache[require.resolve('./src/list-pages/index.yaml')]
@@ -135,29 +130,9 @@ gulp.task('clean', function () {
 // });
 
 
-gulp.task('watch', ['browser-sync', 'sass', 'scripts'], function () {
+gulp.task('watch', ['browser-sync', 'sass', 'scripts', 'img', 'fonts', 'html'], function () {
 	gulp.watch('src/scss/**/*', ['sass']);
-	gulp.watch('src/*.html', browserSync.reload);
-	gulp.watch('src/js/**/*.js', browserSync.reload);
-  gulp.watch('src/list-pages/**/*', ['list-pages']);
-});
-
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
-
-	var buildCss = gulp.src('src/css/style.css')
-		.pipe(csso({
-			sourceMap: false
-		}))
-		.pipe(gulp.dest('dist/css'));
-
-	var buildFonts = gulp.src('src/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'));
-
-	var buildJs = gulp.src('src/js/**/*')
-    // .pipe(gulpIf(['*.js'], uglifyjs()))
-		.pipe(gulp.dest('dist/js'));
-
-	var buildHtml = gulp.src('src/*.html')
-		.pipe(gulp.dest('dist'));
-
+	gulp.watch('src/*.html', ['html']);
+	gulp.watch('src/js/**/*.js', 'scripts');
+  // gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
