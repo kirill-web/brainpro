@@ -358,6 +358,7 @@
 		display: none;
 		padding-top: 40px;
 		background-color: $white-color;
+    text-decoration: none;
 		&-title {
 			font-size: 16px;
 			line-height: 24px;
@@ -384,6 +385,7 @@
 		&-price {
 			font-size: 14px;
 			font-family: $font-med;
+      text-decoration: none;
 		}
 		&-btn {
 			text-align: center;

@@ -68,6 +68,7 @@ body {
 .no-scroll {
 	overflow: hidden;
 	max-height: 100vh;
+  position: fixed;
 }
 
 .page-header {
@@ -471,6 +472,7 @@ body {
 		color: $black-color;
 		position: relative;
 		font-family: $font-med;
+    text-decoration: none;
 		&:first-child {
 			margin-right: 20px;
 			&:before {

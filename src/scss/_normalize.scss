@@ -137,6 +137,13 @@ textarea {
 	&:focus {
 		outline: 0;
 	}
+  &::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
 }
 
 button {
