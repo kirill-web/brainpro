@@ -30,6 +30,7 @@
     "run-sequence": "^2.1.0"
   },
   "dependencies": {
+    "gulp-if": "^2.0.2",
     "gulp-sourcemaps": "^2.6.1"
   }
 }

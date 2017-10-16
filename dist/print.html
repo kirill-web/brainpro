@@ -9,7 +9,7 @@
     body {
       position: relative;
     }
-    
+
     body::after {
       display: inline-block;
       content: " ";
@@ -24,11 +24,11 @@
       background-image: linear-gradient(to bottom, #f2f3f7, #fff);
       transition: opacity 0.3s ease-out;
     }
-    
+
     body.preloader::after {
       opacity: 1;
     }
-    
+
     body.loaded::after {
       opacity: 0;
     }
@@ -38,7 +38,7 @@
 
 <body class="preloader print-body">
 
-  <header class="page-header wow fadeInDown" data-wow-delay="0.9s">
+  <header class="page-header wow" data-animation-name="fadeInDown" data-wow-delay="0.9s">
     <div class="big-container">
       <aside class="aside">
         <button type="button" class="menu-toggle">
@@ -124,7 +124,7 @@
   <div class="print-promo-bg">
     <section class="print-promo print-promo--full-with">
       <video src="https://s3.envato.com/h264-video-previews/d891aa70-8ed3-4062-8f61-f18a741cb081/19451562.mp4" muted autoplay loop></video>
-      <div class="container flex-wrap wow fadeInUp" data-wow-duration="0.6s">
+      <div class="container flex-wrap wow" data-animation-name="fadeInUp" data-wow-duration="0.6s">
         <div class="print-promo__info">
           <h1 class="print-promo__title">Заправка катриджей.<br> Диагностка, ремонт и обслуживание принтеров и мфу</h1>
           <p class="print-promo__descr"><span>Все работы ведутся только в специально оборудованном помещении!</span> </p>
@@ -140,13 +140,13 @@
         </div>
         <div class="prices-sec__advant prices-sec__advant--on-bg">
           <div class="container flex-wrap">
-            <div class="prices-sec__advant-item prices-sec__advant-item--medal wow fadeInRight" data-wow-delay="0s" data-wow-offset="0">
+            <div class="prices-sec__advant-item prices-sec__advant-item--medal wow" data-animation-name="fadeInRight" data-wow-delay="0s" data-wow-offset="0">
               <h3 class="prices-sec__advant-title"><span class="span-tablet">Качество печати после<br> заправки - отменное</span><span class="span-desktop">Высокое качество печати <br>после каждой заправки</span></h3>
             </div>
-            <div class="prices-sec__advant-item prices-sec__advant-item--printer wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="0">
+            <div class="prices-sec__advant-item prices-sec__advant-item--printer wow" data-animation-name="fadeInRight" data-wow-delay="0.3s" data-wow-offset="0">
               <h3 class="prices-sec__advant-title"><span class="span-tablet">Ресурс картриджа от<br> производителя - сохраним</span><span class="span-desktop">Сохраняем ресурс картриджа <br>от производителя</span></h3>
             </div>
-            <div class="prices-sec__advant-item prices-sec__advant-item--eco wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="0">
+            <div class="prices-sec__advant-item prices-sec__advant-item--eco wow" data-animation-name="fadeInRight" data-wow-delay="0.6s" data-wow-offset="0">
               <h3 class="prices-sec__advant-title"><span class="span-tablet">Диагностика и доставка <br>для клиентов - бесплатно</span><span class="span-desktop">Нашим клиентам диагностика <br>и доставка - бесплатно</span></h3>
             </div>
           </div>
@@ -154,7 +154,7 @@
       </div>
     </section>
     <section class="prices-sec">
-      <div class="container wow fadeInUp" data-wow-delay="0.8s">
+      <div class="container wow" data-animation-name="fadeInUp" data-wow-delay="0.8s">
         <div class="prices-sec__items flex-wrap active" id="prices-bw">
           <div class="prices-sec__item" js-quick-order data-order-id="1">
             <h3 class="prices-sec__item-title">Заправка лазерного картриджа</h3>
@@ -239,15 +239,15 @@
         </div>
         <div class="simple-fast__right">
           <h2 class="simple-fast__title">Просто и быстро</h2>
-          <div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+          <div class="simple-fast__info wow" data-animation-name="fadeInRight" data-wow-offset="150">
             <h3 class="simple-fast__subtitle">1. Оформляете заявку и передаете устройство</h3>
             <p class="simple-fast__descr">Заявку можно оформить любым удобным способом. После, наш курьер, почтовая служба или лично Вы передадите устройство в сервисный центр/магазин для диагностики и проведения работ.</p>
           </div>
-          <div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+          <div class="simple-fast__info wow" data-animation-name="fadeInRight" data-wow-offset="150">
             <h3 class="simple-fast__subtitle">2. Проводим диагностику и сервисные работы</h3>
             <p class="simple-fast__descr">В кратчайшие сроки проведем диагностику и озвучим Вам цену и срок работ. Если таковы потребуются, наши сертифицированные специалисты сделают все, чтобы было как новое и работало безупречно.</p>
           </div>
-          <div class="simple-fast__info wow fadeInRight" data-wow-offset="150">
+          <div class="simple-fast__info wow" data-animation-name="fadeInRight" data-wow-offset="150">
             <h3 class="simple-fast__subtitle">3. Получаете исправное и готовое к работе устройство</h3>
             <p class="simple-fast__descr">По готовности вы получите уведомление. Получить устройство можно так же легко как и отправить. Мы уверены в наших специалистах, поэтому даем гарантию на все выполненные работы.</p>
           </div>
@@ -259,7 +259,7 @@
 
   <section class="about-us about-us--slider">
     <div class="about-us__wrapper">
-      <div class="flex-wrap wow fadeInUp" data-wow-offset="150">
+      <div class="flex-wrap wow" data-animation-name="fadeInUp" data-wow-offset="150">
         <div class="aside"></div>
         <div class="about-us__content">
           <div class="about-us__info">
@@ -299,7 +299,7 @@
   </section>
   <section class="contacts contacts--wider-contacts">
     <div class="big-container big-container--no-pad">
-      <div class="contacts__main flex-wrap wow fadeInUp" data-wow-offset="150">
+      <div class="contacts__main flex-wrap wow" data-animation-name="fadeInUp" data-wow-offset="150">
         <div class="contacts__map" id="contacts-map"></div>
         <div class="contacts__info">
           <form action="#" class="contacts__form">

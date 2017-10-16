@@ -13,6 +13,7 @@ var gulp         = require('gulp'),
   gutil          = require('gulp-util'),
   del            = require('del'),
   runSequence    = require('run-sequence'),
+  gulpIf         = require('gulp-if'),
   postcss        = require('gulp-postcss'),
   flexbugs       = require('postcss-flexbugs-fixes'),
   consolidate    = require('gulp-consolidate'),
@@ -55,7 +56,7 @@ gulp.task('scripts', function () {
     'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/masked.min.js',
     'src/libs/jquery.validate.min.js',
-		'src/libs/wow.min.js'
+		'src/libs/scrollmonitor.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {
@@ -153,6 +154,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function () {
 		.pipe(gulp.dest('dist/fonts'));
 
 	var buildJs = gulp.src('src/js/**/*')
+    // .pipe(gulpIf(['*.js'], uglifyjs()))
 		.pipe(gulp.dest('dist/js'));
 
 	var buildHtml = gulp.src('src/*.html')
