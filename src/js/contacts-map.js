@@ -1,5 +1,5 @@
 
-google.maps.event.addDomListener(window, 'load', initMap);
+// google.maps.event.addDomListener(window, 'load', initMap);
 
 	function initMap() {
 	var kiev = {

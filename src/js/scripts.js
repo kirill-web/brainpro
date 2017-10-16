@@ -324,68 +324,68 @@ $(document).ready(function () {
 	});
 
 	// WOW
-	// wow = new WOW({
-	// 	boxClass: 'wow',
-	// 	animateClass: 'animated',
-	// 	offset: 0,
-	// 	mobile: false,
-	// 	live: true
-	// })
-	// wow.init();
+	wow = new WOW({
+		boxClass: 'wow',
+		animateClass: 'animated',
+		offset: 0,
+		mobile: false,
+		live: true
+	})
+	wow.init();
 	var monitorActive = false;
-  window.runScrollMonitor = function(){
-    setTimeout(function(){
-      if ( !monitorActive ){
-        monitorActive = true;
-        $('.wow').each(function(i, el){
-
-					// parse params
-          var delay;
-					if ( $(window).width() < 768 ){
-						delay = 0
-					} else {
-						delay = $(el).data('wow-delay');
-					}
-
-					var animationName = $(el).data('animation-name');
-
-					var offset
-
-					if ( $(el).data('wow-delay') ){
-						offset = $(el).data('wow-delay')
-					} else {
-						offset = 0;
-					}
-
-					// create instance and apply events
-					var elWatcher = scrollMonitor.create( $(el), offset );
-
-					$(el).css({
-						'visibility': 'hidden'
-					})
-
-          elWatcher.enterViewport(function() {
-            $(el).css({
-              'animation-name': animationName,
-              'animation-delay': delay,
-							'visibility': 'visible'
-            });
-          });
-          elWatcher.exitViewport(function() {
-            $(el).css({
-              'animation-name': 'none',
-              'animation-delay': 0,
-							'visibility': 'hidden'
-            });
-          });
-        });
-      }
-
-    },300);
-  }
-  setTimeout(function(){
-    runScrollMonitor();
-  },1000)
+  // window.runScrollMonitor = function(){
+  //   setTimeout(function(){
+  //     if ( !monitorActive ){
+  //       monitorActive = true;
+  //       $('.wow').each(function(i, el){
+	//
+	// 				// parse params
+  //         var delay;
+	// 				if ( $(window).width() < 768 ){
+	// 					delay = 0
+	// 				} else {
+	// 					delay = $(el).data('wow-delay');
+	// 				}
+	//
+	// 				var animationName = $(el).data('animation-name');
+	//
+	// 				var offset
+	//
+	// 				if ( $(el).data('wow-delay') ){
+	// 					offset = $(el).data('wow-delay')
+	// 				} else {
+	// 					offset = 0;
+	// 				}
+	//
+	// 				// create instance and apply events
+	// 				var elWatcher = scrollMonitor.create( $(el), offset );
+	//
+	// 				$(el).css({
+	// 					'visibility': 'hidden'
+	// 				})
+	//
+  //         elWatcher.enterViewport(function() {
+  //           $(el).css({
+  //             'animation-name': animationName,
+  //             'animation-delay': delay,
+	// 						'visibility': 'visible'
+  //           });
+  //         });
+  //         elWatcher.exitViewport(function() {
+  //           $(el).css({
+  //             'animation-name': 'none',
+  //             'animation-delay': 0,
+	// 						'visibility': 'hidden'
+  //           });
+  //         });
+  //       });
+  //     }
+	//
+  //   },300);
+  // }
+  // setTimeout(function(){
+  //   runScrollMonitor();
+  // },1000)
 
 
 	// переход к форме по заказать

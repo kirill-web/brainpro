@@ -38,11 +38,9 @@ gulp.task('sass', function () {
 				this.emit('end');
 			}
 		}))
-    .pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(autoprefixer(['last 10 versions', '>3%']))
     .pipe( postcss(postCssProcessors) )
-    .pipe(sourcemaps.write('.'))
     .pipe(csso({
 			sourceMap: false
 		}))
@@ -56,7 +54,7 @@ gulp.task('scripts', function () {
     'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/masked.min.js',
     'src/libs/jquery.validate.min.js',
-		'src/libs/scrollmonitor.js',
+		'src/libs/wow.min.js',
     'src/js/*.js'
 	])
 		.pipe(plumber({
@@ -133,6 +131,6 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', ['browser-sync', 'sass', 'scripts', 'img', 'fonts', 'html'], function () {
 	gulp.watch('src/scss/**/*', ['sass']);
 	gulp.watch('src/*.html', ['html']);
-	gulp.watch('src/js/**/*.js', 'scripts');
+	gulp.watch('src/js/*.js', ['scripts']);
   // gulp.watch('src/list-pages/**/*', ['list-pages']);
 });
