@@ -98,7 +98,13 @@
     </div>
   </header>
 	<nav class="main-menu">
-		<a href="/" class="main-menu__logo">BrainPro</a>
+	  <div class="main-menu__mobile-row">
+	    <a href="/" class="main-menu__logo">BrainPro</a>
+	    <select class="page-header__select">
+				<option value="">рус</option>
+			  <option value="">укр</option>
+		  </select>
+	  </div>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
 			<li><a href="#" class="main-menu__link">о сервисе</a></li>
@@ -535,22 +541,20 @@
 			<button type="submit" class="quick-popup__submit">Отправить</button>
 		</form>
 	</div>
-	<form action="#" class="mobile-form">
-		<button type="button" class="mobile-form__close"></button>
-		<div class="mobile-form__steps mobile-form__done" id="step-five">
-			<a href="/" class="mobile-form__logo"><img src="img/logo.svg" alt=""></a>
-			<h2 class="mobile-form__title">Заявка отправлена</h2>
-			<p class="mobile-form__text">Производитель и модель указаны на устройстве. Также на его упаковке или документации</p>
-			<p class="mobile-form__good-day">Хорошего дня!</p>
-			<div class="quick-bid">
-				<div class="flex-wrap">
-					<span class="quick-bid__tel">0 800 215 500</span>
-					<span class="quick-bid__tel">067 353 76 67</span>
-				</div>
-				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
-			</div>
-		</div>
-	</form>
+	<!-- MOBILE STEP BY STEP FORM -->
+  <form action="#" class="mobile-form">
+    <button type="button" class="mobile-form__close"></button>
+    <div class="mobile-form__steps mobile-form__done" id="step-five">
+      <a href="/" class="mobile-form__logo">BrainPro</a>
+      <h2 class="mobile-form__title">Заявка отправлена</h2>
+      <p class="mobile-form__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.
+      </p>
+      <div class="quick-bid">
+        <span class="quick-bid__tel">0 800 215 500</span>
+        <p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+      </div>
+    </div>
+  </form>
 	<!-- -->
 	<script src="js/app.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async></script>

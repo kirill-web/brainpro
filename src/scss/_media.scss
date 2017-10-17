@@ -533,8 +533,15 @@
     &:before {
       display: block;
     }
-    &__logo {
-      display: block;
+    &__mobile-row {
+      display: flex;
+      padding-left: 20%;
+      padding-right: 20px;
+    }
+    .page-header__select {
+      color: $white-color;
+      position: relative;
+      z-index: 999;
     }
     ul {
       //			transform: none;

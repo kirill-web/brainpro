@@ -444,17 +444,19 @@ body {
 			font-size: 12px;
 		}
 	}
+  &__mobile-row {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
 	&__logo {
-		display: none;
 		color: $white-color;
-		transform: translateX(20%);
 		font-size: 24px;
 		line-height: 24px;
 		font-family: $font-med;
 		text-decoration: none;
-		width: 100%;
-		align-self: flex-start;
-		margin-bottom: 62px;
 	}
 }
 
