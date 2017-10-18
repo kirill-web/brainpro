@@ -56,6 +56,15 @@
               <span></span>
   					</button>
           </div>
+          <!-- ONLY FOR MOBILE MENU -->
+          <a href="/" class="main-menu__logo">
+	          <img src="img/logo_white-new.svg" alt="">
+	        </a>
+	        <select class="main-menu__select page-header__select">
+				    <option value="">рус</option>
+			      <option value="">укр</option>
+		      </select>
+          <!-- -->
           <div class="page-header__logo">
             <a href="/">
               <img src="img/logo-new.svg" alt="logo"><span>сервис-центр</span>
@@ -99,11 +108,6 @@
   </header>
 	<nav class="main-menu">
 	  <div class="main-menu__mobile-row">
-	    <a href="/" class="main-menu__logo">BrainPro</a>
-	    <select class="page-header__select">
-				<option value="">рус</option>
-			  <option value="">укр</option>
-		  </select>
 	  </div>
 		<ul>
 			<li><a href="#" class="main-menu__link active">главная</a></li>
@@ -482,6 +486,10 @@
 				<input type="text" name="comment" id="comment">
 				<label for="comment" class="big-quick-popup__placeholder"><span>Комментарий (не обязательно)</span></label>
 			</div>
+			<div class="big-quick-popup__input">
+				<input type="text" name="address-notnes" id="address-notnes">
+				<label for="address-notnes" class="big-quick-popup__placeholder"><span>Адрес доставки (не обязательно)</span></label>
+			</div>
 			<div class="big-quick-popup__input" js-paste-order-option>
 				<input type="text" name="problem-big" id="problem-big" disabled>
 				<label for="problem-big" class="big-quick-popup__placeholder"><span>
@@ -531,6 +539,10 @@
 				<label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
 			</div>
 			<div class="quick-popup__input order-form__input">
+				<input type="text" id="address-popup">
+				<label for="address-popup" class="order-form__placeholder"><span>Адрес доставки (необязательно)</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
 				<input type="text" id="comment-popup">
 				<label for="comment-popup" class="order-form__placeholder"><span>Комментарий (необязательно)</span></label>
 			</div>
@@ -545,7 +557,9 @@
   <form action="#" class="mobile-form">
     <button type="button" class="mobile-form__close"></button>
     <div class="mobile-form__steps mobile-form__done" id="step-five">
-      <a href="/" class="mobile-form__logo">BrainPro</a>
+      <a href="/" class="mobile-form__logo">
+        <img src="img/logo-new.svg" alt="">
+      </a>
       <h2 class="mobile-form__title">Заявка отправлена</h2>
       <p class="mobile-form__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.
       </p>

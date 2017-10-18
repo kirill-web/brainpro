@@ -57,6 +57,15 @@
               <span></span>
   					</button>
           </div>
+          <!-- ONLY FOR MOBILE MENU -->
+          <a href="/" class="main-menu__logo">
+	          <img src="img/logo_white-new.svg" alt="">
+	        </a>
+	        <select class="main-menu__select page-header__select">
+				    <option value="">рус</option>
+			      <option value="">укр</option>
+		      </select>
+          <!-- -->
           <div class="page-header__logo">
             <a href="/">
               <img src="img/logo-new.svg" alt="logo"><span>сервис-центр</span>
@@ -100,11 +109,6 @@
   </header>
   <nav class="main-menu">
     <div class="main-menu__mobile-row">
-	    <a href="/" class="main-menu__logo">BrainPro</a>
-	    <select class="page-header__select">
-				<option value="">рус</option>
-			  <option value="">укр</option>
-		  </select>
 	  </div>
     <ul>
       <li><a href="#" class="main-menu__link active">главная</a></li>
@@ -438,97 +442,103 @@
   <div class="overlay"></div>
   <!-- DESKTOP QUICK POPUP -->
   <form action="#" class="big-quick-popup big-quick-popup--v2">
-    <button type="button" class="big-quick-popup__close"></button>
-    <div class="big-quick-popup__container">
-      <div class="flex-wrap">
-        <div class="big-quick-popup__input">
-          <input type="text" name="name_big" id="name_big">
-          <label for="name_big" class="big-quick-popup__placeholder"><span>Имя и фамилия*</span></label>
-          <div class="big-quick-popup__error">Обязательное поле</div>
-        </div>
-        <div class="big-quick-popup__input">
-          <input type="text" name="tel_big" id="tel_big" class="big-quick-popup__tel">
-          <label for="tel_big" class="big-quick-popup__placeholder"><span>Телефон*</span></label>
-          <div class="big-quick-popup__error">Обязательное поле</div>
-        </div>
-        <div class="big-quick-popup__input">
-          <input type="text" name="email" id="email">
-          <label for="email" class="big-quick-popup__placeholder"><span>Эл. адрес*</span></label>
-          <div class="big-quick-popup__error">Обязательное поле</div>
-        </div>
-      </div>
-      <div class="big-quick-popup__input">
-        <input type="text" name="comment" id="comment">
-        <label for="comment" class="big-quick-popup__placeholder"><span>Комментарий (не обязательно)</span></label>
-      </div>
-      <div class="big-quick-popup__input" js-paste-order-option>
-        <input type="text" name="problem-big" id="problem-big" disabled>
-        <label for="problem-big" class="big-quick-popup__placeholder"><span>
+		<button type="button" class="big-quick-popup__close"></button>
+		<div class="big-quick-popup__container">
+			<div class="flex-wrap">
+				<div class="big-quick-popup__input">
+					<input type="text" name="name_big" id="name_big">
+					<label for="name_big" class="big-quick-popup__placeholder"><span>Имя и фамилия*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
+				</div>
+				<div class="big-quick-popup__input">
+					<input type="text" name="tel_big" id="tel_big" class="big-quick-popup__tel">
+					<label for="tel_big" class="big-quick-popup__placeholder"><span>Телефон*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
+				</div>
+				<div class="big-quick-popup__input">
+					<input type="text" name="email" id="email">
+					<label for="email" class="big-quick-popup__placeholder"><span>Эл. адрес*</span></label>
+					<div class="big-quick-popup__error">Обязательное поле</div>
+				</div>
+			</div>
+			<div class="big-quick-popup__input">
+				<input type="text" name="comment" id="comment">
+				<label for="comment" class="big-quick-popup__placeholder"><span>Комментарий (не обязательно)</span></label>
+			</div>
+			<div class="big-quick-popup__input">
+				<input type="text" name="address-notnes" id="address-notnes">
+				<label for="address-notnes" class="big-quick-popup__placeholder"><span>Адрес доставки (не обязательно)</span></label>
+			</div>
+			<div class="big-quick-popup__input" js-paste-order-option>
+				<input type="text" name="problem-big" id="problem-big" disabled>
+				<label for="problem-big" class="big-quick-popup__placeholder"><span>
           <select class="popup__select">
-            <option value="Заправка монохромного лазерного картриджа">Заправка лазерного картриджа</option>
+            <option value="Заправка монохромного лазерного картриджа">Заправка монохромного лазерного картриджа</option>
             <option value="Заправка цветного лазерного картриджа">Заправка цветного лазерного картриджа</option>
-            <option value="Диагностика лазерного картриджа">Восстановление/ремонт лазерного картриджа</option>
+            <option value="Диагностика лазерного картриджа">Восстановление/ремонт картриджа</option>
             <option value="Профилактика лазерного картриджа">Ремонт принтера/МФУ</option>
           </select>
         </span></label>
-      </div>
-      <div class="flex-wrap big-quick-popup__buttons">
-        <button type="submit" class="big-quick-popup__submit">Отправить</button>
-        <input type="checkbox" class="order-form__check" name="big_agree" id="big_agree" required aria-required="true" checked>
-        <label for="big_agree" class="order-form__check-label">Я принимаю</label> <a href="#">условия передачи информации</a>
-      </div>
-    </div>
-    <div class="big-quick-popup__done">
-      <h2 class="big-quick-popup__title">Заявка отправлена</h2>
-      <p class="big-quick-popup__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.</p>
-      <div class="quick-bid">
-        <span class="quick-bid__tel">0 800 215 500</span>
-        <p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
-      </div>
-    </div>
-  </form>
+			</div>
+			<div class="flex-wrap big-quick-popup__buttons">
+				<button type="submit" class="big-quick-popup__submit">Отправить</button>
+				<input type="checkbox" class="order-form__check" name="big_agree" id="big_agree" required aria-required="true" checked>
+				<label for="big_agree" class="order-form__check-label">Я принимаю <a href="terms.html">условия передачи информации</a></label>
+			</div>
+		</div>
+		<div class="big-quick-popup__done">
+			<h2 class="big-quick-popup__title">Заявка отправлена</h2>
+			<p class="big-quick-popup__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.</p>
+			<div class="quick-bid">
+				<span class="quick-bid__tel">0 800 215 500</span>
+				<p class="quick-bid__text">звонки на 0 800 по Украине бесплатны</p>
+			</div>
+		</div>
+	</form>
   <!--  -->
   <!-- QUICK POPUP -->
   <div class="quick-popup">
-    <button type="button" class="quick-popup__close"></button>
-    <h2 class="quick-popup__title">Заявка на услугу</h2>
-    <form action="" class="quick-popup__form">
-      <select class="mobile-form__select order-form__select ">
+		<button type="button" class="quick-popup__close"></button>
+		<h2 class="quick-popup__title">Заявка на услугу</h2>
+		<form action="" class="quick-popup__form">
+			<select class="mobile-form__select order-form__select ">
 			<option value="">Заправка монохромного лазерного принтера</option>
 			<option value="">Другая услуга</option>
 		</select>
-      <div class="quick-popup__input order-form__input">
-        <input type="text" id="name-popup">
-        <label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия*</span></label>
-        <div class="quick-popup__error">Обязательное поле</div>
-      </div>
-      <div class="quick-popup__input order-form__input">
-        <input type="tel" id="tel-popup" class="order-form__input--tel">
-        <label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
-        <div class="quick-popup__error">Обязательное поле</div>
-      </div>
-      <div class="quick-popup__input order-form__input">
-        <input type="text" id="email-popup">
-        <label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
-        <div class="quick-popup__error">Обязательное поле</div>
-      </div>
-      <div class="quick-popup__input order-form__input">
-        <input type="text" id="comment-popup">
-        <label for="comment-popup" class="order-form__placeholder"><span>Комментарий (необязательно)</span></label>
-      </div>
-      <div class="agree-wrap checked">
-        <input type="checkbox" class="order-form__check" id="check-popup2" checked>
-        <label for="check-popup2" class="order-form__check-label">Я принимаю <a href="#">условия передачи информации</a></label>
-      </div>
-      <button type="submit" class="quick-popup__submit">Отправить</button>
-    </form>
-  </div>
-  <!-- -->
-  <!-- MOBILE STEP BY STEP FORM -->
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="name-popup">
+				<label for="name-popup" class="order-form__placeholder"><span>Имя и фамилия*</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="tel" id="tel-popup" class="order-form__input--tel">
+				<label for="tel-popup" class="order-form__placeholder"><span>Телефон*</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="email-popup">
+				<label for="email-popup" class="order-form__placeholder"><span>Email*</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="address-popup">
+				<label for="address-popup" class="order-form__placeholder"><span>Адрес доставки (необязательно)</span></label>
+			</div>
+			<div class="quick-popup__input order-form__input">
+				<input type="text" id="comment-popup">
+				<label for="comment-popup" class="order-form__placeholder"><span>Комментарий (необязательно)</span></label>
+			</div>
+			<div class="agree-wrap checked">
+				<input type="checkbox" class="order-form__check" id="check-popup2" checked>
+				<label for="check-popup2" class="order-form__check-label">Я принимаю <a href="terms.html" target="_blank">условия передачи информации</a></label>
+			</div>
+			<button type="submit" class="quick-popup__submit">Отправить</button>
+		</form>
+	</div>
+	<!-- MOBILE STEP BY STEP FORM -->
   <form action="#" class="mobile-form">
     <button type="button" class="mobile-form__close"></button>
     <div class="mobile-form__steps mobile-form__done" id="step-five">
-      <a href="/" class="mobile-form__logo">BrainPro</a>
+      <a href="/" class="mobile-form__logo">
+        <img src="img/logo-new.svg" alt="">
+      </a>
       <h2 class="mobile-form__title">Заявка отправлена</h2>
       <p class="mobile-form__text">Спасибо за обращение в Brain Pro, в ближайшее время с Вами свяжется наш менеджер для уточнения деталей.
       </p>
@@ -538,7 +548,7 @@
       </div>
     </div>
   </form>
-  <!--  -->
+	<!-- -->
   <script src="js/app.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc-HQqbjl4xbBI-ep3pMskf9ic-lyMb70&callback=initMap" async></script>
 </body>

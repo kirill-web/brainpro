@@ -450,14 +450,33 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 62px;
+    height: 28px;
   }
 	&__logo {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-68%);
+    display: none;
 		color: $white-color;
 		font-size: 24px;
 		line-height: 24px;
 		font-family: $font-med;
 		text-decoration: none;
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+      max-width: 137px;
+    }
 	}
+  &__select {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
 }
 
 .quick-bid {

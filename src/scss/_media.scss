@@ -226,6 +226,11 @@
 
 @media (max-width: 991px) {
   .page-header {
+    &.active-menu {
+      .main-menu__select {
+      display: block;
+    }
+    }
     &__hours {
       margin-top: -2px;
     }
@@ -499,6 +504,12 @@
 @media (max-width: 767px) {
   .page-header {
     padding: 22px 0;
+    &.active-menu {
+      .main-menu__logo,
+      .main-menu__select {
+      display: block;
+    }
+    }
     .flex-wrap {
       justify-content: flex-start;
     }
