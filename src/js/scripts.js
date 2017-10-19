@@ -21,14 +21,14 @@ $(document).ready(function () {
 	});
 
 	$(document).ready(function () {
-		if ($(window).width() < 1899 && $(window).width() > 1440) {
+		if ($(window).width() < 5899 && $(window).width() > 1440) {
 			var asideWidth = $('.page-header .aside').width();
       asideWidth = asideWidth + 50;
 			$('.about-us .aside').width(asideWidth);
 			$('.about-us__content').css('width', 'calc(100% - ' + asideWidth + 'px)');
 		}
 		$(window).resize(function(){
-			if ($(window).width() < 1899 && $(window).width() > 1440) {
+			if ($(window).width() < 5899 && $(window).width() > 1440) {
 			var asideWidth = $('.page-header .aside').width();
       asideWidth = asideWidth + 50;
 			$('.about-us .aside').width(asideWidth);
