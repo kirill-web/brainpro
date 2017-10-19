@@ -248,6 +248,10 @@
       display: none;
     }
   }
+  .main-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .service-sec {
     &__item {
       width: 48%;
@@ -498,6 +502,10 @@
       width: 100%;
       flex: 0 1 100%;
     }
+  }
+  .big-quick-popup {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
