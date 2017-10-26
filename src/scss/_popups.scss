@@ -136,8 +136,11 @@
 		color: #939db5;
 		padding: 16px 0;
 		display: flex;
-    pointer-events: none;
+    // pointer-events: none;
 		align-items: center;
+    &.active{
+      pointer-events: none;
+    }
 		span {
 			display: block;
 			transition: all 0.3s;
