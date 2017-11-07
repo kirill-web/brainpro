@@ -16,3 +16,61 @@
 
 //Styles for responsive
 @import "_media";
+
+
+// допы с modx
+.about-us__slide{
+	background-position: center center;
+	background-size: cover;
+	background-image: url('');
+}
+
+.about-us__slide img{
+	opacity: 0;
+}
+
+.service-sec__promo:before,
+.service-sec__promo,
+.print-promo{
+	background-image: url('../img/pattern.jpg');
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: auto;
+}
+
+
+@media (max-width: 767px){
+	.service-sec__block-mobile {
+	    background-image: url('../img/pattern.jpg');
+		background-repeat: repeat;
+		background-position: center center;
+	}
+
+	.service-sec__promo{
+		background-image: none;
+	}
+
+	.service-sec__title{
+		padding-top: 50px;
+	}
+
+	.service-sec{
+		padding-top: 0;
+	}
+}
+
+body.loaded{
+	-ms-overflow-x: visible;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .service-sec__block-mobile,
+  .service-sec__promo:before,
+  .service-sec__promo,
+  .print-promo {
+    background-image: url(../img/pattern@2x.jpg);
+  }
+}
