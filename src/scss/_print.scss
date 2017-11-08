@@ -201,7 +201,7 @@
       font-family: $font-med;
 			font-size: 16px;
 			margin: 0;
-			max-width: 75%;
+			width: 75%;
       span{
         font-family: $font-med;
         display: inline-block;
@@ -216,6 +216,7 @@
 			color: $text-color;
 			font-family: $font-reg;
 			text-align: right;
+      width: 25%;
 		}
 	}
 	&__order {
